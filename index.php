@@ -4,13 +4,13 @@
 <?php
 	title("Accueil");
 ?>
-<body>
+
 
 	
-	<link href='http://fonts.googleapis.com/css?family=Mr+Dafoe' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
 	
-	<link rel="stylesheet" href="styles.css" />
+<body>
+
+	<article>
 	
 	<span id="sl_play" class="sl_command">&nbsp;</span>
 	<span id="sl_pause" class="sl_command">&nbsp;</span>
@@ -21,24 +21,29 @@
 	
 	
 	<section id="slideshow">
+	
+		
+		<a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
+		<a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
+		
 		<div class="container">
 			<div class="c_slider"></div>
 			<div class="slider">
 				<figure>
 					<img src="img/dummy-640x310-1.jpg" alt="" width="640" height="310" />
-					<figcaption>The mirror of soul</figcaption>
+					<figcaption>Le gugus !</figcaption>
 				</figure><!--
 				--><figure>
 					<img src="img/dummy-640x310-2.jpg" alt="" width="640" height="310" />
-					<figcaption>Let's cross that bridge when we come to it</figcaption>
+					<figcaption>Vous propose</figcaption>
 				</figure><!--
 				--><figure>
 					<img src="img/dummy-640x310-3.jpg" alt="" width="640" height="310" />
-					<figcaption>Sushi<em>(do)</em> time</figcaption>
+					<figcaption>Cette solution </figcaption>
 				</figure><!--
 				--><figure>
 					<img src="img/dummy-640x310-4.jpg" alt="" width="640" height="310" />
-					<figcaption>Waking Life</figcaption>
+					<figcaption> Pour mettre les titres des articles</figcaption>
 				</figure>
 			</div>
 		</div>
@@ -54,7 +59,10 @@
 		
 	</section>
 	
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-	<script type="text/javascript" src="jquery.sharrre-1.3.4.min.js"></script>
+
+	
+	</article>
+
+	
 </body>
 </html>
