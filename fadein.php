@@ -5,7 +5,8 @@
     title("Accueil");
 ?>
 <body onload="startPix()">
-            <div id="centredroite" style="align:center;">
+
+            <div id="centredroite">
                 <p>
 <script type="text/javascript">
 <!--
@@ -45,11 +46,9 @@ function slideshow() {
 }
 //  End -->
 </script>
-                    <a href="http://www.google.fr"><img id="pixOne" src="img/dummy-640x310-1.jpg" style="align: center; position: absolute;z-index: 10" /></a>
-                    <a href="http://www.google.com"><img id="pixTwo" src="img/dummy-640x310-2.jpg" style="align: center; position: absolute;z-index: 5" /></a>
+                    <a href="http://www.google.fr"><img id="pixOne" src="img/dummy-640x310-1.jpg" style="position: absolute;z-index: 10" /></a>
+                    <a href="http://www.google.com"><img id="pixTwo" src="img/dummy-640x310-2.jpg" style="position: absolute;z-index: 5" /></a>
                 </p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
             </div>
         
     </body>
