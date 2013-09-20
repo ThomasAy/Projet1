@@ -62,7 +62,7 @@ html {
 }
 
 body {
-	width: 800px;
+	width: 100%;
 	margin: 0 auto;
 	color:#777;
 }
@@ -96,6 +96,16 @@ a {
 	border-bottom: 1px solid #bc9d88;
 	color: #8f6b51;
 }
+.slideshow-left {
+	width: 48%;
+	margin-left: 0;
+}
+.slideshow-right {
+	width: 48%;
+	margin-left: 50%;
+}
+
+
 a:hover,
 a:focus {
 	border-bottom: 1px dashed #bc9d88;
