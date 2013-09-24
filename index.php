@@ -4,6 +4,31 @@
 <?php
 	title("Accueil");
 ?>
+<?php
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=GHL', 'admin', 'caluire et cuire');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+
+$reponse = $bdd->query('SELECT * from taxes');
+while ($donnees = $reponse->fetch())
+{
+?>
+    <p>
+    <strong>Taxe numéro</strong> : <?php echo $donnees['ID_TAXE']; ?><br />
+    Pour le pays suivant : "<?php echo $donnees['PAYS']; ?>", la taxe applicable est à <?php echo $donnees['RATE']; ?> % !<br />
+   </p>
+<?php
+}
+ 
+$reponse->closeCursor();
+
+?>
+
 
 
 	
