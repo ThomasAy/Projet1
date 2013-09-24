@@ -14,7 +14,10 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
-$reponse = $bdd->query('SELECT * from taxes');
+$reponse = $bdd->query('SELECT U.Nom, U.Prenom, U.Num_Tel, U.Mail, TU.NOM_TYPE, C.NOM_CIVI 
+						from user U, CIVILITE C, TYPE_USER TU 
+						WHERE U.ID_CIVI = C.ID_CIVI
+						AND U.ID_TYPE = TU.ID_TYPE_USER');
 while ($donnees = $reponse->fetch())
 {
 ?>
