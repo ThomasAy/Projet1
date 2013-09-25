@@ -4,6 +4,10 @@ function process_card($card_details){
 	return true;
 }
 
+function cmd_num(){
+	return substr(md5(microtime()), 25);
+}
+
 function insert_order($order_details){
 	//Extraction de order_details dans les variables
 	extract($order_details);
