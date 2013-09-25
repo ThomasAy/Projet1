@@ -16,20 +16,20 @@ function do_html_header($title=''){
 	<!doctype html>
 	<html>
     <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title><?php echo $title; ?></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="icon" type="image/ico" href="medias/favicon.ico">
+      <title><?php echo $title; ?></title>
     </head>
     <body>
     <div id="topbar">
-      Ceci est la topbar
+        Ceci est la topbar
     </div>
     <?php
 	}
 
 function do_html_footer(){
 	?>
-    <script src="jquery-1.9.1.js"></script>
     </body>
     </html>
     <?php
