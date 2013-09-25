@@ -18,6 +18,7 @@ function do_html_header($title=''){
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <link rel="stylesheet" type="text/css" href="style.css">
+<<<<<<< HEAD
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
       <title><?php echo $title; ?></title>
     </head>
@@ -25,11 +26,24 @@ function do_html_header($title=''){
     <div id="topbar">
         Ceci est la topbar
     </div>
+=======
+      <title><?php echo $title; ?></title>
+    </head>
+    <body>
+      <div id="topbar">
+        Ceci est la topbar
+      </div>
+>>>>>>> e8a9252374c1f077d31840c8dfd1a68bbd875b9b
     <?php
 	}
 
 function do_html_footer(){
 	?>
+<<<<<<< HEAD
+=======
+    
+    <script src="jquery-1.9.1.js"></script>
+>>>>>>> e8a9252374c1f077d31840c8dfd1a68bbd875b9b
     </body>
     </html>
     <?php
