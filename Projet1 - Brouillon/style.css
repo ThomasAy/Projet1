@@ -14,12 +14,10 @@ body{
 
 #topbar{
 	margin-top: 0px;
-<<<<<<< HEAD
-	height : 100%;
-=======
 	height : 5%;
->>>>>>> e8a9252374c1f077d31840c8dfd1a68bbd875b9b
 	width : 100%;
 	background-color: rgb(241,242,242);
-	font-size: 12px;
+}
+#topbar.p{
+	font-size: 100%
 }
