@@ -18,6 +18,35 @@ body{
 	width : 100%;
 	background-color: rgb(241,242,242);
 }
-#topbar.p{
-	font-size: 100%
+
+#topbar #languages{
+
+}
+
+#topbar #panier{
+	margin-top : 0;
+	margin-right: 15%;
+	float : right;
+	width: 100px;
+	border: 1px solid black;
+}
+
+#topbar #panier img{
+	width: 30%;
+	height: 30%;
+}
+
+#topbar #account{
+	margin-top: 0;
+	margin-right: 25%;
+	/*font-size: 100%;*/
+	width : 100px;
+	border : 1px black solid;
+	float : right;
+}
+
+
+#topbar #account p{
+	margin-top: 0;
+	text-align: right;
 }

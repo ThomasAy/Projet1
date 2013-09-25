@@ -23,7 +23,12 @@ function do_html_header($title=''){
     </head>
     <body>
     <div id="topbar">
-        Ceci est la topbar
+        <div id="account">
+          <p> Se connecter </p>
+        </div>
+        <div id="panier">
+          <a><img src="medias/cart_64x64.png" alt="Panier"/></a>
+        </div>
     </div>
     <?php
 	}
