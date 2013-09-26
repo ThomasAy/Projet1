@@ -38,7 +38,7 @@ function do_html_header($title=''){
         </div>
         <div id="panier">
             <a href="#">
-                <img src="medias/cart_64x64.png" alt="Panier" ><span id="qte_total"><?php echo $_SESSION['items']; ?></span>
+                <img src="medias/cart_64x64.png" alt="Panier" ></span>
             </a>
         </div>
 
