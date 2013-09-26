@@ -1,6 +1,6 @@
 <?php
 //Inclut le fichier de fonctions pour cette application
-require('book_sc_fns.php');
+require('ghl_fns.php');
 session_start();
 
 if(isset($_POST['username']) && isset($_POST['passwd'])){
@@ -22,12 +22,14 @@ if(isset($_POST['username']) && isset($_POST['passwd'])){
 	}
 }
 	
-	do_html_header("Administration");
+	
 	if(check_admin_user()){
+		do_html_header("Administration");
 		display_admin_menu();
+		do_html_footer();
 	} else {
-		echo "<p> You are not authorized to enter the administration area</p>";
+		header("location: index.php");
 	}
-	do_html_footer();
+	
 ?>
 	

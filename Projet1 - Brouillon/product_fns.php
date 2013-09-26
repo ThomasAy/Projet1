@@ -12,7 +12,7 @@ function get_categories(){
 	//Cherche dans la base de données une liste de catégories
 	
 	$conn = db_connect();
-	$query = "select id_cate, nom_cate from categories";
+	$query = "select id_cate, nom from categorie";
 	$result = @$conn->query($query);
 	if(!$result){
 		return false;
@@ -31,7 +31,7 @@ function get_category_name($catid){
 	//Récupère le nom de la catégorie correspondant à l'id catégorie passé en paramètre
 	
 	$conn = db_connect();
-	$query = "select catname from categories where catid = '".$catid."'";
+	$query = "select nom from categories where id_cate = '".$catid."'";
 	$result = @$conn->query($query);
 	if(!$result){
 		return false;
@@ -44,27 +44,27 @@ function get_category_name($catid){
 	return $row->catname;
 }
 
-function get_books($catid){
+function get_products($catid){
 	//Récupère les livres dans la catégorie correspondante dont l'ID est passé en paramètres
 	if((!$catid) || $catid==''){
 		return false;
 	}
 	
 	$conn = db_connect();
-	$query = "select * from books where catid = ".$catid;
+	$query = "select * from books where id_cate = ".$catid;
 	$result = @$conn->query($query);
 	if(!$result){
 		return false;
 	}
-	$num_books = $result->num_rows;
-	if($num_books == 0){
+	$num_products = $result->num_rows;
+	if($num_products == 0){
 		return false;
 	}
 	$result = db_result_to_array($result);
 	return $result;
 }
 
-function get_book_details($isbn){
+function get_product_details($id_prod){
 	//requête qui récupère les détails du livre dont l'isbn passé en paramètres correspond
 	if((!$isbn) || $isbn==''){
 		return false;
@@ -72,7 +72,7 @@ function get_book_details($isbn){
 	
 	
 	$conn=db_connect();
-	$query="select * from books where isbn='".$isbn."'";
+	$query="select * from produits where id_prod='".$id_prod."'";
 	$result=@$conn->query($query);
 	if(!$result){
 		return false;
@@ -87,12 +87,12 @@ function calculate_price($cart){
 	$price = 0;
 	if(is_array($cart)){
 		$conn = db_connect();
-		foreach($cart as $isbn => $qty){
-			$query = "select price from books where isbn = '".$isbn."'";
+		foreach($cart as $id_prod => $qty){
+			$query = "select prix_ht from products where id_prod = '".$id_prod."'";
 			$result = $conn->query($query);
 			if($result){
-				$item = $result->fetch_array();
-				$item_price = $item['price'];
+				$produit = $result->fetch_array();
+				$prix_produit = $produit['prix_ht'];
 				$price += $item_price*$qty;
 			}
 		}
@@ -103,7 +103,7 @@ function calculate_price($cart){
 
 function calculate_items($cart){
 	//Calule le nombre total d'articles dans le panier
-	$items = 0;
+	$produits = 0;
 	if(is_array($cart)){
 		foreach ($cart as $isbn => $qty){
 			$items += $qty;

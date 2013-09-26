@@ -6,18 +6,30 @@ function login($mail, $passwd){
 	if(!$conn){
 		return false;
 	}
-	
-	$result = $conn->query("select * from admin where username = '".$username."' and password = sha1('".$passwd."')");
+	$passwd = md5($mail.$passwd);
+
+	$result = $conn->query("select * from user where mail = '".$mail."' and password = '".$passwd."'");
 	
 	if(!$result){
 		return false;
 	}
+
 	
 	if($result->num_rows>0){
 		return true;
 	} else {
 		return false;
 	}
+}
+
+function is_admin($mail){
+	$conn = db_connect();
+	if(!$conn){
+		return false;
+	}
+
+
+
 }
 
 function check_admin_user(){

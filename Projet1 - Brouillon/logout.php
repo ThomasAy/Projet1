@@ -1,5 +1,5 @@
 <?php
-require_once('book_sc_fns.php');
+require_once('ghl_fns.php');
 session_start();
 
 $old_user = $_SESSION['admin_user']; // On stocke la variable de session pour voir si l'utilisateur était connecté

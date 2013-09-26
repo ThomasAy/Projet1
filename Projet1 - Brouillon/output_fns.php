@@ -23,12 +23,18 @@ function do_html_header($title=''){
     </head>
     <body>
     <div id="topbar">
+        <div id="social_buttons"> <p><a href="">FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
+        <div id="languages"><p>FR - EN</p></div>
         <div id="account">
-          <p> Se connecter </p>
+          <p><?php do_html_url("login.php", "Connexion");?></p>
         </div>
         <div id="panier">
-          <a><img src="medias/cart_64x64.png" alt="Panier"/></a>
+            <a href="#">
+                <img src="medias/cart_64x64.png" alt="Panier" ><span id="qte_total"><?php echo $_SESSION['items']; ?></span>
+            </a>
         </div>
+
+        
     </div>
     <?php
 	}
@@ -36,7 +42,6 @@ function do_html_header($title=''){
 function do_html_footer(){
 	?>
     
-    <script src="jquery-1.9.1.js"></script>
     </body>
     </html>
     <?php
@@ -362,19 +367,19 @@ function display_card_form($name) {
 function display_login_form(){
   // dispaly form asking for name and password
 ?>
- <form method="post" action="admin.php">
- <table bgcolor="#cccccc">
+ <form method="post" action="connect.php">
+ <div id="login_form" bgcolor="#cccccc">
    <tr>
-     <td>Username:</td>
-     <td><input type="text" name="username"/></td></tr>
+     <td>Adresse e-mail:</td>
+     <td><input type="text" name="mail"/></td></tr>
    <tr>
-     <td>Password:</td>
+     <td>Mot de passe:</td>
      <td><input type="password" name="passwd"/></td></tr>
    <tr>
      <td colspan="2" align="center">
-     <input type="submit" value="Log in"/></td></tr>
+     <input type="submit" value="Connexion"/></td></tr>
    <tr>
- </table></form>
+ </div></form>
 <?php
 }
 function display_admin_menu() {
