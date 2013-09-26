@@ -374,6 +374,9 @@ function display_card_form($name) {
 
 function display_login_form(){
   // dispaly form asking for name and password
+  if (isset($_POST['mail']) &&  isset ($_POST['passwd'])){
+    echo "Vous avez essayé de vous connecter, voici le md5(".substr(md5($_POST['mail'] . $_POST['passwd']),12) . ")";
+  }
 ?>
  <form method="post" action="connect.php">
  <div id="login_form" bgcolor="#cccccc">
