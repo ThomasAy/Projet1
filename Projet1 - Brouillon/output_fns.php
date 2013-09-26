@@ -4,7 +4,15 @@ function do_html_header($title=''){
 	//affiche l'entête html	
 	
 	//on déclare les variables de session qu'on veut accéder dans la fonction
-	
+
+  // Changing page title
+	if ($title != "")
+    $title .= " - ";
+
+  $title .= "Grind House Leather";
+
+
+
 	if(!isset($_SESSION['items'])){
 		$_SESSION['items'] = 0;
 	}
