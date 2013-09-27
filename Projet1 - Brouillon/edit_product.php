@@ -1,11 +1,11 @@
 <?php
-require_once("book_sc_fns.php");
+require_once("ghl_fns.php");
 session_start();
 
-do_html_header("Updating book");
+do_html_header("Mettre à jour un produit");
 if(check_admin_user()){
 	if(filled_out($_POST)){
-		$oldisbn = $_POST['isbn'];
+		//$oldisbn = $_POST['isbn'];
 		$isbn = $_POST['isbn'];
 		$title = $_POST['title'];
 		$author = $_POST['author'];

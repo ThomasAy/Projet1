@@ -28,6 +28,9 @@ function is_admin($mail){
 		return false;
 	}
 
+	$result = $conn->query("select type_user.nom, type_user.id_type_user, user.id_type
+							where type_user.id_type_user=user.type_id
+							and where mail='".$mail."'");
 
 
 }
@@ -40,5 +43,12 @@ function check_admin_user(){
 	}
 }
 
+function get_username(){
+	$conn = db_connect();
+}
+
+function insert_user(){
+	
+}
 
 ?>

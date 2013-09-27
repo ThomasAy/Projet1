@@ -1,5 +1,5 @@
 <?php
-include('book_sc_fns.php');
+include('ghl_fns.php');
 
 //Le panier virtuel a besoin des sessions, on en ouvre donc une
 session_start();

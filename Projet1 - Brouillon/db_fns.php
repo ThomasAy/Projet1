@@ -1,7 +1,5 @@
 <?php
 function db_connect(){
-	//$result = new mysqli('mysql.hostinger.fr', 'u190431703_booko', 'russoa17101991', 'u190431703_boko');
-	
 	$result = new mysqli('localhost', 'admin', 'caluire et cuire', 'ghl');
 	
 	if(!$result){
