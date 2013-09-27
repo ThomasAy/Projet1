@@ -4,9 +4,18 @@ function do_html_header($title=''){
 	//affiche l'entête html	
 	
 	//on déclare les variables de session qu'on veut accéder dans la fonction
-	
+
+  // Changing page title
+	if ($title != "")
+    $title .= " - ";
+
+  $title .= "Grind House Leather";
+
+
+
 	if(!isset($_SESSION['items'])){
-		$_SESSION['items'] = 0;
+    //TODO REMOVE 3, 0 instead
+		$_SESSION['items'] = 3;
 	}
 	
 	if(!isset($_SESSION['total_price'])){
@@ -30,7 +39,7 @@ function do_html_header($title=''){
         </div>
         <div id="panier">
             <a href="#">
-                <img src="medias/cart_64x64.png" alt="Panier" ><span id="qte_total"><?php echo $_SESSION['items']; ?></span>
+                <img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["items"] . '.png"';?> alt="Votre panier" ></span>
             </a>
         </div>
 
@@ -366,6 +375,9 @@ function display_card_form($name) {
 
 function display_login_form(){
   // dispaly form asking for name and password
+  if (isset($_POST['mail']) &&  isset ($_POST['passwd'])){
+    echo "Vous avez essayé de vous connecter, voici le md5(".substr(md5($_POST['mail'] . $_POST['passwd']),12) . ")";
+  }
 ?>
  <form method="post" action="connect.php">
  <div id="login_form" bgcolor="#cccccc">
