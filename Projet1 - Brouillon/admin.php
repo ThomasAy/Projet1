@@ -3,7 +3,7 @@
 require('ghl_fns.php');
 session_start();
 
-if(isset($_POST['username']) && isset($_POST['passwd'])){
+/*if(isset($_POST['username']) && isset($_POST['passwd'])){
 	//Essai de connexion
 	
 	$username = $_POST['username'];
@@ -21,7 +21,7 @@ if(isset($_POST['username']) && isset($_POST['passwd'])){
 		exit;
 	}
 }
-	
+*/
 	
 	if(check_admin_user()){
 		do_html_header("Administration");

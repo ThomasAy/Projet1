@@ -1,6 +1,6 @@
 <?php
 
-function do_html_header($title=''){
+function do_html_header($title='', $languages_vars){
 	//affiche l'entête html	
 	
 	//on déclare les variables de session qu'on veut accéder dans la fonction
@@ -33,9 +33,9 @@ function do_html_header($title=''){
     <body>
     <div id="topbar">
         <div id="social_buttons"> <p><a href="">FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
-        <div id="languages"><p>FR - EN</p></div>
+        <div id="languages"><?php do_html_url($_SERVER['PHP_SELF'].'?lang=fr', 'FR');?> - <?php do_html_url($_SERVER['PHP_SELF'].'?lang=en', 'EN');?></div>
         <div id="account">
-          <p><?php do_html_url("login.php", "Connexion");?></p>
+          <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
         </div>
         <div id="panier">
             <a href="#">
@@ -373,7 +373,7 @@ function display_card_form($name) {
 <?php
 }
 
-function display_login_form(){
+function display_login_form($languages_vars){
   // dispaly form asking for name and password
   if (isset($_POST['mail']) &&  isset ($_POST['passwd'])){
     echo "Vous avez essayé de vous connecter, voici le md5(".substr(md5($_POST['mail'] . $_POST['passwd']),12) . ")";
@@ -382,10 +382,10 @@ function display_login_form(){
  <form method="post" action="connect.php">
  <div id="login_form" bgcolor="#cccccc">
    <tr>
-     <td>Adresse e-mail:</td>
+     <td><?php echo $languages_vars['mail']; ?></td>
      <td><input type="text" name="mail"/></td></tr>
    <tr>
-     <td>Mot de passe:</td>
+     <td><?php echo $languages_vars['mdp']; ?>:</td>
      <td><input type="password" name="passwd"/></td></tr>
    <tr>
      <td colspan="2" align="center">
