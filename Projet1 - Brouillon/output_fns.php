@@ -15,7 +15,7 @@ function do_html_header($title='', $languages_vars){
 
 	if(!isset($_SESSION['items'])){
     //TODO REMOVE 3, 0 instead
-		$_SESSION['items'] = 3;
+		$_SESSION['items'] = 1;
 	}
 	
 	if(!isset($_SESSION['total_price'])){
@@ -33,7 +33,9 @@ function do_html_header($title='', $languages_vars){
     <body>
     <div id="topbar">
         <div id="social_buttons"> <p><a href="">FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
-        <div id="languages"><?php do_html_url($_SERVER['PHP_SELF'].'?lang=fr', 'FR');?> - <?php do_html_url($_SERVER['PHP_SELF'].'?lang=en', 'EN');?></div>
+        <div id="languages">
+            <p><?php do_html_url($_SERVER['PHP_SELF'].'?lang=fr', 'FR');?> - <?php do_html_url($_SERVER['PHP_SELF'].'?lang=en', 'EN');?></p>
+        </div>
         <div id="account">
           <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
         </div>
@@ -66,7 +68,7 @@ function do_html_heading($heading){
 function do_html_url($url, $name){
 	//affiche un lien et <br/>
 	?>
-    <a href="<?php echo $url;?>"><?php echo $name;?></a><br/>
+    <a href="<?php echo $url;?>"><?php echo $name;?></a>
     <?php
 }
 
