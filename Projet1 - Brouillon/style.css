@@ -28,37 +28,6 @@ a, a:visited{
 	text-align: center;
 }
 
-
-#topbar #panier{
-	margin-top : 0;
-	float : right;
-	height: 100%;
-	
-
-}
-
-#topbar #account{
-	margin-top: 0;
-	/*font-size: 100%;*/
-	width : 7%;
-	height: 100%;
-	float : right;
-}
-
-
-
-
-#topbar #panier img{
-	
-	text-align: right;
-	vertical-align: center;
-}
-
-#topbar #panier p{
-	text-align: center;
-	width: 100%;
-	height: 25%;
-}
 #social_buttons{
 	margin-top: 0;
 	height: 100%;
@@ -72,3 +41,39 @@ a, a:visited{
 	width : 7%;
 	float: left;
 }
+
+#search {
+	width: 200px;
+	margin-left: 200px;
+
+}
+
+
+#topbar #panier{
+	margin-top : 0;
+	float : right;
+	height: 100%;
+	
+}
+
+
+
+#topbar #panier img{
+	
+	text-align: right;
+}
+
+#topbar #panier p{
+	text-align: center;
+	width: 100%;
+	height: 25%;
+}
+
+#topbar #account{
+	
+	/*font-size: 100%;*/
+	width : 7%;
+	height: 100%;
+	float : right;
+}
+

@@ -14,8 +14,16 @@ function do_html_header($title='', $languages_vars){
 
 
 	if(!isset($_SESSION['items'])){
-    //TODO REMOVE 3, 0 instead
-		$_SESSION['items'] = 1;
+    //TODO REMOVE 0 instead
+		$_SESSION['items'] = 150;
+    if($_SESSION['items'] > 10)
+    {
+      $_SESSION['imgPanier'] = 10;
+    }
+    else
+    {
+      $_SESSION['imgPanier'] = $_SESSION['items'];
+    }
 	}
 	
 	if(!isset($_SESSION['total_price'])){
@@ -31,17 +39,26 @@ function do_html_header($title='', $languages_vars){
       <title><?php echo $title; ?></title>
     </head>
     <body>
+      <script src="scripts.js"  type="text/javascript"></script>
     <div id="topbar">
         <div id="social_buttons"> <p><a href="">FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
         <div id="languages">
             <p><?php do_html_url($_SERVER['PHP_SELF'].'?lang=fr', 'FR');?> - <?php do_html_url($_SERVER['PHP_SELF'].'?lang=en', 'EN');?></p>
         </div>
+        
+        <div id="search">
+          <form method="post" action="#">
+            <input type="text" name="keyWord"/>
+            <input type="submit" value="Go!"/>
+          </form>
+        </div>
+
         <div id="account">
           <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
         </div>
         <div id="panier">
             <a href="#">
-                <img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["items"] . '.png"';?> alt="Votre panier" ></span>
+                <img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
             </a>
         </div>
 
