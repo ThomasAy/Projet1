@@ -16,7 +16,10 @@ function do_html_header($title='', $languages_vars){
 	if(!isset($_SESSION['items'])){
     //TODO REMOVE 0 instead
 		$_SESSION['items'] = 150;
-    if($_SESSION['items'] > 10)
+   
+	}
+
+   if($_SESSION['items'] > 10)
     {
       $_SESSION['imgPanier'] = 10;
     }
@@ -24,7 +27,6 @@ function do_html_header($title='', $languages_vars){
     {
       $_SESSION['imgPanier'] = $_SESSION['items'];
     }
-	}
 	
 	if(!isset($_SESSION['total_price'])){
 		$_SESSION['total_price'] = 0;
@@ -49,7 +51,7 @@ function do_html_header($title='', $languages_vars){
         <div id="search">
           <form method="post" action="#">
             <input type="text" name="keyWord"/>
-            <input type="submit" value="Go!"/>
+            <input type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
           </form>
         </div>
 
