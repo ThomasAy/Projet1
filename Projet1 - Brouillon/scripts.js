@@ -12,6 +12,6 @@ window.onload = function()
           var size = (pageWidth - 200 ) / 2;
 
 document.getElementById("search").style.marginLeft = size + "px";
-          alert(size);
+          //alert(size);
       };
 
