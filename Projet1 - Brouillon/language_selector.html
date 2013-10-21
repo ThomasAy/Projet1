@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+
+	<!-- begin CSS -->
+    <link href="polyglot-language-switcher.css" type="text/css" rel="stylesheet">
+	<!-- end CSS -->
+	
+	<!-- begin JS -->
+    <script src="jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="jquery.polyglot.language.switcher.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#polyglotLanguageSwitcher').polyglotLanguageSwitcher({
+				effect: 'fade',
+                testMode: true,
+                onChange: function(evt){
+                    alert("The selected language is: "+evt.selectedItem);
+                }
+
+			});
+        });
+    </script>
+	<!-- end JS -->
+
+</head>
+
+<body>
+<!-- begin container -->
+<div id="container" style="width: 40px; margin: 0px;">
+	<!-- begin language switcher -->
+    <div id="polyglotLanguageSwitcher">
+		<form action="#">
+			<select id="polyglot-language-options">
+				<option id="en" value="en" selected>En</option>
+				<option id="fr" value="fr">Fr</option>
+			</select>
+		</form>
+	</div>
+	<!-- end language switcher -->
+    
+</div>
+<!-- end container -->
+</html>

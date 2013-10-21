@@ -36,35 +36,68 @@ function do_html_header($title='', $languages_vars){
 	<html>
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="icon" type="image/ico" href="medias/favicon.ico">
+
+  <!-- begin CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="TopBar.css">
+    <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
+    <link href="polyglot-language-switcher.css" type="text/css" rel="stylesheet">
+  <!-- end CSS -->
+  
+  <!-- begin JS -->
+    <script src="jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="jquery.polyglot.language.switcher.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#polyglotLanguageSwitcher').polyglotLanguageSwitcher({
+        effect: 'fade',
+                testMode: true,
+                onChange: function(evt){
+                    alert("The selected language is: "+evt.selectedItem);
+                }
+
+      });
+        });
+    </script>
+  <!-- end JS -->
+
       <title><?php echo $title; ?></title>
     </head>
     <body>
       <script src="scripts.js"  type="text/javascript"></script>
-    <div id="topbar">
-        <div id="social_buttons"> <p><a href="">FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
-        <div id="languages">
-            <p><?php do_html_url($_SERVER['PHP_SELF'].'?lang=fr', 'FR');?> - <?php do_html_url($_SERVER['PHP_SELF'].'?lang=en', 'EN');?></p>
+    <div class="Top_Bar">
+        <div id="Reseaux_sociaux"> <p><a href="">&nbsp;FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
+<!-- begin container -->
+        <div id="container" style="width: 40px; margin-left: 10%; height: 50px;">
+<!-- begin language switcher -->
+            <div id="polyglotLanguageSwitcher">
+              <form action="#">
+                <select id="polyglot-language-options">
+                  <option id="en" value="en" selected>En</option>
+                  <option id="fr" value="fr">Fr</option>
+                </select>
+              </form>
+            </div>
+<!-- end language switcher -->
         </div>
+<!-- end container -->    
         
-        <div id="search">
+        <div id="Rechercher">
           <form method="post" action="#">
             <input type="text" name="keyWord"/>
             <input type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
           </form>
         </div>
 
-        <div id="account">
+        <div id="Texte_de_connexion">
           <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
         </div>
-        <div id="panier">
+        <div id="Panier">
             <a href="#">
                 <img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
             </a>
         </div>
 
-        
     </div>
     <?php
 	}
