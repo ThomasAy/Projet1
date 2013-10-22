@@ -40,7 +40,7 @@
 .Top_Bar #Reseaux_sociaux {
   position: absolute;
   left: 40px;
-  min-height: 30px;
+  top: -4px;
 }
 
 .Top_Bar #Rechercher {
@@ -83,12 +83,12 @@
     display: none;
   }
 .Top_Bar #inputSearch {
-  width: 60px;
+  width: 50px;
 }
 
 .Top_Bar #Rechercher {
   width: 60px;
-  left: 60%;
+  left: 65%;
 }
 
   #btnValider{

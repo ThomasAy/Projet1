@@ -65,7 +65,7 @@ function do_html_header($title='', $languages_vars){
     <body>
       <script src="scripts.js"  type="text/javascript"></script>
     <div class="Top_Bar">
-        <div id="Reseaux_sociaux"> <p><a href="">&nbsp;FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
+        <div id="Reseaux_sociaux"> <p> &nbsp <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
