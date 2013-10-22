@@ -50,13 +50,12 @@ function do_html_header($title='', $languages_vars){
     <script type="text/javascript">
         $(document).ready(function() {
             $('#polyglotLanguageSwitcher').polyglotLanguageSwitcher({
-        effect: 'fade',
+                effect: 'fade',
                 testMode: true,
                 onChange: function(evt){
                     alert("The selected language is: "+evt.selectedItem);
                 }
-
-      });
+            });
         });
     </script>
   <!-- end JS -->
@@ -68,7 +67,7 @@ function do_html_header($title='', $languages_vars){
     <div class="Top_Bar">
         <div id="Reseaux_sociaux"> <p><a href="">&nbsp;FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
 <!-- begin container -->
-        <div id="container" style="width: 40px; margin-left: 10%; height: 50px;">
+        <div id="Pays">
 <!-- begin language switcher -->
             <div id="polyglotLanguageSwitcher">
               <form action="#">
@@ -94,7 +93,7 @@ function do_html_header($title='', $languages_vars){
         </div>
         <div id="Panier">
             <a href="#">
-                <img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
+                <span><img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
             </a>
         </div>
 

@@ -14,66 +14,8 @@ a, a:visited{
 	text-decoration: none;
 }
 
-
-#topbar{
-	margin-top: 0;
-	height : 5%;
-	width : 100%;
-	background-color: rgb(241,242,242);
-	min-height: 30px;
-}
-
-#topbar p{
-	vertical-align: middle;
-	text-align: center;
-}
-
-#social_buttons{
-	margin-top: 0;
-	height: 100%;
-	width: 7%;
-	float:left;
-}
-
-#languages{
-	margin-top: 0;
-	height: 100%;
-	width : 7%;
-	float: left;
-}
-
-#search {
-	width: 200px;
-	margin-left: 200px;
-
-}
-
-
-#topbar #panier{
-	margin-top : 0;
-	float : right;
-	height: 100%;
-	
-}
-
-
-
-#topbar #panier img{
-	
-	text-align: right;
-}
-
-#topbar #panier p{
-	text-align: center;
-	width: 100%;
-	height: 25%;
-}
-
-#topbar #account{
-	
-	/*font-size: 100%;*/
-	width : 7%;
-	height: 100%;
-	float : right;
+#login_form{
+	position: absolute;
+	margin-top: 100px;
 }
 
