@@ -1,56 +1,99 @@
+.Top_Bar {
+  position: absolute;
+  background-color: rgb(238,238,238);
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height : 5%;
+  min-height: 50px;
+}  
 
-@media (min-width: 800px) {
-  .Top_Bar {
-    position: absolute;
-    background-color: rgb(238,238,238);
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height : 5%;
-    min-height: 50px;
-  }
-
-  .Top_Bar #Rechercher {
-    background-image: url("images/Rechercher.png");
-    position: absolute;
-    left: 42%;
-    top: 15px;
-    width: 50%;
-    height: 32px;
-    z-index: 50;
-  }
-  .Top_Bar #Panier {
-    font-size: 24px;
-    font-family: "Myriad Pro";
-    color: rgb( 255, 255, 255 );
-    position: absolute;
-    left: 96%;
-    top: 10px;
-    width: 20px;
-    z-index: 48;
-  }
-  .Top_Bar #Texte_de_connexion {
-    font-family: "Helvetica Neue";
-    position: absolute;
-    right: 5%;
-    min-height: 30px;
-  }
+.Top_Bar #Panier {
+  font-size: 24px;
+  font-family: "Myriad Pro";
+  color: rgb( 255, 255, 255 );
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  z-index: 48;
+}
 
   .Top_Bar #Pays {
-    font-family: "Helvetica Neue";
-    color: rgb( 209, 211, 212 );
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    width: 40px;
-    min-height: 30px;
+  font-family: "Helvetica Neue";
+  color: rgb( 209, 211, 212 );
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 40px;
+  min-height: 30px;
+}
 
-  }
-  .Top_Bar #Reseaux_sociaux {
-    position: absolute;
-    left: 40px;
-    min-height: 30px;
+.Top_Bar #Texte_de_connexion {
+  font-family: "Helvetica Neue";
+  position: absolute;
+  right: 5%;
+  min-height: 30px;
+}
 
+
+.Top_Bar #Reseaux_sociaux {
+  position: absolute;
+  left: 40px;
+  min-height: 30px;
+}
+
+.Top_Bar #Rechercher {
+  background-image: url("images/Rechercher.png");
+  position: absolute;
+  left: 42%;
+  top: 15px;
+  width: 50%;
+  height: 32px;
+  z-index: 50;
+}
+
+  .Top_Bar #Texte_de_connexion {
+  font-family: "Helvetica Neue";
+  display: none;
+  position: absolute;
+  right: 30px;
+  min-height: 30px;
+}
+
+@media (min-width: 768px) {
+ .Top_Bar #Texte_de_connexion {
+    display: inline;
   }
 }
+
+
+@media (max-width: 768px) and (min-width: 401px) {
+  #btnValider{
+    display: none;
+  }
+  .Top_Bar #Texte_de_connexion {
+    display: inline;
+  }
+
+}
+
+@media (max-width: 400px) {
+.Top_Bar #Texte_de_connexion {
+    display: none;
+  }
+.Top_Bar #inputSearch {
+  width: 60px;
+}
+
+.Top_Bar #Rechercher {
+  width: 60px;
+  left: 60%;
+}
+
+  #btnValider{
+    display: none;
+  }
+}
+
 

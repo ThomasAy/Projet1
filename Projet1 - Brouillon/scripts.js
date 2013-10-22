@@ -9,9 +9,9 @@ function resizeWindow()
 window.onload = function()
       {
           var pageWidth = window.innerWidth; 
-          var size = (pageWidth - 200 ) / 2;
-
-document.getElementById("search").style.marginLeft = size + "px";
-          //alert(size);
+          if (pageWidth < 768) {
+            //alert(pageWidth);
+            //document.getElementById("btnValider").style.display = "none";
+          };
       };
 

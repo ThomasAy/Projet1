@@ -83,8 +83,8 @@ function do_html_header($title='', $languages_vars){
         
         <div id="Rechercher">
           <form method="post" action="#">
-            <input type="text" name="keyWord"/>
-            <input type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
+            <input id="inputSearch" type="text" name="keyWord"/>
+            <input id="btnValider" type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
           </form>
         </div>
 
