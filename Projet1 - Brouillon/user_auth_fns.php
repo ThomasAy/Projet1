@@ -47,8 +47,52 @@ function get_username(){
 	$conn = db_connect();
 }
 
-function insert_user(){
-	
+function insert_user($mail, $password, $civ, $firstname, $lastname, $adress, $address2, $zipcode, $city, $country, $phone='', $birthday='', $newsletter= '0', $type_user = 1){
+	$conn = db_connect();
+
+	//Vérifie si l'utilisateur existe 
+
+	$query = "select * from user where mail = '".$mail."'";
+	$result = $conn->query($query);
+
+	if($result->num_rows != 0 ){
+		return false;
+	}
+
+	//Insertion du nouvel utilisateur
+
+	$passwd = md5($mail.$password);
+	$query = "insert into user values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	$instr = $conn->prepare($query);
+	$instr->bind_param("issiissssi", '', $name, $firstname, $civ, $type_user, $phone, $mail, $passwd, $birthday, $newsletter);
+	$instr->execute();
+	$instr->close();
+
+	if(!$instr){
+		return false;
+	}
+
+	$query = "select id_user from user where mail = '".$mail."'";
+
+	$result = $conn->query($query);
+
+	if(!$result){
+		return false;
+	}
+
+	if($result->num_rows == 0){
+		return false;
+	}
+
+	$row = $result->fetch_object();
+	$id_user = $row->id_user;
+
+	$query = "insert into address values (?, ?, ?, ?, ?, ?, ?)";
+	$instr = $conn->prepare($query);
+	$instr->bind_param("iisssssi", '', $id_user, $address, $address2, $city, $zipcode, $country, 1);
+	$instr->execute();
+	$instr->close();
+
 }
 
 ?>

@@ -44,7 +44,11 @@ $languages_var['code_reduction'] = 'Code de réduction';
 $languages_var['utiliser'] = 'Utiliser';
 $languages_var['TVA'] = 'Dont TVA';
 
-//INFORMATIONS
+//INFO[RMATIONS
+
+$languages_var['monsieur'] = 'M';
+$languages_var['madame'] = 'Mme';
+$languages_var['mademoiselle'] = 'Mlle';
 
 
 $languages_var['new_client'] = 'Nouveau client ?';
@@ -147,11 +151,33 @@ $languages_var['maj'] = 'Mettre à jour';
 $languages_var['desabo_news'] = 'Pour vous désabonner, déchochez la case';
 $languages_var['recevoir_news'] = 'Recevoir la newsletter';
 
-
-
-
-
-
+$languages_var['country']['france'] = 'France';
+$languages_var['country']['uk'] = 'Royaume Uni';
+$languages_var['country']['espagne'] = 'Espagne';
+$languages_var['country']['italie'] = 'Italie';
+$languages_var['country']['portugal'] = 'Portugal';
+$languages_var['country']['belgique'] = 'Belgique';
+$languages_var['country']['allemagne'] = 'Allemagne';
+$languages_var['country']['autriche'] = 'Autriche';
+$languages_var['country']['danemark'] = 'Danemark';
+$languages_var['country']['estonie'] = 'Estonie';
+$languages_var['country']['chypre'] = 'Chypre';
+$languages_var['country']['croatie'] = 'Croatie';
+$languages_var['country']['finlande'] = 'Finlande';
+$languages_var['country']['grece'] = 'Grèce';
+$languages_var['country']['hongrie'] = 'Hongrie';
+$languages_var['country']['irlande'] = 'Irlande';
+$languages_var['country']['lettonie'] = 'Lettonie';
+$languages_var['country']['lituanie'] = 'Lituanie';
+$languages_var['country']['luxembourg'] = 'Luxembourg';
+$languages_var['country']['malte'] = 'Malte';
+$languages_var['country']['pays_bas'] = 'Pays-Bas';
+$languages_var['country']['pologne'] = 'Pologne';
+$languages_var['country']['republique_tcheque'] = 'République Tchèque';
+$languages_var['country']['roumanie'] = 'Roumanie';
+$languages_var['country']['slovaquie'] = 'Slovaquie';
+$languages_var['country']['slovenie'] = 'Slovénie';
+$languages_var['country']['suede'] = 'Suède';
 
 
 

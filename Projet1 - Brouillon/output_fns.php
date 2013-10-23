@@ -1,6 +1,6 @@
 <?php
 
-function do_html_header($title='', $languages_vars){
+function do_html_header($languages_vars, $title=''){
 	//affiche l'entête html	
 	
 	//on déclare les variables de session qu'on veut accéder dans la fonction
@@ -37,7 +37,21 @@ function do_html_header($title='', $languages_vars){
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+      <script>
+        $(function() {
+          $( "#datepicker" ).datepicker();
+        });
+      </script>
+
+      <style>
+          #datepicker{
+            font-size: 10px !important;
+          };
+      </style>
       <title><?php echo $title; ?></title>
     </head>
     <body>
@@ -406,16 +420,18 @@ function display_login_form($languages_vars){
      <td><?php echo $languages_vars['mail']; ?></td>
      <td><input type="text" name="mail"/></td></tr>
    <tr>
-     <td><?php echo $languages_vars['mdp']; ?>:</td>
+     <td><?php echo $languages_vars['mdp']; ?></td>
      <td><input type="password" name="passwd"/></td></tr>
    <tr>
      <td colspan="2" align="center">
-     <input type="submit" value="Connexion"/></td></tr>
+     <input type="submit" value="<?php echo $languages_vars['connexion']; ?>"/></td></tr>
    <tr>
  </div></form>
+
 <?php
 }
-function display_admin_menu() {
+
+function display_admin_menu(){
 ?>
 <br />
 <a href="index.php">Go to main site</a><br />
@@ -424,6 +440,71 @@ function display_admin_menu() {
 <a href="change_password_form.php">Change admin password</a><br />
 <?php
 }
-		
-			
-        
+
+function display_signup_form($languages_vars){
+  //display
+?>
+      <div id="new_client">
+          <?php echo $languages_vars['new_client']; ?>
+      </div>
+      <div id="signup_form">
+          <form method="post" action="register.php">
+          <?php echo $languages_vars['civilite']; ?>
+          <input type="radio" name="civilite" value="1"><?php echo $languages_vars['monsieur']; ?>
+          <input type="radio" name="civilite" value="2"><?php echo $languages_vars['madame']; ?>
+          <input type="radio" name="civilite" value="3"><?php echo $languages_vars['mademoiselle']; ?>
+          <br/>
+          <?php echo $languages_vars['nom'];?>
+          <input type="text" name="nom">
+          <br/>
+          <?php echo $languages_vars['prenom'];?>
+          <input type="text" name="prenom">
+          <br/>
+          <?php echo $languages_vars['adresse'];?>
+          <input type="text" name="adresse">
+          <br/>
+          <?php echo $languages_vars['adresse_2']; ?>
+          <input type="text" name="adresse_2">
+          <br/>
+          <?php echo $languages_vars['code_postal']; ?>
+          <input type="text" name="zipcode">
+          <br/>
+          <?php echo $languages_vars['ville'];?>
+          <input type="text" name="ville">
+          <br/>
+          <?php echo $languages_vars['pays']; ?>
+          <select name="pays">
+            <?php
+            foreach($languages_vars['country'] as $key => $value){ ?>
+              <option value=<?php echo '"'.$value.'"'; ?>> <?php echo $value; ?> </option>
+            <?php
+            }
+            ?>
+          </select>
+          <br/>
+          <?php echo $languages_vars['date_naissance']; ?>
+          <input id="datepicker" type="text" name="date_naissance">
+          <br/>
+          <input type="checkbox" name="newsletter" value="1">
+          <?php echo $languages_vars['grindhouse']; ?>
+          <br/>
+
+          <hr>
+
+          <br/>
+
+          <?php echo $languages_vars['mail']; ?>
+          <input type="email" name="email">
+
+          <?php echo $languages_vars['mdp']; ?>
+          <input type="password" name="mdp">
+          <br/>
+          <br/>
+
+          <p><?php echo $languages_vars['champ_obligatoire']; ?></p>
+
+          <input type="submit" name="submit" value=<?php echo '"'.$languages_vars['inscription'].'"'; ?>>
+          </form>
+    </div>
+<?php
+}
