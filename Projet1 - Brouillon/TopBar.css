@@ -1,3 +1,10 @@
+a:visited{
+  text-decoration: none;
+}
+a{
+  color: black;
+}
+
 .Top_Bar {
   position: absolute;
   background-color: rgb(238,238,238);
