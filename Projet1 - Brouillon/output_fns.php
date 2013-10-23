@@ -72,8 +72,8 @@ function do_html_header($title='', $languages_vars){
             <div id="polyglotLanguageSwitcher">
               <form action="#">
                 <select id="polyglot-language-options">
-                  <option id="en" value="en" selected>En</option>
-                  <option id="fr" value="fr">Fr</option>
+                  <option id="en" value="en">En</option>
+                  <option id="fr" value="fr" selected>Fr</option>
                 </select>
               </form>
             </div>
