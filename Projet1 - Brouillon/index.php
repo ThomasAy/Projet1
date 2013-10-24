@@ -5,5 +5,7 @@ session_start();
 do_html_header("Bienvenue sur GrindHouse Leather", $languages_var);
 echo "";
 
+do_html_homepage_body();
+
 do_html_footer();
 ?>

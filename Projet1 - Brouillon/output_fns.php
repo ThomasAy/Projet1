@@ -100,6 +100,27 @@ function do_html_header($title='', $languages_vars){
     <?php
 	}
 
+function do_html_homepage_body(){ 
+
+  ?>
+
+  <div class="Contenu">
+        <div id="femme">
+          <img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme">
+        </div>
+        <div id="logo">
+          <img src="medias/pictures/logo.png" alt="GHL Logo">
+        </div>
+        <div id="homme">
+         <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
+        </div>
+        <div class="BandeGenre">
+        </div>
+  </div>
+  <?php
+}
+
+
 function do_html_footer(){
 	?>
   <div style="height: 2000px;"></div>
