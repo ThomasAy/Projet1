@@ -8,10 +8,9 @@ function resizeWindow()
 
 window.onload = function()
       {
-          var pageWidth = window.innerWidth; 
-          if (pageWidth < 768) {
-            //alert(pageWidth);
-            //document.getElementById("btnValider").style.display = "none";
-          };
+          var imgWidth = document.getElementById("ceinture").width; 
+          //document.getElementById("APropos").style.left = parseInt(imgWidth) + "px";
+          //alert(parseInt(imgWidth));
+            
       };
 

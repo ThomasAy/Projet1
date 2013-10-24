@@ -1,9 +1,71 @@
+/*
+                    _   
+ _ __ ___  ___  ___| |_ 
+| '__/ _ \/ __|/ _ \ __|
+| | |  __/\__ \  __/ |_ 
+|_|  \___||___/\___|\__|
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* 
+  _______  _______ .__   __.  _______ .______          ___       __      
+ /  _____||   ____||  \ |  | |   ____||   _  \        /   \     |  |     
+|  |  __  |  |__   |   \|  | |  |__   |  |_)  |      /  ^  \    |  |     
+|  | |_ | |   __|  |  . `  | |   __|  |      /      /  /_\  \   |  |     
+|  |__| | |  |____ |  |\   | |  |____ |  |\  \----./  _____  \  |  `----.
+ \______| |_______||__| \__| |_______|| _| `._____/__/     \__\ |_______|
+*/
 a:visited{
   text-decoration: none;
 }
 a{
   color: black;
 }
+@font-face { font-family: UL; src: url('HelveticaNeueUltraLight.ttf'); } 
+
+div{
+  font-family: UL;
+}
+p{
+  font-family: UL;
+}
+
+
+
+/*
+
+.___________.  ______   .______   .______        ___      .______      
+|           | /  __  \  |   _  \  |   _  \      /   \     |   _  \     
+`---|  |----`|  |  |  | |  |_)  | |  |_)  |    /  ^  \    |  |_)  |    
+    |  |     |  |  |  | |   ___/  |   _  <    /  /_\  \   |      /     
+    |  |     |  `--'  | |  |      |  |_)  |  /  _____  \  |  |\  \----.
+    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|
+                                                                       
+*/
+
+
 
 .Top_Bar {
   position: absolute;
@@ -47,7 +109,7 @@ a{
 .Top_Bar #Reseaux_sociaux {
   position: absolute;
   left: 40px;
-  top: -4px;
+  top: 15px;
 }
 
 .Top_Bar #Rechercher {
@@ -65,9 +127,54 @@ a{
   display: none;
   position: absolute;
   right: 30px;
+    top: 15px;
+
   min-height: 30px;
 }
 
+/*
+ _______   ______     ______   .___________. _______ .______      
+|   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
+|  |__   |  |  |  | |  |  |  | `---|  |----`|  |__   |  |_)  |    
+|   __|  |  |  |  | |  |  |  |     |  |     |   __|  |      /     
+|  |     |  `--'  | |  `--'  |     |  |     |  |____ |  |\  \----.
+|__|      \______/   \______/      |__|     |_______|| _| `._____|
+                                                                  
+*/
+
+
+.Footer{
+  background-color: rgb(238,238,238);
+  bottom: 0px;
+  width: 100%;
+  max-height: 398px;
+}
+.Footer img{
+  height: 100%;
+  bottom: 0px;
+  display: inline-block;
+  margin-bottom: -6px;
+margin-left: -1px;
+
+}
+.Footer #APropos{
+  width: 20%;
+  display: inline-block;
+}
+
+
+
+/*
+     _______..______    _______   ______  __   _______  __    ______ 
+    /       ||   _  \  |   ____| /      ||  | |   ____||  |  /      |
+   |   (----`|  |_)  | |  |__   |  ,----'|  | |  |__   |  | |  ,----'
+    \   \    |   ___/  |   __|  |  |     |  | |   __|  |  | |  |     
+.----)   |   |  |      |  |____ |  `----.|  | |  |     |  | |  `----.
+|_______/    | _|      |_______| \______||__| |__|     |__|  \______|
+                                                                     
+
+
+*/
 @media (min-width: 768px) {
  .Top_Bar #Texte_de_connexion {
     display: inline;
@@ -103,4 +210,12 @@ a{
   }
 }
 
+/*
+ _______ .__   __.  _______  
+|   ____||  \ |  | |       \ 
+|  |__   |   \|  | |  .--.  |
+|   __|  |  . `  | |  |  |  |
+|  |____ |  |\   | |  '--'  |
+|_______||__| \__| |_______/ 
 
+*/

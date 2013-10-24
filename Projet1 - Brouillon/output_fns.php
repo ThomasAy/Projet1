@@ -65,7 +65,7 @@ function do_html_header($title='', $languages_vars){
     <body>
       <script src="scripts.js"  type="text/javascript"></script>
     <div class="Top_Bar">
-        <div id="Reseaux_sociaux"> <p> &nbsp <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
+        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
@@ -103,10 +103,25 @@ function do_html_header($title='', $languages_vars){
 
 function do_html_footer(){
 	?>
+  <div style="height: 2000px;"></div>
+    <div class="Footer">
+      
+      <img id="ceinture" src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage">
+
+      <div id="APropos">
+        
+      Après 20 ans d'expèrience dans la maroquinerie de luxe, GrindHouse Leather lance 
+      sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
+      nous mettons un point d'honneur à vous proposer des produits faits 
+      main en France, de qualité supérieure et pensés pour vous.
+      </div>
+
+    </div>
+  </body>
+  </html>
     
-    </body>
-    </html>
-    <?php
+
+  <?php
 
 }
 
