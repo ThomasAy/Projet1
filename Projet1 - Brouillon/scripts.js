@@ -8,7 +8,7 @@ function resizeWindow()
 
 window.onload = function()
       {
-          var imgWidth = document.getElementById("ceinture").width; 
+          //var imgWidth = document.getElementById("ceinture").width; 
           //document.getElementById("APropos").style.left = parseInt(imgWidth) + "px";
           //alert(parseInt(imgWidth));
             

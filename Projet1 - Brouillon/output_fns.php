@@ -103,27 +103,43 @@ function do_html_header($title='', $languages_vars){
 function do_html_footer(){
 	?>
   <div style="height: 2000px;"></div>
-    <div class="Footer">
-      
-      <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage"></div>
+  <div class="PreFooter">
+    <TABLE> 
+      <TR> 
+         <TH><img src="medias/icons/livraison24.png" alt="valeur"/></TH> 
+         <TH><img src="medias/icons/paiementsecurise.png" alt="valeur"/></TH> 
+         <TH><img src="medias/icons/serviceclient.png" alt="valeur"/></TH> 
+         <TH><img src="medias/icons/satisfaitrembourse.png" alt="valeur"/></TH>
+         <TH><img src="medias/icons/madeinfrance.png" alt="valeur"/></TH> 
+      </TR>  
+    </TABLE> 
 
-      <div id="APropos">
-        <h1>À PROPOS</h1>
-        <hr>
+
+
+
+  </div>
+
+  <div class="Footer">
+    
+    <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage"></div>
+
+    <div id="APropos">
+      <h1>À PROPOS</h1>
+      <hr>
 <p>Après 20 ans d'expérience dans la maroquinerie de luxe, GrindHouse Leather lance 
 sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
 nous mettons un point d'honneur à vous proposer des produits faits 
 main en France, de qualité supérieure et pensés pour vous.</p>
-      </div>
-      <div id="Contact">
-        <h1>CONTACT</h1>
-        <hr>
-      </div>
-
-
     </div>
-  </body>
-  </html>
+    <div id="Contact">
+      <h1>CONTACT</h1>
+      <hr>
+    </div>
+
+
+  </div>
+</body>
+</html>
     
 
   <?php

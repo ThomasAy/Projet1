@@ -133,7 +133,19 @@ hr{
 |__|      \______/   \______/      |__|     |_______|| _| `._____|
                                                                   
 */
+.PreFooter{
+  width: 100%;
+}
 
+.PreFooter table{
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 20px;
+    *border-collapse: expression('separate', cellSpacing = '20px');
+}
+.PreFooter img{
+  width: 80%;
+}
 
 .Footer{
   background-color: rgb(217,217,217);
