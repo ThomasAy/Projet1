@@ -175,6 +175,18 @@ hr{
   padding-top: 50px;
   margin-left: 5%;
 }
+.Footer #Contact table{
+  border-collapse: separate;
+  border-spacing: 5px;
+ *border-collapse: expression('separate', cellSpacing = '5px');
+}
+.Footer #Contact img{
+  width: 80%;
+}
+.Footer #CGU{
+  
+}
+
 
 /*
      _______..______    _______   ______  __   _______  __    ______ 

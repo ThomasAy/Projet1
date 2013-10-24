@@ -113,10 +113,6 @@ function do_html_footer(){
          <TH><img src="medias/icons/madeinfrance.png" alt="valeur"/></TH> 
       </TR>  
     </TABLE> 
-
-
-
-
   </div>
 
   <div class="Footer">
@@ -134,7 +130,17 @@ main en France, de qualité supérieure et pensés pour vous.</p>
     <div id="Contact">
       <h1>CONTACT</h1>
       <hr>
+      <table>
+        <tr>
+          <th><img src="medias/icons/ico-mail.png"></th>
+          <th><img src="medias/icons/ico-facebook.png"></th>
+          <th><img src="medias/icons/ico-mail.png"></th>
+        </tr>
+      </table>
     </div>
+    <div id="CGU">
+      <p><a href="">Conditions Générales</a> | &copy; GrindHouse Leather</p>
+    </div> 
 
 
   </div>
