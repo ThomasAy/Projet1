@@ -38,7 +38,6 @@ function do_html_header($title='', $languages_vars){
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <!-- begin CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="TopBar.css">
     <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
     <link href="polyglot-language-switcher.css" type="text/css" rel="stylesheet">
@@ -106,15 +105,21 @@ function do_html_footer(){
   <div style="height: 2000px;"></div>
     <div class="Footer">
       
-      <img id="ceinture" src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage">
+      <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage"></div>
 
       <div id="APropos">
-        
-      Après 20 ans d'expèrience dans la maroquinerie de luxe, GrindHouse Leather lance 
-      sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
-      nous mettons un point d'honneur à vous proposer des produits faits 
-      main en France, de qualité supérieure et pensés pour vous.
+        <h1>À PROPOS</h1>
+        <hr>
+<p>Après 20 ans d'expérience dans la maroquinerie de luxe, GrindHouse Leather lance 
+sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
+nous mettons un point d'honneur à vous proposer des produits faits 
+main en France, de qualité supérieure et pensés pour vous.</p>
       </div>
+      <div id="Contact">
+        <h1>CONTACT</h1>
+        <hr>
+      </div>
+
 
     </div>
   </body>
