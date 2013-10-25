@@ -152,7 +152,6 @@ function do_html_header($title='', $languages_vars){
 
 function do_html_footer(){
 	?>
-<<<<<<< HEAD
   <div style="height: 0px;"></div>
   <div class="PreFooter">
     <TABLE> 
@@ -169,12 +168,6 @@ function do_html_footer(){
   <div class="Footer">
     
     <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage" /></div>
-=======
-  <div style="height: 2000px;"></div>
-    <div class="Footer">
-      
-      <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage"></div>
->>>>>>> fa51aa70dc5b18b8fd1012437c5ff685f6e7fdf2
 
       <div id="APropos">
         <h1>À PROPOS</h1>
@@ -183,7 +176,6 @@ function do_html_footer(){
 sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
 nous mettons un point d'honneur à vous proposer des produits faits 
 main en France, de qualité supérieure et pensés pour vous.</p>
-<<<<<<< HEAD
     </div>
     <div id="Contact">
       <h1>CONTACT</h1>
@@ -202,18 +194,7 @@ main en France, de qualité supérieure et pensés pour vous.</p>
   </div>
 </body>
 </html>
-=======
-      </div>
-      <div id="Contact">
-        <h1>CONTACT</h1>
-        <hr>
-      </div>
 
-
-    </div>
-  </body>
-  </html>
->>>>>>> fa51aa70dc5b18b8fd1012437c5ff685f6e7fdf2
     
 
   <?php
