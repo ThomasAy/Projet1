@@ -128,23 +128,17 @@ function do_html_header($title='', $languages_vars){
       <h1>À voir aussi...</h1>
         <div class="Montre">
           <img src="medias/pictures/Montre-2-Homepage.jpg" alt="Montre">
+          <h1 class="Produit1">Produit #1</h1>
         </div>
 
-        <div class="Produit1">
-          <h1>Produit #1</h1>
-        </div>
         <div class="Gants">
           <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+           <h1 class="Produit2">Produit #2</h1>
         </div>
 
-        <div class="Produit2">
-          <h1>Produit #2</h1>
-        </div>
         <div class="Portefeuille">
           <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">  
-        </div>
-        <div class="Produit3">
-          <h1>Produit #3</h1>
+          <h1 class="Produit3">Produit #3</h1>
         </div>
       </div>
   <?php

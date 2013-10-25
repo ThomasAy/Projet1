@@ -43,13 +43,14 @@ a:visited{
 a{
   color: black;
 }
-@font-face { font-family: UL; src: url('HelveticaNeueUltraLight.ttf'); } 
 
 div{
-  font-family: UL;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
 }
 p{
-  font-family: UL;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
 }
 
 
@@ -99,7 +100,6 @@ p{
 }
 
 .Top_Bar #Texte_de_connexion {
-  font-family: "Helvetica Neue";
   position: absolute;
   right: 5%;
   min-height: 30px;
@@ -113,7 +113,6 @@ p{
 }
 
 .Top_Bar #Rechercher {
-  background-image: url("images/Rechercher.png");
   position: absolute;
   left: 42%;
   top: 15px;
@@ -122,13 +121,16 @@ p{
   z-index: 50;
 }
 
+.Top_Bar #btnValider{
+    font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
   .Top_Bar #Texte_de_connexion {
-  font-family: "Helvetica Neue";
   display: none;
   position: absolute;
   right: 30px;
-    top: 15px;
-
+  top: 15px;
   min-height: 30px;
 }
 
@@ -224,9 +226,9 @@ p{
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  font-size: 120px;
-  margin-top: 50px;
-  margin-left: 110px;
+  margin-left: 10%;
+    font-size: 600%;
+
   z-index: 2;
 
 }
@@ -236,76 +238,76 @@ p{
   float:left;
   font-family: "Helvetica Neue";
   font-weight: 100;
+  margin-left: 60%;
   color: black;
-  font-size: 120px;
-  margin-top: 50px;
-  margin-left: 970px;
+  font-size: 6em;
   z-index: 2;
 }
 
 .ASavoir {
-  position: absolute;
+  position: relative;
   font-family: "Helvetica Neue";
   font-weight: 100;
   font-size:150%;
   color: black;
-  left: 50px;
-  top: 900px;
+  width: 90%;
+  left: 5%;
+  height: 100%;
+  margin-top: 65%;
+}
+
+.ASavoir img{
+  width: 100%;
+  border:2px solid rgb(238,238,238);
 
 }
 
 .Montre{
-  position: absolute;
+  position: relative;
   float:left;
-  border:2px solid rgb(238,238,238);
   left: 0px;
   top: 50px;
-  width: 412px;
+  margin-left: 5%;
+  width: 25%;
 }
 
 .Produit1{
-  position: absolute;
+  position: relative;
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  left: 0px;
-  top: 350px;
+  width: 100%;
 }
 
 .Gants{
-  position: absolute;
+  position: relative;
   float:left;
-  border:2px solid rgb(238,238,238);
-  left: 535px;
   top: 50px;
-  width: 412px;
+  margin-left: 5%;
+  width: 25%;
 }
 
 .Produit2{
-  position: absolute;
+  position: relative;
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  left: 535px;
-  top: 350px;
 }
 
 .Portefeuille{
-  position: absolute;
+  position: relative;
   float:left;
-  border:2px solid rgb(238,238,238);
-  left: 1065px;
   top: 50px;
-  width: 412px;
+  width: 100%;
+  margin-left: 5%;
+  width: 25%;
 }
 
 .Produit3{
-  position: absolute;
+  position: relative;
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  left: 1065px;
-  top: 350px;
 }
 
 
@@ -320,9 +322,20 @@ p{
 */
 
 .PreFooter{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
   width: 100%;
   position: relative;
-  margin-top:  65%;
+  margin-top:  30%;
+}
+.PreFooter table{
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 20px;
+    *border-collapse: expression('separate', cellSpacing = '20px');
+}
+.PreFooter img{
+  width: 80%;
 }
 
 .Footer{
@@ -330,6 +343,7 @@ p{
   bottom: 0px;
   float: left;
   width: 100%;
+  margin-top: 5%;
   clear: both;
 }
 
@@ -352,6 +366,10 @@ p{
   width: 20%;
   padding-top: 50px;
   margin-left: 5%;
+}
+
+.Footer #Contact img{
+  width: 100%;
 }
 
 
