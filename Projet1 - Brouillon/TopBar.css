@@ -136,56 +136,78 @@ hr{
 
 .Contenu {
   position: absolute;
-  left: 50px;
-  right: 50px;
-  top: 115px;
-  height: 730px;
-  background-color: rgb(238,238,238);
+  left: 5%;
+  right: 5%;
+  top: 15%;
+  width: 90%;
+  background-color: rgb(199,200,202);
   clear: both;
+}
+
+#femme, #homme{
+  position: relative;
+  float: left;
+  width: 42%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  z-index: 1;
+}
+#femme{
+    margin-left: 5%;
+
+}
+#homme{
+  margin-left: 6%;
 }
 
 #femme img{
   position: relative;
   float:left;
-  margin-top: 50px;
-  margin-left: 50px;
-  height: 630px;
-  width: 520px;
   z-index: 1;
+  width: 100%;
 }
 
-#logo img{
-  position: relative;
-  float:left;
-  margin-top: 260px;
-  margin-left: 80px;
-  margin-right: 80px;
-  height: 200px;
-  width: 140px;
-  z-index: 2;
-}
 
 
 #homme img{
   position: relative;
   float:left;
-  margin-top: 50px;
-  margin-left: 43px;
-  margin-right: 50px;
-  height: 630px;
-  width: 520px;
-  z-index: 1;
+  width: 100%;
 }
-.BandeGenre {
-  position: absolute;
-  opacity: 0.502;
-  background-color: rgb(237,238,239);
-  left: 0px;
-  top: 240px;
-  width: 1480px;
-  height: 240px;
-  z-index: 1;
 
+.BandeGenre {
+  background-image: url("medias/icons/pixel.png");
+  background-repeat: repeat;
+  position: absolute;
+  left: 0px;
+  top: 40%;
+  width: 100%;
+  height: 20%;
+  z-index: 2;
+
+}
+#logo {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;  
+  z-index: 3;
+  opacity: 1;
+}
+
+#logo img{
+  position: relative;
+ height: 100%;
+
+}
+
+.Gris{
+  position: absolute;
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  z-index: 3;
 }
 
 
@@ -200,6 +222,8 @@ hr{
 */
 .PreFooter{
   width: 100%;
+  position: relative;
+  margin-top:  65%;
 }
 
 .PreFooter table{

@@ -108,14 +108,15 @@ function do_html_homepage_body(){
         <div id="femme">
           <img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme">
         </div>
-        <div id="logo">
-          <img src="medias/pictures/logo.png" alt="GHL Logo">
+        <div class="BandeGenre">
+          <div id="logo">
+            <img src="medias/pictures/logo.png" alt="GHL Logo">
+          </div>
         </div>
         <div id="homme">
          <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
         </div>
-        <div class="BandeGenre">
-        </div>
+        
   </div>
   <?php
 }
@@ -123,7 +124,7 @@ function do_html_homepage_body(){
 
 function do_html_footer(){
 	?>
-  <div style="height: 2000px;"></div>
+  <div style="height: 0px;"></div>
   <div class="PreFooter">
     <TABLE> 
       <TR> 
@@ -138,7 +139,7 @@ function do_html_footer(){
 
   <div class="Footer">
     
-    <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage"></div>
+    <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage" /></div>
 
     <div id="APropos">
       <h1>À PROPOS</h1>
@@ -153,17 +154,15 @@ main en France, de qualité supérieure et pensés pour vous.</p>
       <hr>
       <table>
         <tr>
-          <th><img src="medias/icons/ico-mail.png"></th>
-          <th><img src="medias/icons/ico-facebook.png"></th>
-          <th><img src="medias/icons/ico-mail.png"></th>
+          <th><img src="medias/icons/ico-mail.png" alt="mail icon" /></th>
+          <th><img src="medias/icons/ico-facebook.png" alt="FB icon" /></th>
+          <th><img src="medias/icons/ico-mail.png" alt="twitter icon" /></th>
         </tr>
       </table>
     </div>
     <div id="CGU">
       <p><a href="">Conditions Générales</a> | &copy; GrindHouse Leather</p>
     </div> 
-
-
   </div>
 </body>
 </html>
