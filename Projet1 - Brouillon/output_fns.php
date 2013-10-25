@@ -100,73 +100,77 @@ function do_html_header($title='', $languages_vars){
     <?php
 	}
 
-function do_html_homepage_body(){ 
+  function do_html_homepage_body(){ 
 
   ?>
 
   <div class="Contenu">
-        <div id="femme">
-          <img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme">
-        </div>
-        <div id="logo">
-          <img src="medias/pictures/logo.png" alt="GHL Logo">
-        </div>
-        <div id="homme">
-         <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
-        </div>
-        <div class="BandeGenre">
-        </div>
+    <div id="femme">
+      <img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme">
+    </div>
+    <div id="logo">
+      <img src="medias/pictures/logo.png" alt="GHL Logo">
+    </div>
+    <div id="homme">
+     <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
+    </div>
+    <div class="BandeGenre">  
+    <div id="femmeNom"> 
+      <h1>FEMME</h1>
+    </div>
+    <div id="hommeNom">
+      <h1>HOMME</h1>
+    </div>
+    </div>
   </div>
+    <div class="ASavoir">
+      <h1>À voir aussi...</h1>
+        <div class="Montre">
+          <img src="medias/pictures/Montre-2-Homepage.jpg" alt="Montre">
+        </div>
+        <div class="Produit1">
+          <h1>Produit #1</h1>
+        </div>
+        <div class="Gants">
+          <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+        </div>
+        <div class="Produit2">
+          <h1>Produit #2</h1>
+        </div>
+        <div class="Portefeuille">
+          <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">  
+        </div>
+        <div class="Produit3">
+          <h1>Produit #3</h1>
+        </div>
+      </div>
   <?php
 }
-
 
 function do_html_footer(){
 	?>
   <div style="height: 2000px;"></div>
-  <div class="PreFooter">
-    <TABLE> 
-      <TR> 
-         <TH><img src="medias/icons/livraison24.png" alt="valeur"/></TH> 
-         <TH><img src="medias/icons/paiementsecurise.png" alt="valeur"/></TH> 
-         <TH><img src="medias/icons/serviceclient.png" alt="valeur"/></TH> 
-         <TH><img src="medias/icons/satisfaitrembourse.png" alt="valeur"/></TH>
-         <TH><img src="medias/icons/madeinfrance.png" alt="valeur"/></TH> 
-      </TR>  
-    </TABLE> 
-  </div>
+    <div class="Footer">
+      
+      <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage"></div>
 
-  <div class="Footer">
-    
-    <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage"></div>
-
-    <div id="APropos">
-      <h1>À PROPOS</h1>
-      <hr>
+      <div id="APropos">
+        <h1>À PROPOS</h1>
+        <hr>
 <p>Après 20 ans d'expérience dans la maroquinerie de luxe, GrindHouse Leather lance 
 sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
 nous mettons un point d'honneur à vous proposer des produits faits 
 main en France, de qualité supérieure et pensés pour vous.</p>
-    </div>
-    <div id="Contact">
-      <h1>CONTACT</h1>
-      <hr>
-      <table>
-        <tr>
-          <th><img src="medias/icons/ico-mail.png"></th>
-          <th><img src="medias/icons/ico-facebook.png"></th>
-          <th><img src="medias/icons/ico-mail.png"></th>
-        </tr>
-      </table>
-    </div>
-    <div id="CGU">
-      <p><a href="">Conditions Générales</a> | &copy; GrindHouse Leather</p>
-    </div> 
+      </div>
+      <div id="Contact">
+        <h1>CONTACT</h1>
+        <hr>
+      </div>
 
 
-  </div>
-</body>
-</html>
+    </div>
+  </body>
+  </html>
     
 
   <?php

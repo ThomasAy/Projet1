@@ -1,12 +1,11 @@
 /*
-.______       _______     _______. _______ .___________.
-|   _  \     |   ____|   /       ||   ____||           |
-|  |_)  |    |  |__     |   (----`|  |__   `---|  |----`
-|      /     |   __|     \   \    |   __|      |  |     
-|  |\  \----.|  |____.----)   |   |  |____     |  |     
-| _| `._____||_______|_______/    |_______|    |__|     
-                                                        
+                    _   
+ _ __ ___  ___  ___| |_ 
+| '__/ _ \/ __|/ _ \ __|
+| | |  __/\__ \  __/ |_ 
+|_|  \___||___/\___|\__|
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,6 +27,8 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
+
 /* 
   _______  _______ .__   __.  _______ .______          ___       __      
  /  _____||   ____||  \ |  | |   ____||   _  \        /   \     |  |     
@@ -36,25 +37,25 @@ time, mark, audio, video {
 |  |__| | |  |____ |  |\   | |  |____ |  |\  \----./  _____  \  |  `----.
  \______| |_______||__| \__| |_______|| _| `._____/__/     \__\ |_______|
 */
-
 a:visited{
   text-decoration: none;
 }
 a{
   color: black;
 }
-h1{
-  text-align: center;
-  font-size: 2em;
+@font-face { font-family: UL; src: url('HelveticaNeueUltraLight.ttf'); } 
+
+div{
+  font-family: UL;
 }
-body{
-  font-family:'Helvetica Neue', sans-serif;
-  font-weight:100;
+p{
+  font-family: UL;
 }
-hr{
-  width: 80%;
-}
+
+
+
 /*
+
 .___________.  ______   .______   .______        ___      .______      
 |           | /  __  \  |   _  \  |   _  \      /   \     |   _  \     
 `---|  |----`|  |  |  | |  |_)  | |  |_)  |    /  ^  \    |  |_)  |    
@@ -63,9 +64,12 @@ hr{
     |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|
                                                                        
 */
+
+
+
 .Top_Bar {
   position: absolute;
-  background-color: rgb(217,217,217);
+  background-color: rgb(238,238,238);
   left: 0px;
   top: 0px;
   width: 100%;
@@ -94,6 +98,14 @@ hr{
   min-height: 30px;
 }
 
+.Top_Bar #Texte_de_connexion {
+  font-family: "Helvetica Neue";
+  position: absolute;
+  right: 5%;
+  min-height: 30px;
+}
+
+
 .Top_Bar #Reseaux_sociaux {
   position: absolute;
   left: 40px;
@@ -110,17 +122,13 @@ hr{
   z-index: 50;
 }
 
-.Top_Bar #btnValider {
-  font-family:'Helvetica Neue', sans-serif;
-  font-weight:100;
-}
-
-.Top_Bar #Texte_de_connexion {
+  .Top_Bar #Texte_de_connexion {
   font-family: "Helvetica Neue";
   display: none;
   position: absolute;
   right: 30px;
-  top: 15px;
+    top: 15px;
+
   min-height: 30px;
 }
 
@@ -188,6 +196,96 @@ hr{
 
 }
 
+#femmeNom{
+  position: absolute;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  font-size: 120px;
+  margin-top: 50px;
+  margin-left: 110px;
+  z-index: 2;
+
+}
+
+#hommeNom{
+  position: absolute;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  font-size: 120px;
+  margin-top: 50px;
+  margin-left: 970px;
+  z-index: 2;
+}
+
+.ASavoir {
+  position: absolute;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:150%;
+  color: black;
+  left: 50px;
+  top: 900px;
+
+}
+
+.Montre{
+  position: absolute;
+  float:left;
+  border:2px solid rgb(238,238,238);
+  left: 0px;
+  top: 50px;
+  width: 412px;
+}
+
+.Produit1{
+  position: absolute;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  left: 0px;
+  top: 350px;
+}
+
+.Gants{
+  position: absolute;
+  float:left;
+  border:2px solid rgb(238,238,238);
+  left: 535px;
+  top: 50px;
+  width: 412px;
+}
+
+.Produit2{
+  position: absolute;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  left: 535px;
+  top: 350px;
+}
+
+.Portefeuille{
+  position: absolute;
+  float:left;
+  border:2px solid rgb(238,238,238);
+  left: 1065px;
+  top: 50px;
+  width: 412px;
+}
+
+.Produit3{
+  position: absolute;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  left: 1065px;
+  top: 350px;
+}
+
 
 /*
  _______   ______     ______   .___________. _______ .______      
@@ -198,19 +296,7 @@ hr{
 |__|      \______/   \______/      |__|     |_______|| _| `._____|
                                                                   
 */
-.PreFooter{
-  width: 100%;
-}
 
-.PreFooter table{
-  margin: auto;
-  border-collapse: separate;
-  border-spacing: 20px;
-    *border-collapse: expression('separate', cellSpacing = '20px');
-}
-.PreFooter img{
-  width: 80%;
-}
 
 .Footer{
   background-color: rgb(217,217,217);
@@ -240,17 +326,7 @@ hr{
   padding-top: 50px;
   margin-left: 5%;
 }
-.Footer #Contact table{
-  border-collapse: separate;
-  border-spacing: 5px;
- *border-collapse: expression('separate', cellSpacing = '5px');
-}
-.Footer #Contact img{
-  width: 80%;
-}
-.Footer #CGU{
-  
-}
+
 
 
 /*
@@ -260,6 +336,9 @@ hr{
     \   \    |   ___/  |   __|  |  |     |  | |   __|  |  | |  |     
 .----)   |   |  |      |  |____ |  `----.|  | |  |     |  | |  `----.
 |_______/    | _|      |_______| \______||__| |__|     |__|  \______|
+                                                                     
+
+
 */
 @media (min-width: 768px) {
  .Top_Bar #Texte_de_connexion {
@@ -272,25 +351,24 @@ hr{
   #btnValider{
     display: none;
   }
-
   .Top_Bar #Texte_de_connexion {
     display: inline;
   }
+
 }
 
 @media (max-width: 430px) {
-  .Top_Bar #Texte_de_connexion {
+.Top_Bar #Texte_de_connexion {
     display: none;
   }
-
-  .Top_Bar #inputSearch {
+.Top_Bar #inputSearch {
   width: 50px;
-  }
+}
 
-  .Top_Bar #Rechercher {
+.Top_Bar #Rechercher {
   width: 60px;
   left: 65%;
-  }
+}
 
   #btnValider{
     display: none;
@@ -304,4 +382,5 @@ hr{
 |   __|  |  . `  | |  |  |  |
 |  |____ |  |\   | |  '--'  |
 |_______||__| \__| |_______/ 
+
 */
