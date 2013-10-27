@@ -8,10 +8,9 @@ function resizeWindow()
 
 window.onload = function()
       {
-          var pageWidth = window.innerWidth; 
-          var size = (pageWidth - 200 ) / 2;
-
-document.getElementById("search").style.marginLeft = size + "px";
-          //alert(size);
+          //var imgWidth = document.getElementById("ceinture").width; 
+          //document.getElementById("APropos").style.left = parseInt(imgWidth) + "px";
+          //alert(parseInt(imgWidth));
+            
       };
 

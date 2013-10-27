@@ -36,6 +36,7 @@ function do_html_header($languages_vars, $title=''){
 	<html>
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<<<<<<< HEAD
       <link rel="stylesheet" type="text/css" href="style.css">
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
@@ -52,43 +53,164 @@ function do_html_header($languages_vars, $title=''){
             font-size: 10px !important;
           };
       </style>
+=======
+
+  <!-- begin CSS -->
+    <link rel="stylesheet" type="text/css" href="TopBar.css">
+    <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
+    <link href="polyglot-language-switcher.css" type="text/css" rel="stylesheet">
+  <!-- end CSS -->
+  
+  <!-- begin JS -->
+    <script src="jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="jquery.polyglot.language.switcher.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#polyglotLanguageSwitcher').polyglotLanguageSwitcher({
+                effect: 'fade',
+                testMode: true,
+                onChange: function(evt){
+                    alert("The selected language is: "+evt.selectedItem);
+                }
+            });
+        });
+    </script>
+  <!-- end JS -->
+
+>>>>>>> 3a922614e1d80c4b19ab79edc5c1c3dc70e46a50
       <title><?php echo $title; ?></title>
     </head>
     <body>
       <script src="scripts.js"  type="text/javascript"></script>
-    <div id="topbar">
-        <div id="social_buttons"> <p><a href="">FB</a> | <a href="">TW</a> | <a href="">PI</a></p></div>
-        <div id="languages">
-            <p><?php do_html_url($_SERVER['PHP_SELF'].'?lang=fr', 'FR');?> - <?php do_html_url($_SERVER['PHP_SELF'].'?lang=en', 'EN');?></p>
+    <div class="Top_Bar">
+        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
+<!-- begin container -->
+        <div id="Pays">
+<!-- begin language switcher -->
+            <div id="polyglotLanguageSwitcher">
+              <form action="#">
+                <select id="polyglot-language-options">
+                  <option id="en" value="en">En</option>
+                  <option id="fr" value="fr" selected>Fr</option>
+                </select>
+              </form>
+            </div>
+<!-- end language switcher -->
         </div>
+<!-- end container -->    
         
-        <div id="search">
+        <div id="Rechercher">
           <form method="post" action="#">
-            <input type="text" name="keyWord"/>
-            <input type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
+            <input id="inputSearch" type="text" name="keyWord"/>
+            <input id="btnValider" type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
           </form>
         </div>
 
-        <div id="account">
+        <div id="Texte_de_connexion">
           <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
         </div>
-        <div id="panier">
+        <div id="Panier">
             <a href="#">
-                <img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
+                <span><img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
             </a>
         </div>
 
-        
     </div>
     <?php
 	}
 
+  function do_html_homepage_body(){ 
+
+  ?>
+
+  <div class="Contenu">
+    <div id="femme">
+      <img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme">
+    </div>
+    <div id="homme">
+     <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
+    </div>
+    <div class="BandeGenre"> 
+      <div id="logo">
+          <img src="medias/pictures/logo.png" alt="GHL Logo">
+      </div>
+        
+    <div id="femmeNom"> 
+      <h1>FEMME</h1>
+    </div>
+    <div id="hommeNom">
+      <h1>HOMME</h1>
+    </div>
+    </div>
+  </div>
+    <div class="ASavoir">
+      <h1>À voir aussi...</h1>
+        <div class="Montre">
+          <img src="medias/pictures/Montre-2-Homepage.jpg" alt="Montre">
+          <h1 class="Produit1">Produit #1</h1>
+        </div>
+
+        <div class="Gants">
+          <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+           <h1 class="Produit2">Produit #2</h1>
+        </div>
+
+        <div class="Portefeuille">
+          <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">  
+          <h1 class="Produit3">Produit #3</h1>
+        </div>
+      </div>
+  <?php
+}
+
 function do_html_footer(){
 	?>
+  <div style="height: 0px;"></div>
+  <div class="PreFooter">
+    <TABLE> 
+      <TR> 
+         <TH><img src="medias/icons/livraison24.png" alt="valeur"/></TH> 
+         <TH><img src="medias/icons/paiementsecurise.png" alt="valeur"/></TH> 
+         <TH><img src="medias/icons/serviceclient.png" alt="valeur"/></TH> 
+         <TH><img src="medias/icons/satisfaitrembourse.png" alt="valeur"/></TH>
+         <TH><img src="medias/icons/madeinfrance.png" alt="valeur"/></TH> 
+      </TR>  
+    </TABLE> 
+  </div>
+
+  <div class="Footer">
     
-    </body>
-    </html>
-    <?php
+    <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage" /></div>
+
+      <div id="APropos">
+        <h1>À PROPOS</h1>
+        <hr>
+<p>Après 20 ans d'expérience dans la maroquinerie de luxe, GrindHouse Leather lance 
+sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
+nous mettons un point d'honneur à vous proposer des produits faits 
+main en France, de qualité supérieure et pensés pour vous.</p>
+    </div>
+    <div id="Contact">
+      <h1>CONTACT</h1>
+      <hr>
+      <table>
+        <tr>
+          <th><img src="medias/icons/ico-mail.png" alt="mail icon" /></th>
+          <th><img src="medias/icons/ico-facebook.png" alt="FB icon" /></th>
+          <th><img src="medias/icons/ico-mail.png" alt="twitter icon" /></th>
+        </tr>
+      </table>
+    </div>
+    <div id="CGU">
+      <p><a href="">Conditions Générales</a> | &copy; GrindHouse Leather</p>
+    </div> 
+  </div>
+</body>
+</html>
+
+    
+
+  <?php
 
 }
 

@@ -1,0 +1,431 @@
+/*
+                    _   
+ _ __ ___  ___  ___| |_ 
+| '__/ _ \/ __|/ _ \ __|
+| | |  __/\__ \  __/ |_ 
+|_|  \___||___/\___|\__|
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* 
+  _______  _______ .__   __.  _______ .______          ___       __      
+ /  _____||   ____||  \ |  | |   ____||   _  \        /   \     |  |     
+|  |  __  |  |__   |   \|  | |  |__   |  |_)  |      /  ^  \    |  |     
+|  | |_ | |   __|  |  . `  | |   __|  |      /      /  /_\  \   |  |     
+|  |__| | |  |____ |  |\   | |  |____ |  |\  \----./  _____  \  |  `----.
+ \______| |_______||__| \__| |_______|| _| `._____/__/     \__\ |_______|
+*/
+a:visited{
+  text-decoration: none;
+}
+a{
+  color: black;
+}
+
+div{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+p{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+
+
+/*
+
+.___________.  ______   .______   .______        ___      .______      
+|           | /  __  \  |   _  \  |   _  \      /   \     |   _  \     
+`---|  |----`|  |  |  | |  |_)  | |  |_)  |    /  ^  \    |  |_)  |    
+    |  |     |  |  |  | |   ___/  |   _  <    /  /_\  \   |      /     
+    |  |     |  `--'  | |  |      |  |_)  |  /  _____  \  |  |\  \----.
+    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|
+                                                                       
+*/
+
+
+
+.Top_Bar {
+  position: absolute;
+  background-color: rgb(238,238,238);
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height : 5%;
+  min-height: 50px;
+}  
+
+.Top_Bar #Panier {
+  font-size: 24px;
+  font-family: "Myriad Pro";
+  color: rgb( 255, 255, 255 );
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  z-index: 48;
+}
+
+  .Top_Bar #Pays {
+  font-family: "Helvetica Neue";
+  color: rgb( 209, 211, 212 );
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 40px;
+  min-height: 30px;
+}
+
+.Top_Bar #Texte_de_connexion {
+  position: absolute;
+  right: 5%;
+  min-height: 30px;
+}
+
+
+.Top_Bar #Reseaux_sociaux {
+  position: absolute;
+  left: 40px;
+  top: 15px;
+}
+
+.Top_Bar #Rechercher {
+  position: absolute;
+  left: 42%;
+  top: 15px;
+  width: 50%;
+  height: 32px;
+  z-index: 50;
+}
+
+.Top_Bar #btnValider{
+    font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+  .Top_Bar #Texte_de_connexion {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  min-height: 30px;
+}
+
+/*
+.______     ______    _______  ____    ____ 
+|   _  \   /  __  \  |       \ \   \  /   / 
+|  |_)  | |  |  |  | |  .--.  | \   \/   /  
+|   _  <  |  |  |  | |  |  |  |  \_    _/   
+|  |_)  | |  `--'  | |  '--'  |    |  |     
+|______/   \______/  |_______/     |__|  
+
+*/
+
+.Contenu {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 15%;
+  width: 90%;
+  background-color: rgb(199,200,202);
+  clear: both;
+}
+
+#femme, #homme{
+  position: relative;
+  float: left;
+  width: 42%;
+  height: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  z-index: 1;
+}
+#femme{
+    margin-left: 5%;
+
+}
+#homme{
+  margin-left: 6%;
+}
+
+#femme img{
+  position: relative;
+  float:left;
+  z-index: 1;
+  width: 100%;
+}
+
+
+
+#homme img{
+  position: relative;
+  float:left;
+  width: 100%;
+}
+
+.BandeGenre {
+  background-image: url("medias/icons/pixel.png");
+  background-repeat: repeat;
+  position: absolute;
+  left: 0px;
+  top: 40%;
+  width: 100%;
+  height: 20%;
+  z-index: 2;
+
+}
+#logo {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;  
+  z-index: 3;
+  opacity: 1;
+}
+
+#logo img{
+  position: relative;
+ height: 100%;
+
+}
+
+.Gris{
+  position: absolute;
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  z-index: 3;
+}
+
+#femmeNom{
+  position: absolute;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  margin-left: 10%;
+    font-size: 600%;
+
+  z-index: 2;
+
+}
+
+#hommeNom{
+  position: absolute;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 60%;
+  color: black;
+  font-size: 6em;
+  z-index: 2;
+}
+
+.ASavoir {
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:150%;
+  color: black;
+  width: 90%;
+  left: 5%;
+  height: 100%;
+  margin-top: 65%;
+}
+
+.ASavoir img{
+  width: 100%;
+  border:2px solid rgb(238,238,238);
+
+}
+
+.Montre{
+  position: relative;
+  float:left;
+  left: 0px;
+  top: 50px;
+  margin-left: 5%;
+  width: 25%;
+}
+
+.Produit1{
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  width: 100%;
+}
+
+.Gants{
+  position: relative;
+  float:left;
+  top: 50px;
+  margin-left: 5%;
+  width: 25%;
+}
+
+.Produit2{
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+}
+
+.Portefeuille{
+  position: relative;
+  float:left;
+  top: 50px;
+  width: 100%;
+  margin-left: 5%;
+  width: 25%;
+}
+
+.Produit3{
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+}
+
+
+/*
+ _______   ______     ______   .___________. _______ .______      
+|   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
+|  |__   |  |  |  | |  |  |  | `---|  |----`|  |__   |  |_)  |    
+|   __|  |  |  |  | |  |  |  |     |  |     |   __|  |      /     
+|  |     |  `--'  | |  `--'  |     |  |     |  |____ |  |\  \----.
+|__|      \______/   \______/      |__|     |_______|| _| `._____|
+                                                                  
+*/
+
+.PreFooter{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  position: relative;
+  margin-top:  30%;
+}
+.PreFooter table{
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 20px;
+    *border-collapse: expression('separate', cellSpacing = '20px');
+}
+.PreFooter img{
+  width: 80%;
+}
+
+.Footer{
+  background-color: rgb(217,217,217);
+  bottom: 0px;
+  float: left;
+  width: 100%;
+  margin-top: 5%;
+  clear: both;
+}
+
+.Footer #Ceinture{
+  float: left;
+  width: 50%;
+  margin-left: -1px;
+}
+
+.Footer #APropos{
+  text-align: justify;
+  float: left;
+  width: 20%;
+  padding-top: 50px;
+}
+
+.Footer #Contact{
+  text-align: justify;
+  float: left;
+  width: 20%;
+  padding-top: 50px;
+  margin-left: 5%;
+}
+
+.Footer #Contact img{
+  width: 100%;
+}
+
+
+
+/*
+     _______..______    _______   ______  __   _______  __    ______ 
+    /       ||   _  \  |   ____| /      ||  | |   ____||  |  /      |
+   |   (----`|  |_)  | |  |__   |  ,----'|  | |  |__   |  | |  ,----'
+    \   \    |   ___/  |   __|  |  |     |  | |   __|  |  | |  |     
+.----)   |   |  |      |  |____ |  `----.|  | |  |     |  | |  `----.
+|_______/    | _|      |_______| \______||__| |__|     |__|  \______|
+                                                                     
+
+
+*/
+@media (min-width: 768px) {
+ .Top_Bar #Texte_de_connexion {
+    display: inline;
+  }
+}
+
+
+@media (max-width: 768px) and (min-width: 431px) {
+  #btnValider{
+    display: none;
+  }
+  .Top_Bar #Texte_de_connexion {
+    display: inline;
+  }
+
+}
+
+@media (max-width: 430px) {
+.Top_Bar #Texte_de_connexion {
+    display: none;
+  }
+.Top_Bar #inputSearch {
+  width: 50px;
+}
+
+.Top_Bar #Rechercher {
+  width: 60px;
+  left: 65%;
+}
+
+  #btnValider{
+    display: none;
+  }
+}
+
+/*
+ _______ .__   __.  _______  
+|   ____||  \ |  | |       \ 
+|  |__   |   \|  | |  .--.  |
+|   __|  |  . `  | |  |  |  |
+|  |____ |  |\   | |  '--'  |
+|_______||__| \__| |_______/ 
+
+*/

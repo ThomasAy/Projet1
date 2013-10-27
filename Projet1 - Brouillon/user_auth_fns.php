@@ -48,14 +48,20 @@ function get_username(){
 }
 
 function insert_user($mail, $password, $civ, $firstname, $lastname, $adress, $address2, $zipcode, $city, $country, $phone='', $birthday='', $newsletter= '0', $type_user = 1){
-	$conn = db_connect();
-
+	$mysqli = new mysqli('localhost', 'admin', 'caluire et cuire', 'ghl');
+	
 	//Vérifie si l'utilisateur existe 
 
-	$query = "select * from user where mail = '".$mail."'";
-	$result = $conn->query($query);
+	$query = $mysqli->prepare("select from user");
+	var_dump($query);
+	$query->bind_param('s', $mail);
+	$query->execute();
+	$query->store_result();
 
-	if($result->num_rows != 0 ){
+	$rows = $query->num_rows;
+
+
+	if($rows != 0){
 		return false;
 	}
 
@@ -74,7 +80,7 @@ function insert_user($mail, $password, $civ, $firstname, $lastname, $adress, $ad
 
 	$query = "select id_user from user where mail = '".$mail."'";
 
-	$result = $conn->query($query);
+	$result = $conen->query($query);
 
 	if(!$result){
 		return false;
@@ -92,6 +98,8 @@ function insert_user($mail, $password, $civ, $firstname, $lastname, $adress, $ad
 	$instr->bind_param("iisssssi", '', $id_user, $address, $address2, $city, $zipcode, $country, 1);
 	$instr->execute();
 	$instr->close();
+
+	return true;
 
 }
 
