@@ -149,6 +149,7 @@ p{
   left: 5%;
   right: 5%;
   top: 15%;
+  top
   width: 90%;
   background-color: rgb(199,200,202);
   clear: both;
@@ -220,28 +221,24 @@ p{
   z-index: 3;
 }
 
-#femmeNom{
-  position: absolute;
-  float:left;
+.Nom{
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  margin-left: 10%;
-    font-size: 600%;
-
+  font-size: 7vw; /* see http://stackoverflow.com/a/16390717/2307070 for further information about vw & vh usage */
   z-index: 2;
+}
 
+#femmeNom{
+  position: absolute;
+  float:left;
+  margin-left: 10%;
 }
 
 #hommeNom{
   position: absolute;
   float:left;
-  font-family: "Helvetica Neue";
-  font-weight: 100;
   margin-left: 60%;
-  color: black;
-  font-size: 6em;
-  z-index: 2;
 }
 
 .ASavoir {
@@ -348,28 +345,46 @@ p{
 }
 
 .Footer #Ceinture{
+  position: relative;
   float: left;
   width: 50%;
   margin-left: -1px;
+  z-index: 1;
 }
 
 .Footer #APropos{
+    position: relative;
+
   text-align: justify;
   float: left;
   width: 20%;
   padding-top: 50px;
+    z-index: 1;
+
 }
 
 .Footer #Contact{
+    position: relative;
+
   text-align: justify;
   float: left;
   width: 20%;
   padding-top: 50px;
   margin-left: 5%;
+    z-index: 1;
+
 }
 
 .Footer #Contact img{
   width: 100%;
+    z-index: 1;
+
+}
+
+.Footer #CGU{
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
 

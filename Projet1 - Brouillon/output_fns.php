@@ -116,11 +116,10 @@ function do_html_header($title='', $languages_vars){
           <img src="medias/pictures/logo.png" alt="GHL Logo">
       </div>
         
-    <div id="femmeNom"> 
-      <h1>FEMME</h1>
-    </div>
-    <div id="hommeNom">
-      <h1>HOMME</h1>
+    <div class="Nom"> 
+      <h1 id="femmeNom">FEMME</h1>
+
+      <h1 id="hommeNom">HOMME</h1>
     </div>
     </div>
   </div>
