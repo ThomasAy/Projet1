@@ -731,3 +731,11 @@ function display_warning_message($message){
   </div>
 <?php
 }
+
+function do_html_produit(){
+?>
+
+
+
+<?php  
+}
