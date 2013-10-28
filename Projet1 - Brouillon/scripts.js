@@ -35,6 +35,7 @@ $(document).ready(function(){
   $("#"+MEASUREMENTS_ID).text(getDimensions());
   $(window).on("resize", function(){
       $("#"+MEASUREMENTS_ID).text(getDimensions());
+   
   });
 });
 

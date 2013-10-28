@@ -111,16 +111,10 @@ function do_html_header($title='', $languages_vars){
     <div id="homme">
      <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
     </div>
-    <div class="BandeGenre"> 
       <div id="logo">
-          <img src="medias/pictures/logo.png" alt="GHL Logo">
-      </div>
-        
-    <div class="Nom"> 
-      <h1 id="femmeNom">FEMME</h1>
-
-      <h1 id="hommeNom">HOMME</h1>
-    </div>
+        <img id="femmeNom" src="medias/FEMME.png" alt="GHL Logo">
+        <img id="GLH" src="medias/pictures/logo.png" alt="GHL Logo">
+        <img id="hommeNom" src="medias/HOMME.png" alt="GHL Logo">
     </div>
   </div>
     <div class="ASavoir">
@@ -145,7 +139,6 @@ function do_html_header($title='', $languages_vars){
 
 function do_html_footer(){
 	?>
-  <div style="height: 0px;"></div>
   <div class="PreFooter">
     <TABLE> 
       <TR> 

@@ -38,6 +38,10 @@ time, mark, audio, video {
 |  |__| | |  |____ |  |\   | |  |____ |  |\  \----./  _____  \  |  `----.
  \______| |_______||__| \__| |_______|| _| `._____/__/     \__\ |_______|
 */
+
+body{
+  min-height: 100%;
+}
 a:visited{
   text-decoration: none;
 }
@@ -146,12 +150,14 @@ p{
 */
 
 .Contenu {
-  position: absolute;
+  float: left;
+  margin-left: 5%;
   left: 5%;
   right: 5%;
   width: 90%;
+  margin-top: 5%;
+  margin-bottom: 50px;
   background-color: rgb(199,200,202);
-  clear: both;
 }
 
 #femme, #homme{
@@ -186,58 +192,39 @@ p{
   width: 100%;
 }
 
-.BandeGenre {
+#logo {
   background-image: url("medias/icons/pixel.png");
   background-repeat: repeat;
   position: absolute;
-  left: 0px;
-  top: 40%;
-  width: 100%;
+  float: center;
+  width: 90%;
+  margin-top: 25%;
   height: 20%;
+  max-height: 85px;
+  color: black;
+  font-size: 7vw;
   z-index: 2;
-
-}
-#logo {
-  position: absolute;
-  text-align: center;
-  height: 100%;
-  width: 100%;  
-  z-index: 3;
-  opacity: 1;
 }
 
 #logo img{
-  position: relative;
- height: 100%;
-
+  width: 25%
 }
 
-.Gris{
+#logo #GLH{
+  height: 100%;
+  width: auto;
   position: absolute;
-  position: absolute;
-  width: 100%;
-  height: 10px;
-  z-index: 3;
-}
-
-.Nom{
-  font-family: "Helvetica Neue";
-  font-weight: 100;
-  color: black;
-  font-size: 7vw; /* see http://stackoverflow.com/a/16390717/2307070 for further information about vw & vh usage */
-  z-index: 2;
+  margin-left: 46.5%;
 }
 
 #femmeNom{
   position: absolute;
-  float:left;
   margin-left: 10%;
 }
 
 #hommeNom{
   position: absolute;
-  float:left;
-  margin-left: 60%;
+  margin-left : 57%;
 }
 
 .ASavoir {
@@ -248,8 +235,6 @@ p{
   color: black;
   width: 90%;
   left: 5%;
-  height: 100%;
-  margin-top: 65%;
 }
 
 .ASavoir img{
@@ -322,7 +307,8 @@ p{
   font-weight: 100;
   width: 100%;
   position: relative;
-  margin-top:  30%;
+  margin-top:  50px;
+  float: left;
 }
 .PreFooter table{
   margin: auto;
@@ -341,6 +327,13 @@ p{
   width: 100%;
   margin-top: 5%;
   clear: both;
+}
+
+.Footer hr{
+  width: 80%;
+}
+.Footer h1{
+  text-align: center;
 }
 
 .Footer #text{
@@ -454,9 +447,6 @@ p{
 
   #btnValider{
     display: none;
-  }
-    .ASavoir{
-    margin-top: 85%;
   }
     #APropos{
     display: none;
