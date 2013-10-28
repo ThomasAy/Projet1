@@ -36,7 +36,6 @@ function do_html_header($languages_vars, $title=''){
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<<<<<<< HEAD
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
       <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -55,8 +54,7 @@ function do_html_header($languages_vars, $title=''){
             font-size: 10px !important;
           };
       </style>
-=======
->>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
+
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
     <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
@@ -77,7 +75,6 @@ function do_html_header($languages_vars, $title=''){
             });
         });
     </script>
-<<<<<<< HEAD
 
     <script src="scripts.js"  type="text/javascript"></script>
   <!-- end JS -->
@@ -86,17 +83,7 @@ function do_html_header($languages_vars, $title=''){
       <title><?php echo $title; ?></title>
     </head>
     <body>
-    <br><br><br> <br><br><br> <?php var_dump($_SESSION); ?>
-
-
-=======
-  <!-- end JS -->
-
-      <title><?php echo $title; ?></title>
-    </head>
-    <body>
-      <script src="scripts.js"  type="text/javascript"></script>
->>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
+    
     <div class="Top_Bar">
         <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
@@ -163,9 +150,7 @@ function do_html_header($languages_vars, $title=''){
      <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
     </div>
       <div id="logo">
-        <img id="femmeNom" src="medias/FEMME.png" alt="GHL Logo">
-        <img id="GLH" src="medias/pictures/logo.png" alt="GHL Logo">
-        <img id="hommeNom" src="medias/HOMME.png" alt="GHL Logo">
+        <img id="GLH" src="medias/BandeHomepage.png" alt="GHL Logo">
     </div>
   </div>
     <div class="ASavoir">
@@ -559,8 +544,9 @@ function display_login_form($languages_vars){
     echo "Vous avez essayé de vous connecter, voici le md5(".substr(md5($_POST['mail'] . $_POST['passwd']),12) . ")";
   }
 ?>
+<div id="login_form">
  <form method="post" action="connect.php">
- <div id="login_form" bgcolor="#cccccc">
+ <div  bgcolor="#cccccc">
    <tr>
      <td><?php echo $languages_vars['mail']; ?></td>
      <td><input type="text" name="mail"/></td></tr>
@@ -569,9 +555,10 @@ function display_login_form($languages_vars){
      <td><input type="password" name="passwd"/></td></tr>
    <tr>
      <td colspan="2" align="center">
-     <input type="submit" value="<?php echo $languages_vars['connexion']; ?>"/></td></tr>
+     <input type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></tr>
    <tr>
  </div></form>
+</div>
 
 <?php
 }

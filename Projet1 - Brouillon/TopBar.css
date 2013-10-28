@@ -195,7 +195,6 @@ p{
 }
 
 #logo {
-  background-image: url("medias/icons/pixel.png");
   background-repeat: repeat;
   position: absolute;
   float: center;
@@ -213,10 +212,9 @@ p{
 }
 
 #logo #GLH{
-  height: 100%;
-  width: auto;
+  width: 90%;
   position: absolute;
-  margin-left: 46.5%;
+  margin-left: 5%;
 }
 
 #femmeNom{
@@ -309,6 +307,19 @@ p{
 }
 
 /*
+ __        ______     _______  __  .__   __. 
+|  |      /  __  \   /  _____||  | |  \ |  | 
+|  |     |  |  |  | |  |  __  |  | |   \|  | 
+|  |     |  |  |  | |  | |_ | |  | |  . `  | 
+|  `----.|  `--'  | |  |__| | |  | |  |\   | 
+|_______| \______/   \______| |__| |__| \__| 
+*/
+
+#login_form{
+  position: relative;
+  height: 20%;
+}
+/*
  _______   ______     ______   .___________. _______ .______      
 |   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
 |  |__   |  |  |  | |  |  |  | `---|  |----`|  |__   |  |_)  |    
@@ -337,10 +348,10 @@ p{
 }
 
 .Footer{
+  height: auto;
   background-color: rgb(217,217,217);
   bottom: 0px;
   float: left;
-  width: 100%;
   margin-top: 5%;
   clear: both;
 }
