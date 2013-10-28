@@ -643,7 +643,7 @@ function do_man_category(){
 }
 		
 			
-        
+       
 function display_signup_form($languages_vars){
   //display
 ?>
