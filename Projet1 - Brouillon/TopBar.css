@@ -41,7 +41,9 @@ time, mark, audio, video {
 
 body{
   min-height: 100%;
+  font-family: "Helvetica Neue";
 }
+
 a:visited{
   text-decoration: none;
 }
@@ -291,6 +293,20 @@ p{
   color: black;
 }
 
+#signup_form{
+  margin-top: 30px;
+}
+
+#signup_confirm{
+  margin : auto;
+}
+
+#warning_message{
+  background-color: red;
+  border : 1px solid black;
+  opacity: 0.7;
+  margin-top: 50px;
+}
 
 /*
  _______   ______     ______   .___________. _______ .______      
@@ -423,7 +439,8 @@ p{
   .Top_Bar #Texte_de_connexion {
     display: inline;
   }
-  .ASavoir{
+.ASavoir{
+
     margin-top: 80%;
   }
   #APropos{

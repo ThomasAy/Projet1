@@ -1,9 +1,9 @@
 <?php
 function db_connect(){
-	$result = new mysqli('localhost', 'admin', 'caluire et cuire', 'ghl');
+	$result = new mysqli('localhost', 'root', '', 'ghl');
 	
-	if(!$result){
-		return false;
+	if (mysqli_connect_errno()) {
+ 	 exit('Connect failed: '. mysqli_connect_error());
 	}
 	$result->autocommit(TRUE);
 	return $result;
@@ -19,5 +19,3 @@ function db_result_to_array($result){
 	return $res_array;
 }
 ?>
-	
-	

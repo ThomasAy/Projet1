@@ -3,6 +3,7 @@
 	$languages_var = array();
 	$languages_var['connexion'] = 'Sign in';
 	$languages_var['deconnexion'] = 'Sign out';
+	$languages_var['inscription'] = 'Sign up';
 	$languages_var['mail'] = 'Email';
 	$languages_var['mdp'] = 'Password';
 
@@ -10,7 +11,7 @@
 	$languages_var['collection_femme'] = 'Womenwsear';
 
 
-
+	$languages_var['bienvenue'] = 'Welcome to GrindHouse Leather';
 	$languages_var['accueil'] = 'Home';
 	$languages_var['homme'] = 'Man';
 	$languages_var['femme'] = 'Woman';
@@ -39,6 +40,9 @@
 
 	//INFORMATIONS
 
+	$languages_var['monsieur'] = 'Mr';
+	$languages_var['madame'] = 'Ms';
+	$languages_var['mademoiselle'] = 'Mrs';
 
 	$languages_var['new_client'] = 'New customer ?';
 	$languages_var['deja_client'] = 'Already customer ?';
@@ -140,6 +144,41 @@
 
 	$languages_var['desabo_news'] = 'In order to unsuscribe, please uncheck the box';
 	$languages_var['recevoir_news'] = 'Receive newsletter';
+
+	$languages_var['country']['france'] = 'France';
+	$languages_var['country']['uk'] = 'United Kingdom';
+	$languages_var['country']['espagne'] = 'Spain';
+	$languages_var['country']['italie'] = 'Italy';
+	$languages_var['country']['portugal'] = 'Portugal';
+	$languages_var['country']['belgique'] = 'Belgium';
+	$languages_var['country']['allemagne'] = 'Germany';
+	$languages_var['country']['autriche'] = 'Austria';
+	$languages_var['country']['danemark'] = 'Danemark';
+	$languages_var['country']['estonie'] = 'Estonia';
+	$languages_var['country']['chypre'] = 'Cyprus';
+	$languages_var['country']['croatie'] = 'Croatia';
+	$languages_var['country']['finlande'] = 'Finland';
+	$languages_var['country']['grece'] = 'Greece';
+	$languages_var['country']['hongrie'] = 'Hungary';
+	$languages_var['country']['irlande'] = 'Ireland';
+	$languages_var['country']['lettonie'] = 'Latvia';
+	$languages_var['country']['lituanie'] = 'Lithuania';
+	$languages_var['country']['luxembourg'] = 'Luxembourg';
+	$languages_var['country']['malte'] = 'Malta';
+	$languages_var['country']['pays_bas'] = 'Netherlands';
+	$languages_var['country']['pologne'] = 'Poland';
+	$languages_var['country']['republique_tcheque'] = 'Czech Republic';
+	$languages_var['country']['roumanie'] = 'Romania';
+	$languages_var['country']['slovaquie'] = 'Slovakia';
+	$languages_var['country']['slovenie'] = 'Slovenia';
+	$languages_var['country']['suede'] = 'Sweden';
+
+	$languages_var['inscription_confirm'] = 'You are now registered on GrindHouse Leather, you can login by clicking <a href=\'login.php\'>ici</a>.';
+	$languages_var['warning'] = 'You have to vcomplete required fields';
+	$languages_var['mail_existant'] = 'An account with this mail address already exists, please choose another one.';
+	$languages_var['mdp_incorrects'] = 'Passwords don\'t match, please try again';
+
+	$languages_var['combinaison_incorrecte'] = 'Combination is not correct, please try again';
 
 
 	
