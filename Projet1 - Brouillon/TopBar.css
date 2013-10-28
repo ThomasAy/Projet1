@@ -1,9 +1,10 @@
 /*
-                    _   
- _ __ ___  ___  ___| |_ 
-| '__/ _ \/ __|/ _ \ __|
-| | |  __/\__ \  __/ |_ 
-|_|  \___||___/\___|\__|
+.______       _______     _______. _______ .___________.
+|   _  \     |   ____|   /       ||   ____||           |
+|  |_)  |    |  |__     |   (----`|  |__   `---|  |----`
+|      /     |   __|     \   \    |   __|      |  |     
+|  |\  \----.|  |____.----)   |   |  |____     |  |     
+| _| `._____||_______|_______/    |_______|    |__|     
 */
 
 
@@ -37,7 +38,6 @@ time, mark, audio, video {
 |  |__| | |  |____ |  |\   | |  |____ |  |\  \----./  _____  \  |  `----.
  \______| |_______||__| \__| |_______|| _| `._____/__/     \__\ |_______|
 */
-
 body{
   font-family: "Helvetica Neue";
 }
@@ -224,28 +224,24 @@ p{
   z-index: 3;
 }
 
-#femmeNom{
-  position: absolute;
-  float:left;
+.Nom{
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  margin-left: 10%;
-    font-size: 600%;
-
+  font-size: 7vw; /* see http://stackoverflow.com/a/16390717/2307070 for further information about vw & vh usage */
   z-index: 2;
+}
 
+#femmeNom{
+  position: absolute;
+  float:left;
+  margin-left: 10%;
 }
 
 #hommeNom{
   position: absolute;
   float:left;
-  font-family: "Helvetica Neue";
-  font-weight: 100;
   margin-left: 60%;
-  color: black;
-  font-size: 6em;
-  z-index: 2;
 }
 
 .ASavoir {
@@ -330,9 +326,6 @@ p{
 }
 
 
-
-
-
 /*
  _______   ______     ______   .___________. _______ .______      
 |   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
@@ -368,30 +361,52 @@ p{
   margin-top: 5%;
   clear: both;
 }
+.Footer #text{
+  display: inline-block;
+  width: 50%;
+}
+
 
 .Footer #Ceinture{
+  position: relative;
   float: left;
   width: 50%;
   margin-left: -1px;
+  z-index: 1;
+  margin-bottom: -3px; 
 }
 
 .Footer #APropos{
+  position: relative;
   text-align: justify;
   float: left;
-  width: 20%;
+  width: 40%;  
   padding-top: 50px;
+  z-index: 1;
+
 }
 
 .Footer #Contact{
+  position: relative;
   text-align: justify;
   float: left;
-  width: 20%;
+  width: 50%;
   padding-top: 50px;
   margin-left: 5%;
+  z-index: 1;
+
 }
 
 .Footer #Contact img{
   width: 100%;
+  z-index: 1;
+
+}
+
+.Footer #CGU{
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
 
@@ -404,9 +419,25 @@ p{
 .----)   |   |  |      |  |____ |  `----.|  | |  |     |  | |  `----.
 |_______/    | _|      |_______| \______||__| |__|     |__|  \______|
                                                                      
+<<<<<<< HEAD
 
 
 */
+*/
+
+@media (max-height: 420px ){
+  .Contenu {
+    top: 60px;
+  }
+}
+
+@media (min-height: 421px){
+  .Contenu {
+    top: 15%;
+  }
+}
+
+
 @media (min-width: 768px) {
  .Top_Bar #Texte_de_connexion {
     display: inline;
@@ -422,7 +453,14 @@ p{
     display: inline;
   }
 
+  .ASavoir{
+    margin-top: 80%;
+  }
+  #APropos{
+    display: none;
+  }
 }
+
 
 @media (max-width: 430px) {
 .Top_Bar #Texte_de_connexion {
@@ -438,6 +476,12 @@ p{
 }
 
   #btnValider{
+    display: none;
+  }
+    .ASavoir{
+    margin-top: 85%;
+  }
+    #APropos{
     display: none;
   }
 }
