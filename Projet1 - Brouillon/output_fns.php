@@ -573,8 +573,7 @@ function display_admin_menu(){
 <?php
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 function do_man_category(){
 ?>
   <div class="LogoTop">
@@ -645,11 +644,6 @@ function do_man_category(){
 }
 		
 			
-       
-=======
->>>>>>> 98418da08871c46d05964dcb1625f5713e041ed1
-=======
->>>>>>> 98418da08871c46d05964dcb1625f5713e041ed1
 function display_signup_form($languages_vars){
   //display
 ?>
