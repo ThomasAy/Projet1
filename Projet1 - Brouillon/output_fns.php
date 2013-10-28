@@ -161,7 +161,7 @@ function do_html_footer(){
   <div class="Footer">
     
     <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage" /></div>
-
+    <div id="text">
       <div id="APropos">
         <h1>À PROPOS</h1>
         <hr>
@@ -180,10 +180,10 @@ main en France, de qualité supérieure et pensés pour vous.</p>
           <th><img src="medias/icons/ico-mail.png" alt="twitter icon" /></th>
         </tr>
       </table>
-    </div>
-    <div id="CGU">
       <p><a href="">Conditions Générales</a> | &copy; GrindHouse Leather</p>
-    </div> 
+    </div>
+
+  </div>
   </div>
 </body>
 </html>

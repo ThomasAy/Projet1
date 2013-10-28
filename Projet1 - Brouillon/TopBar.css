@@ -1,9 +1,10 @@
 /*
-                    _   
- _ __ ___  ___  ___| |_ 
-| '__/ _ \/ __|/ _ \ __|
-| | |  __/\__ \  __/ |_ 
-|_|  \___||___/\___|\__|
+.______       _______     _______. _______ .___________.
+|   _  \     |   ____|   /       ||   ____||           |
+|  |_)  |    |  |__     |   (----`|  |__   `---|  |----`
+|      /     |   __|     \   \    |   __|      |  |     
+|  |\  \----.|  |____.----)   |   |  |____     |  |     
+| _| `._____||_______|_______/    |_______|    |__|     
 */
 
 
@@ -148,8 +149,6 @@ p{
   position: absolute;
   left: 5%;
   right: 5%;
-  top: 15%;
-  top
   width: 90%;
   background-color: rgb(199,200,202);
   clear: both;
@@ -344,40 +343,45 @@ p{
   clear: both;
 }
 
+.Footer #text{
+  display: inline-block;
+  width: 50%;
+}
+
+
 .Footer #Ceinture{
   position: relative;
   float: left;
   width: 50%;
   margin-left: -1px;
   z-index: 1;
+  margin-bottom: -3px; 
 }
 
 .Footer #APropos{
-    position: relative;
-
+  position: relative;
   text-align: justify;
   float: left;
-  width: 20%;
+  width: 40%;  
   padding-top: 50px;
-    z-index: 1;
+  z-index: 1;
 
 }
 
 .Footer #Contact{
-    position: relative;
-
+  position: relative;
   text-align: justify;
   float: left;
-  width: 20%;
+  width: 50%;
   padding-top: 50px;
   margin-left: 5%;
-    z-index: 1;
+  z-index: 1;
 
 }
 
 .Footer #Contact img{
   width: 100%;
-    z-index: 1;
+  z-index: 1;
 
 }
 
@@ -397,9 +401,21 @@ p{
 .----)   |   |  |      |  |____ |  `----.|  | |  |     |  | |  `----.
 |_______/    | _|      |_______| \______||__| |__|     |__|  \______|
                                                                      
-
-
 */
+
+@media (max-height: 420px ){
+  .Contenu {
+    top: 60px;
+  }
+}
+
+@media (min-height: 421px){
+  .Contenu {
+    top: 15%;
+  }
+}
+
+
 @media (min-width: 768px) {
  .Top_Bar #Texte_de_connexion {
     display: inline;
@@ -414,8 +430,14 @@ p{
   .Top_Bar #Texte_de_connexion {
     display: inline;
   }
-
+  .ASavoir{
+    margin-top: 80%;
+  }
+  #APropos{
+    display: none;
+  }
 }
+
 
 @media (max-width: 430px) {
 .Top_Bar #Texte_de_connexion {
@@ -431,6 +453,12 @@ p{
 }
 
   #btnValider{
+    display: none;
+  }
+    .ASavoir{
+    margin-top: 85%;
+  }
+    #APropos{
     display: none;
   }
 }
