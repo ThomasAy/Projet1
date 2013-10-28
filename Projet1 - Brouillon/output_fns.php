@@ -54,8 +54,6 @@ function do_html_header($languages_vars, $title=''){
             font-size: 10px !important;
           };
       </style>
-
-
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
     <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
@@ -86,6 +84,7 @@ function do_html_header($languages_vars, $title=''){
     <body>
     <br><br><br> <br><br><br> <?php var_dump($_SESSION); ?>
 
+
     <div class="Top_Bar">
         <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
@@ -93,6 +92,7 @@ function do_html_header($languages_vars, $title=''){
 <!-- begin language switcher -->
             <div id="polyglotLanguageSwitcher">
               <form method='get' action="#">
+
                 <select id="polyglot-language-options">
                   <option id="en" value="en">En</option>
                   <option id="fr" value="fr" selected>Fr</option>
@@ -198,6 +198,7 @@ function do_html_footer(){
   </div>
 
   <div class="Footer">
+
     
     <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage" /></div>
     <div id="text">
