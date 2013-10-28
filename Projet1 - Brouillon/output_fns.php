@@ -14,8 +14,7 @@ function do_html_header($languages_vars, $title=''){
 
 
 	if(!isset($_SESSION['items'])){
-    //TODO REMOVE 0 instead
-		$_SESSION['items'] = 150;
+		$_SESSION['items'] = 0;
    
 	}
 
@@ -36,12 +35,14 @@ function do_html_header($languages_vars, $title=''){
 	<html>
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<<<<<<< HEAD
+
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
-      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+     
       <script>
         $(function() {
           $( "#datepicker" ).datepicker();
@@ -53,7 +54,7 @@ function do_html_header($languages_vars, $title=''){
             font-size: 10px !important;
           };
       </style>
-=======
+
 
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
@@ -75,20 +76,22 @@ function do_html_header($languages_vars, $title=''){
             });
         });
     </script>
+    <script src="scripts.js"  type="text/javascript"></script>
   <!-- end JS -->
 
->>>>>>> 3a922614e1d80c4b19ab79edc5c1c3dc70e46a50
+
       <title><?php echo $title; ?></title>
     </head>
     <body>
-      <script src="scripts.js"  type="text/javascript"></script>
+    <br><br><br> <br><br><br> <?php var_dump($_SESSION); ?>
+     
     <div class="Top_Bar">
         <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
             <div id="polyglotLanguageSwitcher">
-              <form action="#">
+              <form method='get' action="#">
                 <select id="polyglot-language-options">
                   <option id="en" value="en">En</option>
                   <option id="fr" value="fr" selected>Fr</option>
@@ -107,7 +110,22 @@ function do_html_header($languages_vars, $title=''){
         </div>
 
         <div id="Texte_de_connexion">
-          <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
+          <p>
+          <?php 
+          if(isset($_SESSION['mail'])){
+            echo $languages_vars['bonjour'].' ';
+            switch ($_SESSION['civ']){
+              case 1 : echo $languages_vars['monsieur']; break;
+              case 2 : echo $languages_vars['mademoiselle']; break;
+              case 3 : echo $languages_vars['madame']; break;
+            }
+            echo ' '.$_SESSION['user_lastname'].' ';
+            do_html_url("logout.php", $languages_vars['deconnexion']);
+          } else {
+            do_html_url("login.php", $languages_vars['connexion']); 
+          }
+          ?>
+          </p>
         </div>
         <div id="Panier">
             <a href="#">
@@ -566,35 +584,36 @@ function display_admin_menu(){
 function display_signup_form($languages_vars){
   //display
 ?>
-      <div id="new_client">
-          <?php echo $languages_vars['new_client']; ?>
-      </div>
       <div id="signup_form">
+          <div id="new_client">
+              <?php echo $languages_vars['new_client']; ?>
+          </div>
+
           <form method="post" action="register.php">
-          <?php echo $languages_vars['civilite']; ?>
+          * <?php echo $languages_vars['civilite']; ?>
           <input type="radio" name="civilite" value="1"><?php echo $languages_vars['monsieur']; ?>
           <input type="radio" name="civilite" value="2"><?php echo $languages_vars['madame']; ?>
           <input type="radio" name="civilite" value="3"><?php echo $languages_vars['mademoiselle']; ?>
           <br/>
-          <?php echo $languages_vars['nom'];?>
+          * <?php echo $languages_vars['nom'];?>
           <input type="text" name="nom">
           <br/>
-          <?php echo $languages_vars['prenom'];?>
+          * <?php echo $languages_vars['prenom'];?>
           <input type="text" name="prenom">
           <br/>
-          <?php echo $languages_vars['adresse'];?>
+          * <?php echo $languages_vars['adresse'];?>
           <input type="text" name="adresse">
           <br/>
           <?php echo $languages_vars['adresse_2']; ?>
           <input type="text" name="adresse_2">
           <br/>
-          <?php echo $languages_vars['code_postal']; ?>
+          * <?php echo $languages_vars['code_postal']; ?>
           <input type="text" name="zipcode">
           <br/>
-          <?php echo $languages_vars['ville'];?>
+          * <?php echo $languages_vars['ville'];?>
           <input type="text" name="ville">
           <br/>
-          <?php echo $languages_vars['pays']; ?>
+          * <?php echo $languages_vars['pays']; ?>
           <select name="pays">
             <?php
             foreach($languages_vars['country'] as $key => $value){ ?>
@@ -604,9 +623,9 @@ function display_signup_form($languages_vars){
             ?>
           </select>
           <br/>
-          <?php echo $languages_vars['date_naissance']; ?>
-          <input id="datepicker" type="text" name="date_naissance">
-          <br/>
+          <?php echo $languages_vars['phone']; ?>
+          <input type='text' name='phone'>
+          <br>
           <input type="checkbox" name="newsletter" value="1">
           <?php echo $languages_vars['grindhouse']; ?>
           <br/>
@@ -615,11 +634,15 @@ function display_signup_form($languages_vars){
 
           <br/>
 
-          <?php echo $languages_vars['mail']; ?>
+          * <?php echo $languages_vars['mail']; ?>
           <input type="email" name="email">
+          <br/>
 
-          <?php echo $languages_vars['mdp']; ?>
+          * <?php echo $languages_vars['mdp']; ?>
           <input type="password" name="mdp">
+          <br/>
+          * <?php echo $languages_vars['confirm_mdp']; ?>
+          <input type="password" name="mdp2">
           <br/>
           <br/>
 
@@ -628,5 +651,20 @@ function display_signup_form($languages_vars){
           <input type="submit" name="submit" value=<?php echo '"'.$languages_vars['inscription'].'"'; ?>>
           </form>
     </div>
+<?php
+}
+function display_signup_confirm($languages_vars){
+?>
+  <div id="signup_confirm">
+      <?php echo $languages_vars['inscription_confirm'];?>
+  </div>
+<?php
+}
+
+function display_warning_message($message){  
+?>
+  <div id="warning_message">
+    <?php echo $message; ?>
+  </div>
 <?php
 }

@@ -11,7 +11,7 @@
 	$languages_var['collection_femme'] = 'Womenwsear';
 
 
-
+	$languages_var['bienvenue'] = 'Welcome to GrindHouse Leather';
 	$languages_var['accueil'] = 'Home';
 	$languages_var['homme'] = 'Man';
 	$languages_var['femme'] = 'Woman';
@@ -173,6 +173,12 @@
 	$languages_var['country']['slovenie'] = 'Slovenia';
 	$languages_var['country']['suede'] = 'Sweden';
 
+	$languages_var['inscription_confirm'] = 'You are now registered on GrindHouse Leather, you can login by clicking <a href=\'login.php\'>ici</a>.';
+	$languages_var['warning'] = 'You have to vcomplete required fields';
+	$languages_var['mail_existant'] = 'An account with this mail address already exists, please choose another one.';
+	$languages_var['mdp_incorrects'] = 'Passwords don\'t match, please try again';
+
+	$languages_var['combinaison_incorrecte'] = 'Combination is not correct, please try again';
 
 
 	
