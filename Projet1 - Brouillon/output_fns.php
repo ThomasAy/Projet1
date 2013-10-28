@@ -540,6 +540,75 @@ function display_admin_menu() {
 <a href="change_password_form.php">Change admin password</a><br />
 <?php
 }
+
+function do_man_category(){
+?>
+  <div class="LogoTop">
+    <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    <h1>Collection Homme | Collection Femme</h1> 
+    <div class="ImageCategroy">
+      <img src="medias/pictures/Parc-6-Collection.jpg" alt="Collection Homme - Eté 2014">
+    </div>
+  </div>
+
+  <div id="conteneur"> 
+    <div class="Category">
+      <div class="Sacs">  
+        <h1>Sacs</h1>
+        <div class="CategoryList1">
+          <ul>
+          <li>Sacs à main</li> 
+          <li>Porte documents</li> 
+          <li>Sacs à dos</li> 
+          <li>Pochettes</li> 
+          </ul>
+        </div>
+      </div>
+      <div class="Accessoires">
+        <h1>Accessoires</h1>
+        <div class="CategoryList2">
+          <ul>
+          <li>Montres</li> 
+          <li>Portefeuilles</li> 
+          <li>Gants</li> 
+          <li>Ceintures</li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ProduitsHommes">
+      <div class="NomHomme">
+       <h1>Hommes (Nombre de Produits)</h1>
+      </div>
+      <table border="1" cellspacing="20">
+        <tr>
+          <td>
+            <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+            <h1 class="Produit">Gants<br>79€</h1>
+          </td>
+          <td>
+            <img src="medias/pictures/Montre-2-Homepage.jpg" alt="Montre">
+            <h1 class="Produit">Montre<br>299€</h1>
+            <h1 class="Produit"></h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">
+            <h1 class="Produit">Portefeuille<br>199€</h1>
+          </td>
+          <td>
+            <img src="medias/pictures/Smartphone-1-Homepage.jpg" alt="Housse smartphone">
+            <h1 class="Produit">Housse<br>49€</h1>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+<?php
+}
 		
 			
         

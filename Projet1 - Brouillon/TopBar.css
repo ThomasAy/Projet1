@@ -306,6 +306,215 @@ p{
   color: black;
 }
 
+/*
+ __        ______     _______   ______      .___________.  ______   .______   
+|  |      /  __  \   /  _____| /  __  \     |           | /  __  \  |   _  \  
+|  |     |  |  |  | |  |  __  |  |  |  |    `---|  |----`|  |  |  | |  |_)  | 
+|  |     |  |  |  | |  | |_ | |  |  |  |        |  |     |  |  |  | |   ___/  
+|  `----.|  `--'  | |  |__| | |  `--'  |        |  |     |  `--'  | |  |      
+|_______| \______/   \______|  \______/         |__|      \______/  | _| 
+
+*/
+
+.LogoTop {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%; 
+  top: 10%; 
+  z-index: 3;
+  opacity: 1;
+}
+
+.LogoTop img{
+  position: relative;
+  height: 25%;
+}
+
+.LogoTop h1{
+  position: absolute;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:150%;
+  color: black;
+  width: 90%;
+  left: 5%;
+  height: 7%;
+} 
+
+/*
+  ______     ___   .___________. _______   _______   ______   .______     ____    ____ 
+ /      |   /   \  |           ||   ____| /  _____| /  __  \  |   _  \    \   \  /   / 
+|  ,----'  /  ^  \ `---|  |----`|  |__   |  |  __  |  |  |  | |  |_)  |    \   \/   /  
+|  |      /  /_\  \    |  |     |   __|  |  | |_ | |  |  |  | |      /      \_    _/   
+|  `----./  _____  \   |  |     |  |____ |  |__| | |  `--'  | |  |\  \----.   |  |     
+ \______/__/     \__\  |__|     |_______| \______|  \______/  | _| `._____|   |__|     
+                                                                                   
+*/
+
+.ImageCategroy {
+  position: relative;
+  left: 5%;
+  right: 5%;
+  margin-top: 5%;
+  width: 90%;
+}
+
+.ImageCategroy img{
+  position: relative;
+  width: 100%;
+}
+
+#conteneur{
+  position: absolute;
+  margin-top: 68%;
+  margin-left: 5%;
+  width: 90%;
+  height: 80%;
+}
+
+#conteneur .Category {
+  position: relative;
+  float: left;
+  background-color: rgb(238,238,238);
+  width: 30%; 
+  margin-left: 0%; 
+  margin-top: 5%;
+  float:left;
+
+}
+
+#conteneur .Category .Sacs{
+  position: relative;
+  margin-top: 5%;
+  width: 100%;
+  margin-left: 10%;
+  height: 30%;
+}
+
+#conteneur .Category .Accessoires{
+  position: relative;
+  margin-top: 5%;
+  width: 100%;
+  margin-left: 10%;
+  height: 60%;
+}
+
+#conteneur .Category h1{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:150%;
+  color: black;
+  width: 0%;
+  margin-left: 0%;
+  margin-top: 3%;
+}
+
+#conteneur .Category .CategoryList1{
+  position: relative;
+  text-align: left;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+#conteneur .Category .CategoryList1 li{
+  position: relative;
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:100%;
+  color: black;
+}
+
+#conteneur .Category .CategoryList1 li:before {
+  position: relative;
+  content: "- ";
+}
+
+#conteneur .Category .CategoryList2{
+  position: relative;
+  text-align: left;
+  margin-top: 2%;
+  width: 100%;
+  margin-left: 10%;
+  
+}
+
+#conteneur .Category .CategoryList2 li{
+  position: relative;
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:100%;
+  color: black;
+}
+
+#conteneur .Category .CategoryList2 li:before {
+  position: relative;
+  content: "- "; 
+}
+    
+#conteneur .ProduitsHommes{
+  position:relative;
+  float:left;
+  margin-top: 5%;
+  margin-left: 5%;
+
+ 
+}
+
+#conteneur .ProduitsHommes .NomHomme h1{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:150%;
+  color: black;
+  width: 150%;
+  margin-left: 2.5%;
+
+}
+
+#conteneur .ProduitsHommes img{
+  position:relative;
+  float:left;
+  border:solid 1px rgb(238,238,238); 
+  margin-top: 3%;
+  margin-right: 10%;
+}
+
+#conteneur .ProduitsHommes img{
+  position:relative;
+  float:left;
+  border:solid 1px rgb(238,238,238); 
+  margin-top: 3%;
+  margin-right: 10%;
+
+}
+
+#conteneur .ProduitsHommes img{
+  position:relative;
+  float:left;
+  border:solid 1px rgb(238,238,238); 
+  margin-top: 3%;
+  margin-right: 10%;
+}
+
+#conteneur .ProduitsHommes img{
+  position:relative;
+  float:left;
+  border:solid 1px rgb(238,238,238); 
+  margin-top: 3%;
+  margin-right: 10%;
+
+}
+
+#conteneur .ProduitsHommes .Produit{
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
 
 /*
  _______   ______     ______   .___________. _______ .______      
