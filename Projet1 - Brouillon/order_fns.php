@@ -44,7 +44,7 @@ function insert_order($order_details){
 			return false;
 		}
 	}
-	
+
 	$customerid = $conn->insert_id;
 	
 	$date=date("Y-m-d");

@@ -1,6 +1,6 @@
 <?php
 
-function do_html_header($title='', $languages_vars){
+function do_html_header($languages_vars, $title=''){
 	//affiche l'entête html	
 	
 	//on déclare les variables de session qu'on veut accéder dans la fonction
@@ -14,8 +14,7 @@ function do_html_header($title='', $languages_vars){
 
 
 	if(!isset($_SESSION['items'])){
-    //TODO REMOVE 0 instead
-		$_SESSION['items'] = 150;
+		$_SESSION['items'] = 0;
    
 	}
 
@@ -37,6 +36,25 @@ function do_html_header($title='', $languages_vars){
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+      <link rel="icon" type="image/ico" href="medias/favicon.ico">
+
+     
+      <script>
+        $(function() {
+          $( "#datepicker" ).datepicker();
+        });
+      </script>
+
+      <style>
+          #datepicker{
+            font-size: 10px !important;
+          };
+      </style>
+
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
     <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
@@ -57,19 +75,23 @@ function do_html_header($title='', $languages_vars){
             });
         });
     </script>
+
+    <script src="scripts.js"  type="text/javascript"></script>
   <!-- end JS -->
+
 
       <title><?php echo $title; ?></title>
     </head>
     <body>
-      <script src="scripts.js"  type="text/javascript"></script>
+    
     <div class="Top_Bar">
         <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
             <div id="polyglotLanguageSwitcher">
-              <form action="#">
+              <form method='get' action="#">
+
                 <select id="polyglot-language-options">
                   <option id="en" value="en">En</option>
                   <option id="fr" value="fr" selected>Fr</option>
@@ -88,7 +110,23 @@ function do_html_header($title='', $languages_vars){
         </div>
 
         <div id="Texte_de_connexion">
-          <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
+          <p>
+          <?php 
+          if(isset($_SESSION['mail'])){
+            echo $languages_vars['bonjour'].' ';
+            switch ($_SESSION['civ']){
+              case 1 : echo $languages_vars['monsieur']; break;
+              case 2 : echo $languages_vars['mademoiselle']; break;
+              case 3 : echo $languages_vars['madame']; break;
+            }
+            echo ' '.$_SESSION['user_lastname'].' ';
+            do_html_url("logout.php", $languages_vars['deconnexion']);
+          } else {
+            do_html_url("login.php", $languages_vars['connexion']); 
+          }
+          ?>
+          </p>
+
         </div>
         <div id="Panier">
             <a href="#">
@@ -111,16 +149,8 @@ function do_html_header($title='', $languages_vars){
     <div id="homme">
      <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
     </div>
-    <div class="BandeGenre"> 
       <div id="logo">
-          <img src="medias/pictures/logo.png" alt="GHL Logo">
-      </div>
-        
-    <div class="Nom"> 
-      <h1 id="femmeNom">FEMME</h1>
-
-      <h1 id="hommeNom">HOMME</h1>
-    </div>
+        <img id="GLH" src="medias/BandeHomepage.png" alt="GHL Logo">
     </div>
   </div>
     <div class="ASavoir">
@@ -145,7 +175,6 @@ function do_html_header($title='', $languages_vars){
 
 function do_html_footer(){
 	?>
-  <div style="height: 0px;"></div>
   <div class="PreFooter">
     <TABLE> 
       <TR> 
@@ -188,7 +217,6 @@ main en France, de qualité supérieure et pensés pour vous.</p>
 </body>
 </html>
 
-    
 
   <?php
 
@@ -516,22 +544,26 @@ function display_login_form($languages_vars){
     echo "Vous avez essayé de vous connecter, voici le md5(".substr(md5($_POST['mail'] . $_POST['passwd']),12) . ")";
   }
 ?>
+<div id="login_form">
  <form method="post" action="connect.php">
- <div id="login_form" bgcolor="#cccccc">
+ <div  bgcolor="#cccccc">
    <tr>
      <td><?php echo $languages_vars['mail']; ?></td>
      <td><input type="text" name="mail"/></td></tr>
    <tr>
-     <td><?php echo $languages_vars['mdp']; ?>:</td>
+     <td><?php echo $languages_vars['mdp']; ?></td>
      <td><input type="password" name="passwd"/></td></tr>
    <tr>
      <td colspan="2" align="center">
-     <input type="submit" value="Connexion"/></td></tr>
+     <input type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></tr>
    <tr>
  </div></form>
+</div>
+
 <?php
 }
-function display_admin_menu() {
+
+function display_admin_menu(){
 ?>
 <br />
 <a href="index.php">Go to main site</a><br />
@@ -612,3 +644,90 @@ function do_man_category(){
 		
 			
         
+function display_signup_form($languages_vars){
+  //display
+?>
+      <div id="signup_form">
+          <div id="new_client">
+              <?php echo $languages_vars['new_client']; ?>
+          </div>
+
+          <form method="post" action="register.php">
+          * <?php echo $languages_vars['civilite']; ?>
+          <input type="radio" name="civilite" value="1"><?php echo $languages_vars['monsieur']; ?>
+          <input type="radio" name="civilite" value="2"><?php echo $languages_vars['madame']; ?>
+          <input type="radio" name="civilite" value="3"><?php echo $languages_vars['mademoiselle']; ?>
+          <br/>
+          * <?php echo $languages_vars['nom'];?>
+          <input type="text" name="nom">
+          <br/>
+          * <?php echo $languages_vars['prenom'];?>
+          <input type="text" name="prenom">
+          <br/>
+          * <?php echo $languages_vars['adresse'];?>
+          <input type="text" name="adresse">
+          <br/>
+          <?php echo $languages_vars['adresse_2']; ?>
+          <input type="text" name="adresse_2">
+          <br/>
+          * <?php echo $languages_vars['code_postal']; ?>
+          <input type="text" name="zipcode">
+          <br/>
+          * <?php echo $languages_vars['ville'];?>
+          <input type="text" name="ville">
+          <br/>
+          * <?php echo $languages_vars['pays']; ?>
+          <select name="pays">
+            <?php
+            foreach($languages_vars['country'] as $key => $value){ ?>
+              <option value=<?php echo '"'.$value.'"'; ?>> <?php echo $value; ?> </option>
+            <?php
+            }
+            ?>
+          </select>
+          <br/>
+          <?php echo $languages_vars['phone']; ?>
+          <input type='text' name='phone'>
+          <br>
+          <input type="checkbox" name="newsletter" value="1">
+          <?php echo $languages_vars['grindhouse']; ?>
+          <br/>
+
+          <hr>
+
+          <br/>
+
+          * <?php echo $languages_vars['mail']; ?>
+          <input type="email" name="email">
+          <br/>
+
+          * <?php echo $languages_vars['mdp']; ?>
+          <input type="password" name="mdp">
+          <br/>
+          * <?php echo $languages_vars['confirm_mdp']; ?>
+          <input type="password" name="mdp2">
+          <br/>
+          <br/>
+
+          <p><?php echo $languages_vars['champ_obligatoire']; ?></p>
+
+          <input type="submit" name="submit" value=<?php echo '"'.$languages_vars['inscription'].'"'; ?>>
+          </form>
+    </div>
+<?php
+}
+function display_signup_confirm($languages_vars){
+?>
+  <div id="signup_confirm">
+      <?php echo $languages_vars['inscription_confirm'];?>
+  </div>
+<?php
+}
+
+function display_warning_message($message){  
+?>
+  <div id="warning_message">
+    <?php echo $message; ?>
+  </div>
+<?php
+}

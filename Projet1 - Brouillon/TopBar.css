@@ -38,6 +38,12 @@ time, mark, audio, video {
 |  |__| | |  |____ |  |\   | |  |____ |  |\  \----./  _____  \  |  `----.
  \______| |_______||__| \__| |_______|| _| `._____/__/     \__\ |_______|
 */
+
+body{
+  min-height: 100%;
+  font-family: "Helvetica Neue";
+}
+
 a:visited{
   text-decoration: none;
 }
@@ -146,12 +152,14 @@ p{
 */
 
 .Contenu {
-  position: absolute;
+  float: left;
+  margin-left: 5%;
   left: 5%;
   right: 5%;
   width: 90%;
+  margin-top: 5%;
+  margin-bottom: 50px;
   background-color: rgb(199,200,202);
-  clear: both;
 }
 
 #femme, #homme{
@@ -186,58 +194,37 @@ p{
   width: 100%;
 }
 
-.BandeGenre {
-  background-image: url("medias/icons/pixel.png");
+#logo {
   background-repeat: repeat;
   position: absolute;
-  left: 0px;
-  top: 40%;
-  width: 100%;
+  float: center;
+  width: 90%;
+  margin-top: 25%;
   height: 20%;
+  max-height: 85px;
+  color: black;
+  font-size: 7vw;
   z-index: 2;
-
-}
-#logo {
-  position: absolute;
-  text-align: center;
-  height: 100%;
-  width: 100%;  
-  z-index: 3;
-  opacity: 1;
 }
 
 #logo img{
-  position: relative;
- height: 100%;
-
+  width: 25%
 }
 
-.Gris{
+#logo #GLH{
+  width: 90%;
   position: absolute;
-  position: absolute;
-  width: 100%;
-  height: 10px;
-  z-index: 3;
-}
-
-.Nom{
-  font-family: "Helvetica Neue";
-  font-weight: 100;
-  color: black;
-  font-size: 7vw; /* see http://stackoverflow.com/a/16390717/2307070 for further information about vw & vh usage */
-  z-index: 2;
+  margin-left: 5%;
 }
 
 #femmeNom{
   position: absolute;
-  float:left;
   margin-left: 10%;
 }
 
 #hommeNom{
   position: absolute;
-  float:left;
-  margin-left: 60%;
+  margin-left : 57%;
 }
 
 .ASavoir {
@@ -248,8 +235,6 @@ p{
   color: black;
   width: 90%;
   left: 5%;
-  height: 100%;
-  margin-top: 65%;
 }
 
 .ASavoir img{
@@ -306,6 +291,7 @@ p{
   color: black;
 }
 
+<<<<<<< HEAD
 /*
  __        ______     _______   ______      .___________.  ______   .______   
 |  |      /  __  \   /  _____| /  __  \     |           | /  __  \  |   _  \  
@@ -514,8 +500,36 @@ p{
   color: black;
   width: 100%;
   text-align: center;
+=======
+#signup_form{
+  margin-top: 30px;
 }
 
+#signup_confirm{
+  margin : auto;
+}
+
+#warning_message{
+  background-color: red;
+  border : 1px solid black;
+  opacity: 0.7;
+  margin-top: 50px;
+>>>>>>> 98418da08871c46d05964dcb1625f5713e041ed1
+}
+
+/*
+ __        ______     _______  __  .__   __. 
+|  |      /  __  \   /  _____||  | |  \ |  | 
+|  |     |  |  |  | |  |  __  |  | |   \|  | 
+|  |     |  |  |  | |  | |_ | |  | |  . `  | 
+|  `----.|  `--'  | |  |__| | |  | |  |\   | 
+|_______| \______/   \______| |__| |__| \__| 
+*/
+
+#login_form{
+  position: relative;
+  height: 20%;
+}
 /*
  _______   ______     ______   .___________. _______ .______      
 |   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
@@ -531,7 +545,8 @@ p{
   font-weight: 100;
   width: 100%;
   position: relative;
-  margin-top:  30%;
+  margin-top:  50px;
+  float: left;
 }
 .PreFooter table{
   margin: auto;
@@ -544,12 +559,19 @@ p{
 }
 
 .Footer{
+  height: auto;
   background-color: rgb(217,217,217);
   bottom: 0px;
   float: left;
-  width: 100%;
   margin-top: 5%;
   clear: both;
+}
+
+.Footer hr{
+  width: 80%;
+}
+.Footer h1{
+  text-align: center;
 }
 
 .Footer #text{
@@ -639,7 +661,8 @@ p{
   .Top_Bar #Texte_de_connexion {
     display: inline;
   }
-  .ASavoir{
+.ASavoir{
+
     margin-top: 80%;
   }
   #APropos{
@@ -663,9 +686,6 @@ p{
 
   #btnValider{
     display: none;
-  }
-    .ASavoir{
-    margin-top: 85%;
   }
     #APropos{
     display: none;

@@ -3,20 +3,34 @@ require('ghl_fns.php');
 session_start();
 
 if(isset($_POST['mail']) &&  isset ($_POST['passwd'])){
-	//Essai de connexion
+
 	$mail = $_POST['mail'];
 	$passwd = $_POST['passwd'];
 
 	if(login($mail, $passwd)){
 		
+		$prenom = return_user_firstname($mail);
+		$nom = return_user_lastname($mail);
+		$type_user = return_type_user($mail);
+		$type_civilite = return_type_civilite($mail);
 		$_SESSION['mail'] = $mail;
-		if(is_admin($_SESSION['mail'])){
-				$_SESSION['admin_user'] = $mail;
+		$_SESSION['user_firstname'] = $prenom;
+		$_SESSION['user_lastname'] = $nom;
+		$_SESSION['civ'] = $type_civilite;
+		$_SESSION['type_user'] = $type_user;
+		if($type_user == 1){
+			$_SESSION['admin'] = $mail;
 		}
-	else{
-		header('location : login.php');
+		header('Location: index.php');
+	} else{
+		do_html_header($languages_var);
+		display_warning_message($languages_var['combinaison_incorrecte']);
+		display_login_form();
+		do_html_footer();
 	}
-
-
-	}
+} else {
+	do_html_header($languages_var);
+	display_warning_message($languages_var['warning']);
+	display_login_form();
+	do_html_footer();
 }
