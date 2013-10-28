@@ -36,6 +36,7 @@ function do_html_header($languages_vars, $title=''){
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+<<<<<<< HEAD
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
       <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
@@ -54,6 +55,8 @@ function do_html_header($languages_vars, $title=''){
             font-size: 10px !important;
           };
       </style>
+=======
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
     <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
@@ -74,6 +77,7 @@ function do_html_header($languages_vars, $title=''){
             });
         });
     </script>
+<<<<<<< HEAD
 
     <script src="scripts.js"  type="text/javascript"></script>
   <!-- end JS -->
@@ -85,14 +89,26 @@ function do_html_header($languages_vars, $title=''){
     <br><br><br> <br><br><br> <?php var_dump($_SESSION); ?>
 
 
+=======
+  <!-- end JS -->
+
+      <title><?php echo $title; ?></title>
+    </head>
+    <body>
+      <script src="scripts.js"  type="text/javascript"></script>
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
     <div class="Top_Bar">
         <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
             <div id="polyglotLanguageSwitcher">
+<<<<<<< HEAD
               <form method='get' action="#">
 
+=======
+              <form action="#">
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
                 <select id="polyglot-language-options">
                   <option id="en" value="en">En</option>
                   <option id="fr" value="fr" selected>Fr</option>
@@ -111,6 +127,7 @@ function do_html_header($languages_vars, $title=''){
         </div>
 
         <div id="Texte_de_connexion">
+<<<<<<< HEAD
           <p>
           <?php 
           if(isset($_SESSION['mail'])){
@@ -128,6 +145,9 @@ function do_html_header($languages_vars, $title=''){
           ?>
           </p>
 
+=======
+          <p><?php do_html_url("login.php", $languages_vars['connexion']);?></p>
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
         </div>
         <div id="Panier">
             <a href="#">
@@ -198,6 +218,7 @@ function do_html_footer(){
   </div>
 
   <div class="Footer">
+<<<<<<< HEAD
 
     
     <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage" /></div>
@@ -229,6 +250,38 @@ main en France, de qualité supérieure et pensés pour vous.</p>
 </html>
 
     
+=======
+    
+    <div id="Ceinture"><img src="medias/pictures/ceinture.jpg" alt="Ceinture Vintage" /></div>
+    <div id="text">
+      <div id="APropos">
+        <h1>À PROPOS</h1>
+        <hr>
+<p>Après 20 ans d'expérience dans la maroquinerie de luxe, GrindHouse Leather lance 
+sa propre boutique en ligne. Répondant aux standards d'aujourd'hui, 
+nous mettons un point d'honneur à vous proposer des produits faits 
+main en France, de qualité supérieure et pensés pour vous.</p>
+    </div>
+    <div id="Contact">
+      <h1>CONTACT</h1>
+      <hr>
+      <table>
+        <tr>
+          <th><img src="medias/icons/ico-mail.png" alt="mail icon" /></th>
+          <th><img src="medias/icons/ico-facebook.png" alt="FB icon" /></th>
+          <th><img src="medias/icons/ico-mail.png" alt="twitter icon" /></th>
+        </tr>
+      </table>
+      <p><a href="">Conditions Générales</a> | &copy; GrindHouse Leather</p>
+    </div>
+
+  </div>
+  </div>
+</body>
+</html>
+
+    
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
 
   <?php
 

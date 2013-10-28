@@ -38,10 +38,13 @@ time, mark, audio, video {
 |  |__| | |  |____ |  |\   | |  |____ |  |\  \----./  _____  \  |  `----.
  \______| |_______||__| \__| |_______|| _| `._____/__/     \__\ |_______|
 */
+<<<<<<< HEAD
 body{
   font-family: "Helvetica Neue";
 }
 
+=======
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
 a:visited{
   text-decoration: none;
 }
@@ -153,7 +156,10 @@ p{
   position: absolute;
   left: 5%;
   right: 5%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
   width: 90%;
   background-color: rgb(199,200,202);
   clear: both;
@@ -311,6 +317,7 @@ p{
   color: black;
 }
 
+<<<<<<< HEAD
 #signup_form{
   margin-top: 30px;
 }
@@ -325,6 +332,9 @@ p{
   opacity: 0.7;
   margin-top: 50px;
 }
+=======
+
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
 /*
  _______   ______     ______   .___________. _______ .______      
 |   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
@@ -448,7 +458,11 @@ p{
   .Top_Bar #Texte_de_connexion {
     display: inline;
   }
+<<<<<<< HEAD
 .ASavoir{
+=======
+  .ASavoir{
+>>>>>>> a28142c1f892e709f01d97855e7fd14026c302a9
     margin-top: 80%;
   }
   #APropos{
