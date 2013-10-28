@@ -85,7 +85,7 @@ function do_html_header($languages_vars, $title=''){
     </head>
     <body>
     <br><br><br> <br><br><br> <?php var_dump($_SESSION); ?>
-     
+
     <div class="Top_Bar">
         <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
 <!-- begin container -->
@@ -127,6 +127,7 @@ function do_html_header($languages_vars, $title=''){
           }
           ?>
           </p>
+
         </div>
         <div id="Panier">
             <a href="#">

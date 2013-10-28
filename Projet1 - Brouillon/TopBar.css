@@ -41,6 +41,7 @@ time, mark, audio, video {
 body{
   font-family: "Helvetica Neue";
 }
+
 a:visited{
   text-decoration: none;
 }
@@ -325,7 +326,6 @@ p{
   margin-top: 50px;
 }
 
-
 /*
  _______   ______     ______   .___________. _______ .______      
 |   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
@@ -361,6 +361,7 @@ p{
   margin-top: 5%;
   clear: both;
 }
+
 .Footer #text{
   display: inline-block;
   width: 50%;
@@ -419,10 +420,6 @@ p{
 .----)   |   |  |      |  |____ |  `----.|  | |  |     |  | |  `----.
 |_______/    | _|      |_______| \______||__| |__|     |__|  \______|
                                                                      
-<<<<<<< HEAD
-
-
-*/
 */
 
 @media (max-height: 420px ){
