@@ -577,7 +577,9 @@ function display_admin_menu(){
 function do_man_category(){
 ?>
   <div class="LogoTop">
+    <div id="logoCat">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
     <h1>Collection Homme | Collection Femme</h1> 
     <div class="ImageCategroy">
       <img src="medias/pictures/Parc-6-Collection.jpg" alt="Collection Homme - Eté 2014">
