@@ -549,17 +549,19 @@ function display_login_form($languages_vars){
    <h1>Connexion à GrindHouse Leather</h1>
    <form method="post" action="connect.php">
    <div  bgcolor="#cccccc">
+   <table cellspacing="10">
      <tr>
-       <td><?php echo $languages_vars['mail']; ?></td>
+       <td><?php echo $languages_vars['mail']; ?> :</td>
        <td><input type="text" name="mail"/></br></td>
      </tr>
      <tr>
-       <td><?php echo $languages_vars['mdp']; ?></td>
+       <td><?php echo $languages_vars['mdp']; ?> :</td>
        <td><input type="password" name="passwd"/></br></td>
      </tr>
      <tr>
        <td colspan="2" align="center">
-       <input type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></br></tr>
+       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></br></tr>
+    </table>
    </div></form>
   </div>
 </center>

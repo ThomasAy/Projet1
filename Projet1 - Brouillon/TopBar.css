@@ -530,8 +530,16 @@ p{
 
 #login_form form{
   border : 1px solid rgb(238,238,238);
-
 }
+
+#login_form #myButton {
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: auto;
+  z-index: 50;
+}
+
 
 #signup_form{
   margin-top: 30px;
@@ -546,7 +554,6 @@ p{
   border : 1px solid black;
   opacity: 0.7;
   margin-top: 50px;
-
 }
 /*
  _______   ______     ______   .___________. _______ .______      
