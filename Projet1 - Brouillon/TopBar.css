@@ -63,14 +63,12 @@ p{
 
 
 /*
-
 .___________.  ______   .______   .______        ___      .______      
 |           | /  __  \  |   _  \  |   _  \      /   \     |   _  \     
 `---|  |----`|  |  |  | |  |_)  | |  |_)  |    /  ^  \    |  |_)  |    
     |  |     |  |  |  | |   ___/  |   _  <    /  /_\  \   |      /     
     |  |     |  `--'  | |  |      |  |_)  |  /  _____  \  |  |\  \----.
-    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|
-                                                                       
+    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|                                                                   
 */
 
 
@@ -388,7 +386,7 @@ background-color: rgb(238,238,238);
   color: black;
 }
 
-#conteneur .Category .CategoryList li:before {
+#conteneur .Category li:before {
   position: relative;
   content: "- ";
 }
@@ -436,32 +434,6 @@ background-color: rgb(238,238,238);
   margin-right: 10%;
 }
 
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-
-}
-
 #conteneur .ProduitsHommes .Produit{
   position: relative;
   font-family: "Helvetica Neue";
@@ -470,6 +442,16 @@ background-color: rgb(238,238,238);
   width: 100%;
   text-align: center;
 }
+
+/*
+ __        ______     _______  __  .__   __. 
+|  |      /  __  \   /  _____||  | |  \ |  | 
+|  |     |  |  |  | |  |  __  |  | |   \|  | 
+|  |     |  |  |  | |  | |_ | |  | |  . `  | 
+|  `----.|  `--'  | |  |__| | |  | |  |\   | 
+|_______| \______/   \______| |__| |__| \__| 
+*/
+
 #signup_form{
   margin-top: 30px;
 }
@@ -483,17 +465,7 @@ background-color: rgb(238,238,238);
   border : 1px solid black;
   opacity: 0.7;
   margin-top: 50px;
-
 }
-
-/*
- __        ______     _______  __  .__   __. 
-|  |      /  __  \   /  _____||  | |  \ |  | 
-|  |     |  |  |  | |  |  __  |  | |   \|  | 
-|  |     |  |  |  | |  | |_ | |  | |  . `  | 
-|  `----.|  `--'  | |  |__| | |  | |  |\   | 
-|_______| \______/   \______| |__| |__| \__| 
-*/
 
 #login_form{
   position: relative;
