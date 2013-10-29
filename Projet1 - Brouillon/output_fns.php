@@ -538,7 +538,6 @@ function display_card_form($name) {
 function display_login_form($languages_vars){
   // dispaly form asking for name and password
   if (isset($_POST['mail']) &&  isset ($_POST['passwd'])){
-    echo "Vous avez essayé de vous connecter, voici le md5(".substr(md5($_POST['mail'] . $_POST['passwd']),12) . ")";
   }
 ?>
 <center>
@@ -731,9 +730,11 @@ function display_signup_confirm($languages_vars){
 
 function display_warning_message($message){  
 ?>
-  <div id="warning_message">
-    <?php echo $message; ?>
-  </div>
+  <center>
+    <div id="warning_message">
+      <?php echo $message; ?>
+    </div>
+  </center>
 <?php
 }
 
