@@ -226,5 +226,22 @@ function update_category($catid, $catname){
 		return true;
 	}
 }
-            
-    
+
+
+function display_list_of_products(){
+
+  $conn = db_connect();
+  
+  $query = "select * from produit";
+  $result = $conn->query($query);
+  ?>
+    <center>
+      <div id="menu">
+        <p>Il y a <?php echo $result.num_rows; ?> produits</p> 
+      </div>
+    </center> 
+  <?php
+  
+
+}
+

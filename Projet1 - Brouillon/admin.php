@@ -23,8 +23,8 @@ session_start();
 }
 */
 	
-	if(check_admin_user()){
-		do_html_header("Administration");
+	if(true){
+		do_html_header($languages_var, $languages_var['tableau_de_bord']);
 		display_admin_menu();
 		do_html_footer();
 	} else {
