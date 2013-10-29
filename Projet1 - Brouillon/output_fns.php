@@ -541,21 +541,27 @@ function display_login_form($languages_vars){
     echo "Vous avez essayé de vous connecter, voici le md5(".substr(md5($_POST['mail'] . $_POST['passwd']),12) . ")";
   }
 ?>
-<div id="login_form">
- <form method="post" action="connect.php">
- <div  bgcolor="#cccccc">
-   <tr>
-     <td><?php echo $languages_vars['mail']; ?></td>
-     <td><input type="text" name="mail"/></td></tr>
-   <tr>
-     <td><?php echo $languages_vars['mdp']; ?></td>
-     <td><input type="password" name="passwd"/></td></tr>
-   <tr>
-     <td colspan="2" align="center">
-     <input type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></tr>
-   <tr>
- </div></form>
-</div>
+<center>
+  <div id="login_form">
+   <h1>Connexion à GrindHouse Leather</h1>
+   <form method="post" action="connect.php">
+   <div  bgcolor="#cccccc">
+   <table cellspacing="10">
+     <tr>
+       <td><?php echo $languages_vars['mail']; ?> :</td>
+       <td><input type="text" name="mail"/></br></td>
+     </tr>
+     <tr>
+       <td><?php echo $languages_vars['mdp']; ?> :</td>
+       <td><input type="password" name="passwd"/></br></td>
+     </tr>
+     <tr>
+       <td colspan="2" align="center">
+       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></tr>
+    </table>
+   </div></form>
+  </div>
+</center>
 
 <?php
 }
