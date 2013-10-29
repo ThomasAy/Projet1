@@ -44,6 +44,22 @@ function get_category_name($catid){
 	return $row->catname;
 }
 
+function get_category_name($id_cate){
+	$conn = db_connect();
+	$query = "select nom from categorie where id_cate = ?";
+
+	$result = $conn->prepare($query);
+	$result->bind_param("i", $id_cate);
+	$result->execute();
+	$result->bind_result($nom_cate);
+	$result->fetch();
+
+	$result->close();
+
+	return $nom_cate;
+
+}
+
 function get_products($catid){
 	//Récupère les livres dans la catégorie correspondante dont l'ID est passé en paramètres
 	if((!$catid) || $catid==''){
