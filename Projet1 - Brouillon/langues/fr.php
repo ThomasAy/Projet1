@@ -182,11 +182,11 @@ $languages_var['country']['slovenie'] = 'Slovénie';
 $languages_var['country']['suede'] = 'Suède';
 
 $languages_var['inscription_confirm'] = 'Vous êtes désormais inscrit sur GrindHouse Leather et vous pouvez vous connecter dès maintenant en cliquant <a href=\'login.php\'>ici</a>.';
-$languages_var['warning'] = 'Vous devez remplir tous les champs obligatoires';
+$languages_var['warning'] = 'Vous devez remplir tous les champs obligatoires.';
 $languages_var['mail_existant'] = 'Un compte avec cette adresse mail existe déjà, veuillez en choisir une autre.';
-$languages_var['mdp_incorrects'] = 'Les mots de passe ne correspondent pas, veillez réessayer';
+$languages_var['mdp_incorrects'] = 'Les mots de passe ne correspondent pas, veillez réessayer.';
 
-$languages_var['combinaison_incorrecte'] = 'La combinaison est incorrecte, veuillez réessayer';
+$languages_var['combinaison_incorrecte'] = 'La combinaison est incorrecte, veuillez réessayer.';
 
 
 $languages_var['accueil_home'] = '<p>Toute l\'équipe de GrindHouse Leather vous souhaite la bienvenue sur son site en ligne.</p>
