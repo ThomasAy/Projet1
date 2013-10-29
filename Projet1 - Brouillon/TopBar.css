@@ -137,7 +137,7 @@ width: 20px;
   position: absolute;
   left: 42%;
   top: 10px;
-  width: 50%;
+  width: 40%;
   height: 32px;
   z-index: 50;
 }
@@ -172,7 +172,7 @@ width: 20px;
 }
 
   .Top_Bar #Texte_de_connexion {
-  display: none;
+  z-index: 10;
   position: absolute;
   right: 60px;
   top: 15px;
