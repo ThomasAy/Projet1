@@ -85,7 +85,7 @@ function do_html_header($languages_vars, $title=''){
     <body>
     
     <div class="Top_Bar">
-        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
+        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/11.png" alt="twitter"/> &nbsp; </p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
