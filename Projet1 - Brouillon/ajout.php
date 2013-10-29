@@ -6,7 +6,7 @@
  } else{
  do_html_header($languages_var, "Ajouter un nouveau produit");
 
- display_form_Product();
+ display_form_Product($languages_var);
 
  do_html_footer();
 }

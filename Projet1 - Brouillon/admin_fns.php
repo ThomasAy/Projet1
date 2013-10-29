@@ -292,3 +292,64 @@ function display_list_of_products(){
   } 
 
 
+function  display_form_Product($languages_vars)
+{
+ echo '
+  <center>
+     <div id="signup_form">
+          <div id="new_client">'
+            .$languages_vars['new_client'].
+            '<hr>
+          </div>
+          <br/>
+          <table>
+          <tr><td>
+          <form method="post" action="register.php">
+          <label for="civilite">* '.$languages_vars['civilite'].' : </label>
+          <input type="radio" name="civilite" value="1">' .$languages_vars['monsieur'].'
+          <input type="radio" name="civilite" value="2">' .$languages_vars['madame'].'
+          <input type="radio" name="civilite" value="3">' .$languages_vars['mademoiselle'].'
+          <br/>
+          <label for="nom">* '. $languages_vars['nom'].':</label>
+          <input type="text" name="nom">
+          <br/>
+          <label for="prenom">* '. $languages_vars['prenom'].'</label>
+          <input type="text" name="prenom">
+          <br/>
+          <label for="adresse">* '. $languages_vars['adresse'].'</label>
+           <input type="text" name="adresse">
+          <br/>
+          <select name="pays">
+          <label for="country">';
+          
+            foreach($languages_vars['country'] as $key => $value){
+              echo '
+              </label>
+              <option value="' . $value . '"> $value </option>
+              ';
+            }
+          echo '
+          </select>
+          <br/>
+          <label for="phone">'. $languages_vars['phone'].'</label>
+          <input class="NomForm" type="text" name="phone">
+          <br>
+          <br/>
+          
+          <br/>
+
+          <hr>
+
+          <br/>
+          </td>
+          </table>
+          
+          <input id="myButton" type="submit" name="submit" value='.$languages_vars['inscription'].'>
+          </form>
+          </br>
+          <br/>
+      </div>
+    </center>
+';
+  }
+
