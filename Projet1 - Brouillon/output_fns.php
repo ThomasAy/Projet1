@@ -543,9 +543,10 @@ function display_login_form($languages_vars){
 <center>
   <div id="login_form">
    <h1>Connexion à GrindHouse Leather</h1>
-   <form method="post" action="connect.php">
    <div  bgcolor="#cccccc">
-   <table cellspacing="10">
+   <table cellspacing="10">   
+   <form method="post" action="connect.php">
+
      <tr>
        <td><?php echo $languages_vars['mail']; ?> :</td>
        <td><input type="text" name="mail"/></br></td>
@@ -556,10 +557,12 @@ function display_login_form($languages_vars){
      </tr>
      <tr>
        <td colspan="2" align="center">
-       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/>
-       <a href="signup.php"><?php echo $languages_vars['inscription']; ?></a></td></tr>
+       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></form>
+       <form method="post" action="signup.php">
+       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['inscription'].'"'; ?>/></form>
+      </td></tr>
     </table>
-   </div></form>
+   </div>
   </div>
 </center>
 
