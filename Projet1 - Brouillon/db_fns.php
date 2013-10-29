@@ -1,6 +1,6 @@
 <?php
 function db_connect(){
-	$result = new mysqli('localhost', 'root', 'root', 'ghl');
+	$result = new mysqli('localhost', 'admin', '', 'ghl');
 	
 	if (mysqli_connect_errno()) {
  	 exit('Connect failed: '. mysqli_connect_error());

@@ -11,6 +11,7 @@ $languages_var['mail'] = 'Adresse e-mail';
 $languages_var['mdp'] = 'Mot de passe';
 $languages_var['mon_panier'] = 'Mon panier';
 $languages_var['panier'] = 'Panier';
+$languages_var['mon_compte'] = 'Mon compte';
 
 
 $languages_var['collection_homme'] = 'Collection Homme';
@@ -32,6 +33,7 @@ $languages_var['bonjour'] = 'Bonjour';
 $languages_var['profil'] = 'MON PROFIL';
 
 $languages_var['change_mdp'] = 'Changer mon mot de passe';
+$languages_var['newsletter'] = 'Newsletter';
 $languages_var['commandes'] = 'MES COMMANDES';
 $languages_var['commandes_en_cours'] = 'Commande(s) en cours';
 $languages_var['historique_facture'] = 'Historique / Facture(s)';
@@ -186,4 +188,7 @@ $languages_var['mdp_incorrects'] = 'Les mots de passe ne correspondent pas, veil
 
 $languages_var['combinaison_incorrecte'] = 'La combinaison est incorrecte, veuillez réessayer';
 
+
+$languages_var['accueil_home'] = '<p>Toute l\'équipe de GrindHouse Leather vous souhaite la bienvenue sur son site en ligne.</p>
+								  <p>Nous sommes à votre disposition à tout moment durant votre visite, n\'hésitez pas à nous contacter en cas de besoin.</p>';
 ?>
