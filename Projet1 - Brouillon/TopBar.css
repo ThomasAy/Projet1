@@ -97,12 +97,23 @@ p{
   z-index: 48;
 }
 
+.Top_Bar #Panier img{
+width: 20px;
+
+}
+
+
   .Top_Bar #Pays {
   font-family: "Helvetica Neue";
   color: rgb( 209, 211, 212 );
   position: absolute;
   top: 10px;
   left: 5px;
+  width: 40px;
+  min-height: 30px;
+}
+
+  .Top_Bar #Pays img{
   width: 40px;
   min-height: 30px;
 }
@@ -116,12 +127,12 @@ p{
 
 .Top_Bar #Reseaux_sociaux {
   position: absolute;
-  left: 40px;
-  top: 10px;
+  left: 60px;
+  top: 12px;
   min-height: 30px;
 }
 .Top_Bar #Reseaux_sociaux img{
-  width:27px;
+  width:20px;
 }
 
 .Top_Bar #Rechercher {
