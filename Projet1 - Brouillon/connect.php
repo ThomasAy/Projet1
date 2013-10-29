@@ -25,7 +25,7 @@ if(isset($_POST['mail']) &&  isset ($_POST['passwd'])){
 	} else{
 		do_html_header($languages_var);
 		display_warning_message($languages_var['combinaison_incorrecte']);
-		display_login_form();
+		display_login_form($languages_var);
 		do_html_footer();
 	}
 } else {
