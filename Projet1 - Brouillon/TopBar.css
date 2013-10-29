@@ -488,6 +488,23 @@ background-color: rgb(238,238,238);
   text-align: center;
 }
 
+/*
+ _______   ______   .______      .___  ___. 
+|   ____| /  __  \  |   _  \     |   \/   | 
+|  |__   |  |  |  | |  |_)  |    |  \  /  | 
+|   __|  |  |  |  | |      /     |  |\/|  | 
+|  |     |  `--'  | |  |\  \----.|  |  |  | 
+|__|      \______/  | _| `._____||__|  |__|
+
+*/
+
+#signup_form{
+  margin-top: 5%;
+}
+
+#signup_confirm{
+  margin : auto;
+}
 
 /*
  __        ______     _______  __  .__   __. 
@@ -498,13 +515,6 @@ background-color: rgb(238,238,238);
 |_______| \______/   \______| |__| |__| \__| 
 */
 
-#signup_form{
-  margin-top: 30px;
-}
-
-#signup_confirm{
-  margin : auto;
-}
 
 #warning_message{
   position: relative;
@@ -513,8 +523,8 @@ background-color: rgb(238,238,238);
   opacity: 0.7;
   height: 20%;
   width: 30%;
-  margin-top: 5%;
-  margin-bottom: -5%;
+  margin-top: 10%;
+  margin-bottom: -10%;
 }
 
 
@@ -523,7 +533,7 @@ background-color: rgb(238,238,238);
   border : 1px rgb(238,238,238);
   height: 20%;
   width: 30%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 #login_form h1{
@@ -539,6 +549,15 @@ background-color: rgb(238,238,238);
   border : 1px solid rgb(238,238,238);
 }
 
+#login_form a{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border : 1px rgb(238,238,238);
+  height: 20%;
+  width: 30%;
+  margin-top: 10%;
+}
+
 #login_form #myButton {
   position: relative;
   display:block;
@@ -551,14 +570,6 @@ background-color: rgb(238,238,238);
   font-weight: 100;
   width: 30%;}
 
-
-#signup_form{
-  margin-top: 30px;
-}
-
-#signup_confirm{
-  margin : auto;
-}
 
 /*
  _______   ______     ______   .___________. _______ .______      

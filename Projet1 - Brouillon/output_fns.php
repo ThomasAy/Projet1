@@ -556,7 +556,8 @@ function display_login_form($languages_vars){
      </tr>
      <tr>
        <td colspan="2" align="center">
-       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></tr>
+       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/>
+       <a href="signup.php"><?php echo $languages_vars['inscription']; ?></a></td></tr>
     </table>
    </div></form>
   </div>
