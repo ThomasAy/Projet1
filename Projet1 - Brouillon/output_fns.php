@@ -571,14 +571,17 @@ function display_login_form($languages_vars){
 
 function display_admin_menu(){
 ?>
-<br />
-<a href="index.php">Go to main site</a><br />
-<a href="insert_category_form.php">Add a new category</a><br />
-<a href="insert_book_form.php">Add a new book</a><br />
-<a href="change_password_form.php">Change admin password</a><br />
+<center>
+  <div id="menu">
+    <a href="index.php">Go to main site</a><br />
+    <a href="ajout.php">Ajouter un nouveau produit</a><br />
+    <a href="list_produit.php">Lister les produits existants</a><br />
+    <a href="insert_book_form.php">Add a new book</a><br />
+    <a href="change_password_form.php">Change admin password</a><br />
+  </div>
+</center>
 <?php
 }
-
 
 function do_man_category(){
 ?>
