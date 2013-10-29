@@ -234,14 +234,61 @@ function display_list_of_products(){
   
   $query = "select * from produit";
   $result = $conn->query($query);
-  ?>
+  
+  if(!$result){
+    ?>
     <center>
       <div id="menu">
-        <p>Il y a <?php echo $result.num_rows; ?> produits</p> 
+        <p>Erreur dans la requete, veuillez contacter votre administrateur</p> 
       </div>
     </center> 
   <?php
-  
+  } else {
+    ?>
+    <center>
+      <div id="menu">
+        <p>Il y a <?php echo $result->num_rows; ?> produits</p>
+      </div>
+    </center>
+      <?php
 
-}
+      $query = "SELECT ID_PROD, NOM, PRIX_HT, DESC_FR, STOCK 
+                FROM produit 
+                ORDER BY ID_PROD ASC";
+
+      $sql = $conn->query($query);
+
+
+        //Pour la MAP du tableau
+        $ListeProd = "
+        <center>
+        <div>
+        <table>
+            <tr>
+                <th> <center> <u>Nom et Prix</u> </center> </th>
+                <th> <center>Image</center> </th>
+                <th> <center> <b> <u>Description</u> </b></center> </th> 
+                <th> <center>Quantité </center></th>
+            </tr>";
+        while($row = $sql->fetch_array(MYSQLI_BOTH)) {
+            $ListeProd = $ListeProd .
+            "<tr> 
+                <td>   <i>". $row['NOM'] . "</i> pour  : " . $row['PRIX_HT'] . "€! </td>
+                <td>    <img SRC=\"\" ALT=\"" . $row['NOM'] . "\" width=\"200px\"> </td>
+                <td> <center> ".$row['DESC_FR']." </center> </td>
+                <td width=\"200px\"> 
+                </td>
+            </tr>";
+        }
+
+        $ListeProd = $ListeProd . 
+        "</table>
+        </div>
+        </center>";
+
+        echo $ListeProd;
+
+      }
+  } 
+
 
