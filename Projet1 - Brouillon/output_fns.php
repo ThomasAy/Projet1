@@ -114,7 +114,7 @@ function do_html_header($languages_vars, $title=''){
           <?php 
           if(isset($_SESSION['mail'])){
             echo $languages_vars['bonjour'].' ';
-            echo = $_SESSION['civ'];
+            echo $_SESSION['civ'];
             do_html_url("account.php", $_SESSION['user_lastname']);
             echo ' ';
             do_html_url("logout.php", $languages_vars['deconnexion']);
@@ -124,7 +124,7 @@ function do_html_header($languages_vars, $title=''){
           ?>
           </p>
 
-        </div>orel
+        </div>
         <div id="Panier">
             <a href="#">
                 <span><img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
