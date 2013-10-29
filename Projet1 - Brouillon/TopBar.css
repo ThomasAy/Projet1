@@ -370,7 +370,6 @@ background-color: rgb(238,238,238);
   color: black;
   width: 0%;
   margin-left: 0%;
-  margin-top: 3%;
 }
 
 #conteneur .Category .CategoryList1{
@@ -389,7 +388,7 @@ background-color: rgb(238,238,238);
   color: black;
 }
 
-#conteneur .Category .CategoryList1 li:before {
+#conteneur .Category .CategoryList li:before {
   position: relative;
   content: "- ";
 }
@@ -411,20 +410,13 @@ background-color: rgb(238,238,238);
   font-size:100%;
   color: black;
 }
-
-#conteneur .Category .CategoryList2 li:before {
-  position: relative;
-  content: "- "; 
-}
     
 #conteneur .ProduitsHommes{
   position:relative;
   float:left;
-  margin-top: 5%;
   margin-left: 5%;
+  padding-top: 10px;
   width: 70%;
-
- 
 }
 
 #conteneur .ProduitsHommes .NomHomme h1{
