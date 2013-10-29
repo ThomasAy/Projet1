@@ -103,12 +103,10 @@ function do_html_header($languages_vars, $title=''){
 <!-- end container -->    
         
         <div id="Rechercher">
-          <form action="#" method="post">
-        <fieldset>
-          <input type="text" value="Rechercher un produit..."  onfocus="this.value=(this.value=='Rechercher un produit')? '' : this.value ;" />
-          <input type="submit" name="go" id="go" value="Go" />
-        </fieldset>
-      </form>
+          <form method="post" action="#">
+            <input id="inputSearch" type="text" name="keyWord"/>
+            <input id="btnValider" type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
+          </form>
         </div>
 
         <div id="Texte_de_connexion">
@@ -116,12 +114,9 @@ function do_html_header($languages_vars, $title=''){
           <?php 
           if(isset($_SESSION['mail'])){
             echo $languages_vars['bonjour'].' ';
-            switch ($_SESSION['civ']){
-              case 1 : echo $languages_vars['monsieur']; break;
-              case 2 : echo $languages_vars['mademoiselle']; break;
-              case 3 : echo $languages_vars['madame']; break;
-            }
-            echo ' '.$_SESSION['user_lastname'].' ';
+            echo $_SESSION['civ'];
+            do_html_url("account.php", $_SESSION['user_lastname']);
+            echo ' ';
             do_html_url("logout.php", $languages_vars['deconnexion']);
           } else {
             do_html_url("login.php", $languages_vars['connexion']); 
@@ -141,15 +136,15 @@ function do_html_header($languages_vars, $title=''){
 	}
 
   function do_html_homepage_body(){ 
-
   ?>
 
   <div class="Contenu">
     <div id="femme">
-      <img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme">
+      <a href="category.php?id=1"><img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme"></a>
     </div>
     <div id="homme">
-     <img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme">
+
+     <a href="category.php?id=2"><img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme"></a>
     </div>
       <div id="logo">
         <img id="GLH" src="medias/BandeHomepage.png" alt="GHL Logo">
@@ -585,7 +580,9 @@ function display_admin_menu(){
 function do_man_category(){
 ?>
   <div class="LogoTop">
+    <div id="logoCat">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
     <h1>Collection Homme | Collection Femme</h1> 
     <div class="ImageCategroy">
       <img src="medias/pictures/Parc-6-Collection.jpg" alt="Collection Homme - Eté 2014">
@@ -740,10 +737,30 @@ function display_warning_message($message){
 <?php
 }
 
-function do_html_produit(){
+function display_account_user($languages_vars){
 ?>
+  <div id='account_home'>
+   
+    <h2><?php echo $languages_vars['bonjour'].' '.$_SESSION['civ'].' '. $_SESSION['user_lastname']; ?></h2>
+      <div id="menu_account">
+        <h3><?php echo $languages_vars['profil']; ?></h3>
+          <ul>
+            <li><?php do_html_url('infos.php', $languages_vars['info']); ?></li>
+            <li><?php do_html_url('change_password.php', $languages_vars['change_mdp']); ?></li>
+            <li><?php do_html_url('newsletter.php', $languages_vars['newsletter']); ?></li>
+          </ul>
+          <h3><?php echo $languages_vars['commandes']; ?></h3>
+          <ul>
+            <li><?php do_html_url('orders.php', $languages_vars['commandes_en_cours']); ?></li>
+            <li><?php do_html_url('history.php', $languages_vars['historique_facture']); ?></li>
+          </ul>
 
+      </div>
 
-
-<?php  
+      <div id="message_home">
+          <?php echo $languages_vars['accueil_home']; ?>
+      </div>
+  </div>
+<?php
 }
+

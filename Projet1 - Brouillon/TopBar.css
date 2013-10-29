@@ -63,14 +63,12 @@ p{
 
 
 /*
-
 .___________.  ______   .______   .______        ___      .______      
 |           | /  __  \  |   _  \  |   _  \      /   \     |   _  \     
 `---|  |----`|  |  |  | |  |_)  | |  |_)  |    /  ^  \    |  |_)  |    
     |  |     |  |  |  | |   ___/  |   _  <    /  /_\  \   |      /     
     |  |     |  `--'  | |  |      |  |_)  |  /  _____  \  |  |\  \----.
-    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|
-                                                                       
+    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|                                                                   
 */
 
 .Top_Bar {
@@ -95,12 +93,23 @@ p{
   z-index: 48;
 }
 
+.Top_Bar #Panier img{
+width: 20px;
+
+}
+
+
   .Top_Bar #Pays {
   font-family: "Helvetica Neue";
   color: rgb( 209, 211, 212 );
   position: absolute;
   top: 10px;
   left: 5px;
+  width: 40px;
+  min-height: 30px;
+}
+
+  .Top_Bar #Pays img{
   width: 40px;
   min-height: 30px;
 }
@@ -114,19 +123,19 @@ p{
 
 .Top_Bar #Reseaux_sociaux {
   position: absolute;
-  left: 40px;
-  top: 10px;
+  left: 60px;
+  top: 12px;
   min-height: 30px;
 }
 .Top_Bar #Reseaux_sociaux img{
-  width:27px;
+  width:20px;
 }
 
 .Top_Bar #Rechercher {
   position: absolute;
   left: 42%;
   top: 10px;
-  width: 50%;
+  width: 40%;
   height: 32px;
   z-index: 50;
 }
@@ -161,7 +170,7 @@ p{
 }
 
   .Top_Bar #Texte_de_connexion {
-  display: none;
+  z-index: 10;
   position: absolute;
   right: 60px;
   top: 15px;
@@ -336,29 +345,30 @@ p{
 */
 
 .LogoTop {
-  position: absolute;
+  display: inline-block;
+  position: relative;
   text-align: center;
-  height: 100%;
-  width: 100%; 
-  top: 10%; 
-  z-index: 3;
-  opacity: 1;
+  top: 60px;
+}
+
+.LogoTop #logoCat{
+
+margin: auto;
+float: center;
+width: 30%;
 }
 
 .LogoTop img{
   position: relative;
   height: 25%;
+  width: 25%;
 }
 
 .LogoTop h1{
-  position: absolute;
-  font-family: "Helvetica Neue";
-  font-weight: 100;
+  position: relative;
   font-size:150%;
-  color: black;
-  width: 90%;
-  left: 5%;
-  height: 7%;
+  width: 100%;
+
 } 
 
 /*
@@ -373,50 +383,27 @@ p{
 
 .ImageCategroy {
   position: relative;
-  left: 5%;
-  right: 5%;
-  margin-top: 5%;
-  width: 90%;
 }
 
 .ImageCategroy img{
   position: relative;
-  width: 100%;
+  width: 90%;
+  height: auto;
 }
 
 #conteneur{
-  position: absolute;
-  margin-top: 68%;
+  position: relative;
+  margin-top: 85px;
   margin-left: 5%;
-  width: 90%;
-  height: 80%;
 }
 
 #conteneur .Category {
-  position: relative;
-  float: left;
-  background-color: rgb(238,238,238);
-  width: 30%; 
-  margin-left: 0%; 
-  margin-top: 5%;
-  float:left;
+position: relative;
+width: 15%;
+float: left;
+padding: 10px;
+background-color: rgb(238,238,238);
 
-}
-
-#conteneur .Category .Sacs{
-  position: relative;
-  margin-top: 5%;
-  width: 100%;
-  margin-left: 10%;
-  height: 30%;
-}
-
-#conteneur .Category .Accessoires{
-  position: relative;
-  margin-top: 5%;
-  width: 100%;
-  margin-left: 10%;
-  height: 60%;
 }
 
 #conteneur .Category h1{
@@ -426,7 +413,6 @@ p{
   color: black;
   width: 0%;
   margin-left: 0%;
-  margin-top: 3%;
 }
 
 #conteneur .Category .CategoryList1{
@@ -445,7 +431,7 @@ p{
   color: black;
 }
 
-#conteneur .Category .CategoryList1 li:before {
+#conteneur .Category li:before {
   position: relative;
   content: "- ";
 }
@@ -467,19 +453,13 @@ p{
   font-size:100%;
   color: black;
 }
-
-#conteneur .Category .CategoryList2 li:before {
-  position: relative;
-  content: "- "; 
-}
     
 #conteneur .ProduitsHommes{
   position:relative;
   float:left;
-  margin-top: 5%;
   margin-left: 5%;
-
- 
+  padding-top: 10px;
+  width: 70%;
 }
 
 #conteneur .ProduitsHommes .NomHomme h1{
@@ -487,7 +467,6 @@ p{
   font-weight: 100;
   font-size:150%;
   color: black;
-  width: 150%;
   margin-left: 2.5%;
 
 }
@@ -498,32 +477,6 @@ p{
   border:solid 1px rgb(238,238,238); 
   margin-top: 3%;
   margin-right: 10%;
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-
 }
 
 #conteneur .ProduitsHommes .Produit{
@@ -544,6 +497,22 @@ p{
 |  `----.|  `--'  | |  |__| | |  | |  |\   | 
 |_______| \______/   \______| |__| |__| \__| 
 */
+
+#signup_form{
+  margin-top: 30px;
+}
+
+#signup_confirm{
+  margin : auto;
+}
+
+#warning_message{
+  background-color: red;
+  border : 1px solid black;
+  opacity: 0.7;
+  margin-top: 50px;
+}
+
 
 #login_form{
   position: relative;

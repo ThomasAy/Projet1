@@ -27,21 +27,37 @@ function get_categories(){
 	return $result;
 }
 
-function get_category_name($catid){
-	//Récupère le nom de la catégorie correspondant à l'id catégorie passé en paramètre
+// function get_category_name($catid){
+// 	//Récupère le nom de la catégorie correspondant à l'id catégorie passé en paramètre
 	
+// 	$conn = db_connect();
+// 	$query = "select nom from categories where id_cate = '".$catid."'";
+// 	$result = @$conn->query($query);
+// 	if(!$result){
+// 		return false;
+// 	}
+// 	$num_cats = $result->num_rows;
+// 	if($num_cats == 0){
+// 		return false;
+// 	}
+// 	$row = $result->fetch_object();
+// 	return $row->catname;
+// }
+
+function get_category_name($id_cate){
 	$conn = db_connect();
-	$query = "select nom from categories where id_cate = '".$catid."'";
-	$result = @$conn->query($query);
-	if(!$result){
-		return false;
-	}
-	$num_cats = $result->num_rows;
-	if($num_cats == 0){
-		return false;
-	}
-	$row = $result->fetch_object();
-	return $row->catname;
+	$query = "select nom from categorie where id_cate = ?";
+
+	$result = $conn->prepare($query);
+	$result->bind_param("i", $id_cate);
+	$result->execute();
+	$result->bind_result($nom_cate);
+	$result->fetch();
+
+	$result->close();
+
+	return $nom_cate;
+
 }
 
 function get_products($catid){
