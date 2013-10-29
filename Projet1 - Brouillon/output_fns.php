@@ -85,7 +85,7 @@ function do_html_header($languages_vars, $title=''){
     <body>
     
     <div class="Top_Bar">
-        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
+        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/11.png" alt="twitter"/> &nbsp; </p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
@@ -103,10 +103,12 @@ function do_html_header($languages_vars, $title=''){
 <!-- end container -->    
         
         <div id="Rechercher">
-          <form method="post" action="#">
-            <input id="inputSearch" type="text" name="keyWord"/>
-            <input id="btnValider" type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
-          </form>
+          <form action="#" method="post">
+        <fieldset>
+          <input type="text" value="Rechercher un produit..."  onfocus="this.value=(this.value=='Rechercher un produit')? '' : this.value ;" />
+          <input type="submit" name="go" id="go" value="Go" />
+        </fieldset>
+      </form>
         </div>
 
         <div id="Texte_de_connexion">
@@ -736,4 +738,12 @@ function display_warning_message($message){
     <?php echo $message; ?>
   </div>
 <?php
+}
+
+function do_html_produit(){
+?>
+
+
+
+<?php  
 }
