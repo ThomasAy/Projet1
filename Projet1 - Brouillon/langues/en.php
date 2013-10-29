@@ -6,6 +6,9 @@
 	$languages_var['inscription'] = 'Sign up';
 	$languages_var['mail'] = 'Email';
 	$languages_var['mdp'] = 'Password';
+	$languages_var['mon_panier'] = 'My basket';
+	$languages_var['panier'] = 'Basket';
+	$languages_var['mon_compte'] = 'My account';
 
 	$languages_var['collection_homme'] = 'Menswear';
 	$languages_var['collection_femme'] = 'Womenwsear';
@@ -26,6 +29,8 @@
 	$languages_var['profil'] = 'MY PROFILE';
 
 	$languages_var['change_mdp'] = 'Change password';
+	$languages_var['newsletter'] = 'Newsletter';
+
 	$languages_var['commandes'] = 'MY ORDERS';
 	$languages_var['commandes_en_cours'] = 'Current orders';
 	$languages_var['historique_facture'] = 'Historic/Invoices';
@@ -180,6 +185,8 @@
 
 	$languages_var['combinaison_incorrecte'] = 'Combination is not correct, please try again';
 
+	$languages_var['accueil_home'] = '<p>Welcome to GrindHouse Leather website.</p>
+								 	  <p>We are available at anytime during your navigation ,do not hesitate to contact us if you need help.</p>';
 
 	
 ?>
