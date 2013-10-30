@@ -767,22 +767,22 @@ function display_signup_form($languages_vars){
           <input type="radio" name="civilite" value="3"><?php echo $languages_vars['mademoiselle']; ?>
           <br/>
           <label for="nom">* <?php echo $languages_vars['nom']." :";?></label>
-          <input type="text" name="nom">
+          <input type="text" name="nom" required>
           <br/>
           <label for="prenom">* <?php echo $languages_vars['prenom']." :";?></label>
-          <input type="text" name="prenom">
+          <input type="text" name="prenom" required>
           <br/>
           <label for="adresse">* <?php echo $languages_vars['adresse']." :";?></label>
-           <input type="text" name="adresse">
+           <input type="text" name="adresse" required>
           <br/>
           <label for="adresse_2"><?php echo $languages_vars['adresse_2']." :"; ?></label>
-           <input type="text" name="adresse_2">
+           <input type="text" name="adresse_2" required>
           <br/>
           <label for="code_postal">* <?php echo $languages_vars['code_postal']." :"; ?></label>
-           <input type="text" name="zipcode">
+           <input type="text" name="zipcode" required>
           <br/>
           <label for="ville">* <?php echo $languages_vars['ville']." :";?></label>
-          <input  type="text" name="ville">
+          <input  type="text" name="ville" required>
           <br/>
           <label for="pays">* <?php echo $languages_vars['pays']." :"; ?></label>
           <select name="pays">
@@ -795,7 +795,7 @@ function display_signup_form($languages_vars){
           </select>
           <br/>
           <label for="phone"><?php echo $languages_vars['phone']." :"; ?></label>
-          <input class="NomForm" type='text' name='phone'>
+          <input class="NomForm" type='text' name='phone' required>
           <br>
           <br/>
           <input type="checkbox" name="newsletter" value="1">
@@ -808,14 +808,14 @@ function display_signup_form($languages_vars){
           <br/>
 
           <label for="mail">* <?php echo $languages_vars['mail']." :"; ?></label>
-          <input type="email" name="email">
+          <input type="email" name="email" required>
           <br/>
 
           <label for="mdp">* <?php echo $languages_vars['mdp']." :"; ?></label>
-          <input type="password" name="mdp">
+          <input type="password" name="mdp" required>
           <br/>
           <label for="confirm_mdp">* <?php echo $languages_vars['confirm_mdp']." :"; ?></label>
-          <input type="password" name="mdp2">
+          <input type="password" name="mdp2" required>
           <br/>
           <br/>
           </td>
@@ -919,7 +919,7 @@ function do_html_cart($languages_vars){
   </div>
 
   <div class="PanierNom2">
-    <p>MON PANIER</p>
+    <p>MES INFORMATIONS</p>
 
     <div class="BarrePanier">
 

@@ -360,12 +360,7 @@ width: 30%;
 
 .LogoTop img{
   position: relative;
-<<<<<<< HEAD
   height: 15%;
-=======
-  height: 25%;
-  width: 25%;
->>>>>>> origin/Roberto
 }
 
 .LogoTop h1{
@@ -523,9 +518,19 @@ background-color: rgb(238,238,238);
   height: 20%;
   width: 30%;
   margin-top: 10%;
-  border : 1px solid rgb(238,238,238);
+  border : 5px solid rgb(238,238,238);
 }
-
+#signup_form #myButton {
+  position: relative;
+  display:block;
+  margin:1 5px 0 0;
+  color:black;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 30%;
+}
 #signup_form #new_client{
   font-family: "Helvetica Neue";
   font-weight: 100;
@@ -558,7 +563,6 @@ background-color: rgb(238,238,238);
 }
 
 
-<<<<<<< HEAD
 
 
 /*
@@ -898,20 +902,8 @@ p {
         display: block;
         clear: both;
 }
-=======
-#signup_form #myButton {
-  position: relative;
-  display:block;
-  margin:1 5px 0 0;
-  color:black;
-  background-color: rgb(238,238,238);
-  border:1px solid rgb(238,238,238);
-  font-family: "Helvetica Neue";
-  font-weight: 100;
-  width: 30%;
-}
 
->>>>>>> origin/Roberto
+
 
 /*
  __        ______     _______  __  .__   __. 
@@ -1096,7 +1088,7 @@ p {
 
 .CartTop{
   position: relative;
-  height: 20%;
+  height: 80px;
   width: 100%;
   margin-top: 5%;
   z-index: 0;
@@ -1104,8 +1096,8 @@ p {
 
 .CartTop .Panier1 {
   position: relative;
-  background-color: rgb(155,155,155);
-  border:1px solid rgb(155,155,155);
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
   float:left;
   height: 69%;
   width: 15%;
@@ -1129,8 +1121,8 @@ p {
 
 .CartTop .MesInformations1{
   position: relative;
-  background-color: rgb(238,238,238);
-  border:1px solid rgb(238,238,238);
+  background-color: rgb(155,155,155);
+  border:1px solid rgb(155,155,155);
   float:left;
   height: 69%;
   width: 15%;
@@ -1205,7 +1197,7 @@ p {
 .PanierNom2{
   position: absolute;
   text-align: left;
-  color:black;
+  color:rgb(105, 103, 103);
   font-family: "Helvetica Neue";
   font-weight: 100;
   width: 90%;
