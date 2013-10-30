@@ -987,7 +987,7 @@ p {
   height: 20%;
   width: 30%;
   margin-top: 10%;
-  margin-bottom: -10%;
+  margin-bottom: 10%;
 }
 
 
@@ -1481,5 +1481,11 @@ p {
     height:80px;
      
         
-         }
+}
+
+.panier{
+  position : relative;
+  margin: auto;
+  margin-bottom: 25%
+}
 

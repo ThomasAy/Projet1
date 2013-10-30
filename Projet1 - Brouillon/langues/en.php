@@ -199,7 +199,7 @@
 								 	  <p>We are available at anytime during your navigation ,do not hesitate to contact us if you need help.</p>';
 
 	$languages_var['no_product'] = '<p>No product in this category.</p>';
-
+	$languages_var['panier_vide'] = 'No product in your cart';
 
 	
 ?>
