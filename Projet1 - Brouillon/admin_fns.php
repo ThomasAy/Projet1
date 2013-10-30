@@ -226,5 +226,130 @@ function update_category($catid, $catname){
 		return true;
 	}
 }
-            
-    
+
+
+function display_list_of_products(){
+
+  $conn = db_connect();
+  
+  $query = "select * from produit";
+  $result = $conn->query($query);
+  
+  if(!$result){
+    ?>
+    <center>
+      <div id="menu">
+        <p>Erreur dans la requete, veuillez contacter votre administrateur</p> 
+      </div>
+    </center> 
+  <?php
+  } else {
+    ?>
+    <center>
+      <div id="menu">
+        <p>Il y a <?php echo $result->num_rows; ?> produits</p>
+      </div>
+    </center>
+      <?php
+
+      $query = "SELECT ID_PROD, NOM, PRIX_HT, DESC_FR, STOCK 
+                FROM produit 
+                ORDER BY ID_PROD ASC";
+
+      $sql = $conn->query($query);
+
+
+        //Pour la MAP du tableau
+        $ListeProd = "
+        <center>
+        <div>
+        <table>
+            <tr>
+                <th> <center> <u>Nom et Prix</u> </center> </th>
+                <th> <center>Image</center> </th>
+                <th> <center> <b> <u>Description</u> </b></center> </th> 
+                <th> <center>Quantité </center></th>
+            </tr>";
+        while($row = $sql->fetch_array(MYSQLI_BOTH)) {
+            $ListeProd = $ListeProd .
+            "<tr> 
+                <td>   <i>". $row['NOM'] . "</i> pour  : " . $row['PRIX_HT'] . "€! </td>
+                <td>    <img SRC=\"\" ALT=\"" . $row['NOM'] . "\" width=\"200px\"> </td>
+                <td> <center> ".$row['DESC_FR']." </center> </td>
+                <td width=\"200px\"> 
+                </td>
+            </tr>";
+        }
+
+        $ListeProd = $ListeProd . 
+        "</table>
+        </div>
+        </center>";
+
+        echo $ListeProd;
+
+      }
+  } 
+
+
+function  display_form_Product($languages_vars)
+{
+ echo '
+  <center>
+     <div id="signup_form">
+          <div id="new_client">'
+            .$languages_vars['new_client'].
+            '<hr>
+          </div>
+          <br/>
+          <table>
+          <tr><td>
+          <form method="post" action="register.php">
+          <label for="civilite">* '.$languages_vars['civilite'].' : </label>
+          <input type="radio" name="civilite" value="1">' .$languages_vars['monsieur'].'
+          <input type="radio" name="civilite" value="2">' .$languages_vars['madame'].'
+          <input type="radio" name="civilite" value="3">' .$languages_vars['mademoiselle'].'
+          <br/>
+          <label for="nom">* '. $languages_vars['nom'].':</label>
+          <input type="text" name="nom">
+          <br/>
+          <label for="prenom">* '. $languages_vars['prenom'].'</label>
+          <input type="text" name="prenom">
+          <br/>
+          <label for="adresse">* '. $languages_vars['adresse'].'</label>
+           <input type="text" name="adresse">
+          <br/>
+          <select name="pays">
+          <label for="country">';
+          
+            foreach($languages_vars['country'] as $key => $value){
+              echo '
+              </label>
+              <option value="' . $value . '"> $value </option>
+              ';
+            }
+          echo '
+          </select>
+          <br/>
+          <label for="phone">'. $languages_vars['phone'].'</label>
+          <input class="NomForm" type="text" name="phone">
+          <br>
+          <br/>
+          
+          <br/>
+
+          <hr>
+
+          <br/>
+          </td>
+          </table>
+          
+          <input id="myButton" type="submit" name="submit" value='.$languages_vars['inscription'].'>
+          </form>
+          </br>
+          <br/>
+      </div>
+    </center>
+';
+  }
+

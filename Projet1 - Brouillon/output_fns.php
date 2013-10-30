@@ -72,7 +72,7 @@ function do_html_header($languages_vars, $title=''){
     <body>
     
     <div class="Top_Bar">
-        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/></p></div>
+        <div id="Reseaux_sociaux"> <p> &nbsp; <img src="medias/icons/twitter.png" alt="twitter"/> &nbsp; <img src="medias/icons/11.png" alt="twitter"/> &nbsp; </p></div>
 <!-- begin container -->
         <div id="Pays">
 <!-- begin language switcher -->
@@ -497,66 +497,48 @@ function display_card_form($name) {
 
 function display_login_form($languages_vars){
 ?>
-<div id="login_form">
- <form method="post" action="connect.php">
- <div  bgcolor="#cccccc">
-   <tr>
-     <td><?php echo $languages_vars['mail']; ?></td>
-     <td><input type="text" name="mail"/></td></tr>
-   <tr>
-     <td><?php echo $languages_vars['mdp']; ?></td>
-     <td><input type="password" name="passwd"/></td></tr>
-   <tr>
-     <td colspan="2" align="center">
-     <input type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></td></tr>
-   <tr>
- </div></form>
-</div>
+<center>
+  <div id="login_form">
+   <h1>Connexion à GrindHouse Leather</h1>
+   <div  bgcolor="#cccccc">
+   <table cellspacing="10">   
+   <form method="post" action="connect.php">
+
+     <tr>
+       <td><?php echo $languages_vars['mail']; ?> :</td>
+       <td><input type="text" name="mail"/></br></td>
+     </tr>
+     <tr>
+       <td><?php echo $languages_vars['mdp']; ?> :</td>
+       <td><input type="password" name="passwd"/></br></td>
+     </tr>
+     <tr>
+       <td colspan="2" align="center">
+       <input id="myButton" type="submit" value=<?php echo '"'.$languages_vars['connexion'].'"'; ?>/></form>
+       <form method="post" action="signup.php">
+       <input  id="myButton" type="submit" value=<?php echo '"'.$languages_vars['inscription'].'"'; ?>/></form>
+      </td></tr>
+    </table>
+   </div>
+  </div>
+</center>
 
 <?php
 }
 
 function display_admin_menu(){
 ?>
-<br />
-<a href="index.php">Go to main site</a><br />
-<a href="insert_category_form.php">Add a new category</a><br />
-<a href="insert_book_form.php">Add a new book</a><br />
-<a href="change_password_form.php">Change admin password</a><br />
+<center>
+  <div id="menu">
+    <a href="index.php">Go to main site</a><br />
+    <a href="ajout.php">Ajouter un nouveau produit</a><br />
+    <a href="list_produit.php">Lister les produits existants</a><br />
+    <a href="insert_book_form.php">Add a new book</a><br />
+    <a href="change_password_form.php">Change admin password</a><br />
+  </div>
+</center>
 <?php
 }
-
-function display_books($book_array) {
-  //display all books in the array passed in
-  if (!is_array($book_array)) {
-    echo "<p>No books currently available in this category</p>";
-  } else {
-    //create table
-    echo "<table width=\"100%\" border=\"0\">";
-
-    //create a table row for each book
-    foreach ($book_array as $row) {
-      $url = "show_book.php?isbn=".$row['isbn'];
-      echo "<tr><td>";
-      if (@file_exists("images/".$row['isbn'].".jpg")) {
-        $title = "<img src=\"images/".$row['isbn'].".jpg\"
-                  style=\"border: 1px solid black\"/>";
-        do_html_url($url, $title);
-      } else {
-        echo "&nbsp;";
-      }
-      echo "</td><td>";
-      $title = $row['title']." by ".$row['author'];
-      do_html_url($url, $title);
-      echo "</td></tr>";
-    }
-
-    echo "</table>";
-  }
-
-  echo "<hr />";
-}
-
 
 function do_man_category($languages_vars, $num_produits, $array_product){
 ?>
@@ -653,73 +635,85 @@ function do_man_category($languages_vars, $num_produits, $array_product){
 function display_signup_form($languages_vars){
   //display
 ?>
-      <div id="signup_form">
+    <center>
+     <div id="signup_form">
           <div id="new_client">
-              <?php echo $languages_vars['new_client']; ?>
+            <?php echo $languages_vars['new_client']; ?>
+            <hr>
           </div>
-
+          <br/>
+          <table>
+          <tr><td>
           <form method="post" action="register.php">
-          * <?php echo $languages_vars['civilite']; ?>
+          <label for="civilite">* <?php echo $languages_vars['civilite']." :"; ?></label>
           <input type="radio" name="civilite" value="1"><?php echo $languages_vars['monsieur']; ?>
           <input type="radio" name="civilite" value="2"><?php echo $languages_vars['madame']; ?>
           <input type="radio" name="civilite" value="3"><?php echo $languages_vars['mademoiselle']; ?>
           <br/>
-          * <?php echo $languages_vars['nom'];?>
+          <label for="nom">* <?php echo $languages_vars['nom']." :";?></label>
           <input type="text" name="nom">
           <br/>
-          * <?php echo $languages_vars['prenom'];?>
+          <label for="prenom">* <?php echo $languages_vars['prenom']." :";?></label>
           <input type="text" name="prenom">
           <br/>
-          * <?php echo $languages_vars['adresse'];?>
-          <input type="text" name="adresse">
+          <label for="adresse">* <?php echo $languages_vars['adresse']." :";?></label>
+           <input type="text" name="adresse">
           <br/>
-          <?php echo $languages_vars['adresse_2']; ?>
-          <input type="text" name="adresse_2">
+          <label for="adresse_2"><?php echo $languages_vars['adresse_2']." :"; ?></label>
+           <input type="text" name="adresse_2">
           <br/>
-          * <?php echo $languages_vars['code_postal']; ?>
-          <input type="text" name="zipcode">
+          <label for="code_postal">* <?php echo $languages_vars['code_postal']." :"; ?></label>
+           <input type="text" name="zipcode">
           <br/>
-          * <?php echo $languages_vars['ville'];?>
-          <input type="text" name="ville">
+          <label for="ville">* <?php echo $languages_vars['ville']." :";?></label>
+          <input  type="text" name="ville">
           <br/>
-          * <?php echo $languages_vars['pays']; ?>
+          <label for="pays">* <?php echo $languages_vars['pays']." :"; ?></label>
           <select name="pays">
-            <?php
-            foreach($languages_vars['country'] as $key => $value){ ?>
+          <label for="country"><?php
+            foreach($languages_vars['country'] as $key => $value){ ?></label>
               <option value=<?php echo '"'.$value.'"'; ?>> <?php echo $value; ?> </option>
             <?php
             }
             ?>
           </select>
           <br/>
-          <?php echo $languages_vars['phone']; ?>
-          <input type='text' name='phone'>
+          <label for="phone"><?php echo $languages_vars['phone']." :"; ?></label>
+          <input class="NomForm" type='text' name='phone'>
           <br>
+          <br/>
           <input type="checkbox" name="newsletter" value="1">
           <?php echo $languages_vars['grindhouse']; ?>
+          <br/>
           <br/>
 
           <hr>
 
           <br/>
 
-          * <?php echo $languages_vars['mail']; ?>
+          <label for="mail">* <?php echo $languages_vars['mail']." :"; ?></label>
           <input type="email" name="email">
           <br/>
 
-          * <?php echo $languages_vars['mdp']; ?>
+          <label for="mdp">* <?php echo $languages_vars['mdp']." :"; ?></label>
           <input type="password" name="mdp">
           <br/>
-          * <?php echo $languages_vars['confirm_mdp']; ?>
+          <label for="confirm_mdp">* <?php echo $languages_vars['confirm_mdp']." :"; ?></label>
           <input type="password" name="mdp2">
           <br/>
           <br/>
-
+          </td>
+          </table>
+          
           <p><?php echo $languages_vars['champ_obligatoire']; ?></p>
-
-          <input type="submit" name="submit" value=<?php echo '"'.$languages_vars['inscription'].'"'; ?>>
+          <br/>
+          <input id="myButton" type="submit" name="submit" value=<?php echo '"'.$languages_vars['inscription'].'"'; ?>>
           </form>
-    </div>
+          </br>
+          <br/>
+      </div>
+    </center>
+
 <?php
 }
 function display_signup_confirm($languages_vars){
@@ -732,9 +726,11 @@ function display_signup_confirm($languages_vars){
 
 function display_warning_message($message){  
 ?>
-  <div id="warning_message">
-    <?php echo $message; ?>
-  </div>
+  <center>
+    <div id="warning_message">
+      <?php echo $message; ?>
+    </div>
+  </center>
 <?php
 }
 
