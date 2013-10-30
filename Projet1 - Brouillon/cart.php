@@ -8,6 +8,6 @@ do_html_header($languages_var, $languages_var['panier']);
 
 do_html_cart($languages_var);
 
-do_html_footer();
+//do_html_footer();
 
 ?>

@@ -895,7 +895,6 @@ function do_html_cart($languages_vars){
 
       <hr>
 
-      <hr>
 
     </div>
   </div>
