@@ -1036,24 +1036,30 @@ function do_html_cart($languages_vars){
       <hr>
         <div class="Reduction">
           <p>Code Réduction :</p>
-        </div>
-        <div class="ReductionCode">
-        </div>
-        <div class="ReductionAppliquer">
-          <div class="ReductionAppliquerNom">
-            <p>APPLIQUER</p>
+          <div class="ReductionCode">
+          </div>
+          <div class="ReductionAppliquer">
+            <div class="ReductionAppliquerNom">
+              <p>APPLIQUER</p>
+            </div>
           </div>
         </div>
-        <hr>
-      <div class="TotalPanier">
-       <p>Prix total :</p>
-       <div class="PrixTotalPanier">
-        <p>378€</p>
-       </div>
       </div>
+        <br/>
+        <br/>
+        <div class="TotalPanier">
+          <p>Prix total :  378€</p>
+        </div>
+        <br/>
+        <br/>
+        <div class="TotalTvaPanier">
+          <p>TVA : 74.10€</p>
+        </div>
+        <div class="ValiderPanier">
+        <p>VALIDER</p>
+        </div>
         </div>
     </div>
-
 
     
 
