@@ -132,7 +132,7 @@ function get_product_details($id_prod){
 	
 	
 	$conn=db_connect();
-	$query="select * from produit where id_prod='".$id_prod."'";
+	$query="select produit.*, picture.url from produit, picture where produit.id_prod='".$id_prod."' and produit.id_prod = picture.id_prod";
 	$result=@$conn->query($query);
 	if(!$result){
 		return false;
@@ -140,6 +140,60 @@ function get_product_details($id_prod){
 	
 	$result = @$result->fetch_assoc();
 	return $result;
+}
+
+function return_id_cat_by_id_prod($id_prod){
+	$conn = db_connect();
+
+	$query = "select id_cate from produit where id_prod=?";
+
+	$result = $conn->prepare($query);
+	$result->bind_param("i", $id_prod);
+	$result->execute();
+	$result->bind_result($id_cate);
+	$result->fetch();
+
+	$result->close();
+
+	return $id_cate;
+
+}
+
+function return_id_subcat_by_id_prod($id_prod){
+	$conn = db_connect();
+
+	$query = "select id_subcat from produit where id_prod=?";
+
+	$result = $conn->prepare($query);
+	$result->bind_param("i", $id_prod);
+	$result->execute();
+	$result->bind_result($id_subcat);
+	$result->fetch();
+
+	$result->close();
+
+	return $id_subcat;
+}
+
+function return_product_by_cat_and_subcat($id_cate, $id_subcat, $id_prod, $id_prod2=''){
+
+	$conn = db_connect();
+	$query = "select produit.*, picture.url from produit, picture where produit.id_cate =".$id_cate." and produit.id_subcat = ".$id_subcat." and produit.id_prod = picture.id_prod and produit.id_prod <> ". $id_prod;
+	if( !empty($id_prod2)){
+		$query .= " and produit.id_prod <> ". $id_prod2;
+	}
+	 
+	$query .= " LIMIT 1";
+	$result = @$conn->query($query);
+	if(!$result){
+		return false;
+	} 
+
+	$result = @$result->fetch_assoc();
+
+	return $result;
+
+
 }
 
 function count_products_by_subcat($id_cate, $id_subcat){
@@ -152,6 +206,7 @@ function count_products_by_subcat($id_cate, $id_subcat){
 	$query = "select * from produit where id_cate = $id_cate and id_subcat = $id_subcat";
 	$result = $conn->prepare($query);
 	if(!$result){
+		echo "coco";
 		return false;
 	}
 
