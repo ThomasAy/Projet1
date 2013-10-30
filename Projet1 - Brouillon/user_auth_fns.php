@@ -135,10 +135,6 @@ function check_admin_user(){
 	}
 }
 
-function get_username(){
-	$conn = db_connect();
-}
-
 function insert_user($mail, $password, $civ, $firstname, $lastname, $address, $address2, $zipcode, $city, $country, $phone='', $newsletter= '0', $type_user = 3){
 	
     $conn = db_connect();
