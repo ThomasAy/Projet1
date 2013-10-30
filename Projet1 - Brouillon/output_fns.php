@@ -572,7 +572,7 @@ function do_man_category($languages_vars, $num_produits, $array_product){
           <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=5', $languages_vars['montres']); ?></li> 
           <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=6', $languages_vars['portefeuille']); ?></li> 
           <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=7', $languages_vars['gants']); ?></li> 
-          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=8', $languages_vars['sac_main']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=8', $languages_vars['ceintures']); ?></li> 
           </ul>
         </div>
       </div>
@@ -591,7 +591,98 @@ function do_man_category($languages_vars, $num_produits, $array_product){
             ?>
               <td>
                   <a href="<?php echo $url ; ?>"> <img src="medias/pictures/<?php echo $row['url']; ?>" alt="<?php echo $row['url']; ?>"></a>
-                  <h1 class="Produit"><a href="<?php echo $url; ?>"<?php echo $row['NOM']; ?></a><br><?php echo $row['PRIX_HT']; ?>
+                  <h1 class="Produit"><a href="<?php echo $url; ?>"><?php echo $row['NOM']; ?></a><br><?php echo $row['PRIX_HT']; ?> &euro;
+              </td>
+            <?php
+              if($i % 2 == 0){?>
+                  </tr>
+              <?php }
+            }
+          $i++;
+        ?>
+      </table>
+        <!--<tr>
+
+        </tr>
+        <tr>
+          <td>
+            <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+            <h1 class="Produit">Gants<br>79€</h1>
+          </td>
+          <td>
+            <img src="medias/pictures/Montre-2-Homepage.jpg" alt="Montre">
+            <h1 class="Produit">Montre<br>299€</h1>
+            <h1 class="Produit"></h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">
+            <h1 class="Produit">Portefeuille<br>199€</h1>
+          </td>
+          <td>
+            <img src="medias/pictures/Smartphone-1-Homepage.jpg" alt="Housse smartphone">
+            <h1 class="Produit">Housse<br>49€</h1>
+          </td>
+        </tr>-->
+      
+    </div>
+  </div>
+
+<?php
+}
+
+function do_sub_category($languages_vars, $num_produits, $array_product){
+?>
+  <div class="LogoTop">
+    <div id="logoCat">
+    <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+    <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+    <div class="ImageCategroy">
+      <img src="medias/pictures/Parc-6-Collection.jpg" alt="Collection Homme - Eté 2014">
+    </div>
+  </div>
+
+  <div id="conteneur"> 
+    <div class="Category">
+      <div class="Sacs">  
+        <h1><?php echo $languages_vars['sacs']; ?></h1>
+        <div class="CategoryList1">
+          <ul>
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=1', $languages_vars['sac_main']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=2', $languages_vars['porte_documents']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=3', $languages_vars['sac_dos']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=4', $languages_vars['pochettes']); ?></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="Accessoires">
+        <h1><?php echo $languages_vars['accessoires']; ?></h1>
+        <div class="CategoryList2">
+          <ul>
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=5', $languages_vars['montres']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=6', $languages_vars['portefeuille']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=7', $languages_vars['gants']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=8', $languages_vars['ceintures']); ?></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ProduitsHommes">
+      <div class="NomHomme">
+          <h1><?php echo $languages_vars['homme']; ?> (<?php echo $num_produits; ?>)</h1>
+      </div>
+      <table border="1" cellspacing="20">
+        <tr>
+        <?php foreach ($array_product as $row) {
+          $i = 1;
+            $url = 'show_product.php?id_product='.$row['ID_PROD'];
+            ?>
+              <td>
+                  <a href="<?php echo $url ; ?>"> <img src="medias/pictures/<?php echo $row['url']; ?>" alt="<?php echo $row['url']; ?>"></a>
+                  <h1 class="Produit"><a href="<?php echo $url; ?>"><?php echo $row['NOM']; ?></a><br><?php echo $row['PRIX_HT']; ?> &euro;
               </td>
             <?php
               if($i % 2 == 0){?>

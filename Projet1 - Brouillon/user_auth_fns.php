@@ -22,6 +22,24 @@ function login($mail, $passwd){
 	}
 }
 
+
+function check_mail($mail){
+	$conn = db_connect();
+
+
+	$query = "select `mail` from `user` where mail = '$mail'";
+
+	$result = $conn->prepare($query);
+
+	$result->execute();
+	$result->store_result();
+	$rows = $result->num_rows;
+
+	return $rows;
+
+
+
+}
 function return_user_firstname($mail){
 	$conn = db_connect();
 

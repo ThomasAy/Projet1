@@ -14,7 +14,7 @@ if (isset($_GET['id']) && count($_GET) == 1){
 		switch($id_cate){
 			case 1 : do_html_header($languages_var, $languages_var['collection_femme']);
 					 if(is_array($array_produits)){
-					 	do_woman_category($languages_var, $num_produits);
+					 	do_woman_category($languages_var, $num_produits, $array_produits);
 					 } else {
 					 	echo "Ya rien pélo";
 					 }
@@ -29,17 +29,23 @@ if (isset($_GET['id']) && count($_GET) == 1){
 			default : header('Location: index.php');
 		}
 			do_html_footer();
-} /*else if(isset($_GET['id']) && isset($_GET['id_sc']) && count($_GET) == 2 ) {
+} else if(isset($_GET['id']) && isset($_GET['id_sc']) && count($_GET) == 2 ) {
 	$id_cate = $_GET['id'];
 	$id_subcat = $_GET['id_sc'];
 
 	$num_produits = count_products_by_subcat($id_cate, $id_subcat);
-
+	$array_produits = get_products_by_subcat($id_cate, $id_subcat);
 
 	do_html_header($languages_var);
-	display_subcategory($languages_var, $id);
+
+	if(is_array($array_produits)){
+		do_sub_category($languages_var, $num_produits, $array_produits);
+	} else {
+
+	}
+
 	do_html_footer();
-}*/ else {
+} else {
 	header('Location: index.php');
 }
 
