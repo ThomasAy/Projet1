@@ -16,14 +16,14 @@ if (isset($_GET['id']) && count($_GET) == 1){
 					 if(is_array($array_produits)){
 					 	do_woman_category($languages_var, $num_produits, $array_produits);
 					 } else {
-					 	no_produit_woman($languages_var);
+					 	echo "Ya rien pélo";
 					 }
 					 break;
 			case 2 : do_html_header($languages_var, $languages_var['collection_homme']);
 					 if(is_array($array_produits)){
 					 	do_man_category($languages_var, $num_produits, $array_produits);
 					 } else {
-					 	no_produit_man($languages_var);
+					 	echo "Ya rien pélo";
 					 }
 					 break;
 			default : header('Location: index.php');
@@ -38,24 +38,11 @@ if (isset($_GET['id']) && count($_GET) == 1){
 
 	do_html_header($languages_var);
 
-	switch ($id_cate) {
-		case 1:
-		if(is_array($array_produits)){
-			do_woman_sub_category($languages_var, $num_produits, $array_produits);
-		} else {
-		no_produit_woman($languages_var);
-		}
-		break;
+	if(is_array($array_produits)){
+		do_sub_category($languages_var, $num_produits, $array_produits);
+	} else {
 
-		case 2:
-		if(is_array($array_produits)){
-			do_man_sub_category($languages_var, $num_produits, $array_produits);
-		} else {
-			no_produit_man($languages_var);
-		}
-		break;
 	}
-	
 
 	do_html_footer();
 } else {

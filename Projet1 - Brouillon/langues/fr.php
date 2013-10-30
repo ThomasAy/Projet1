@@ -123,6 +123,7 @@ $languages_var['categorie'] = 'Catégorie';
 $languages_var['sous_categorie'] = 'Sous-catégorie';
 $languages_var['quantite'] = 'Quantité';
 $languages_var['import_photos'] ='Importer des photos en cliquant ici';
+$languages_var['prix_ht'] = 'Prix HT';
 $languages_var['prix_ttc'] = 'Prix TTC';
 $languages_var['pourcentage_tva'] = '% TVA';
 $languages_var['Valider'] = 'Valider';

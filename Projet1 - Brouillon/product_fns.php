@@ -126,12 +126,13 @@ function get_products_by_subcat($catid, $subcat_id){
 
 function get_product_details($id_prod){
 	//requête qui récupère les détails du livre dont l'isbn passé en paramètres correspond
-	if((!$id_prod) || $id_prod == ''){
+	if((!$isbn) || $isbn == ''){
 		return false;
 	}
 	
 	
 	$conn=db_connect();
+
 	$query="select produit.*, picture.url from produit, picture where produit.id_prod='".$id_prod."' and produit.id_prod = picture.id_prod";
 	$result=@$conn->query($query);
 	if(!$result){
