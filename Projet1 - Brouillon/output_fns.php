@@ -893,10 +893,47 @@ function do_html_cart($languages_vars){
 
     <div class="BarrePanier">
       <hr>
-        <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
-        <p>test</p>
+        <div class="Ligne1Panier">
+          <div class="Image1Panier">
+            <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+            <div class="Image1Nom">
+              <p>Gants en cuir</p>
+            </div>
+            <div class="Quantite1Panier">
+              <p>Quantité :</p>
+              <div class="Quantite1NumberPanier">
+                <p>2</p>
+              </div>
+              <div class="=Image1Poubelle">
+              </div>
+              <div class="PrixProduit1Panier">
+                <p>289€</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
       <hr>
-        <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">  
+      <div class="Ligne2Panier">
+          <div class="Image2Panier">
+            <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Gants">
+            <div class="Image2Nom">
+              <p>Portefeuille en cuir</p>
+            </div>
+            <div class="Quantite2Panier">
+              <p>Quantité :</p>
+              <div class="Quantite2NumberPanier">
+                <p>1</p>
+              </div>
+              <div class="=Image2Poubelle">
+              </div>
+              <div class="PrixProduit2Panier">
+                <p>89€</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
       <hr>
         <div class="Reduction">
           <p>Code Réduction :</p>
@@ -908,17 +945,18 @@ function do_html_cart($languages_vars){
             <p>APPLIQUER</p>
           </div>
         </div>
+        <hr>
+      <div class="TotalPanier">
+       <p>Prix total :</p>
+       <div class="PrixTotalPanier">
+        <p>378€</p>
+       </div>
+      </div>
+        </div>
+    </div>
+
+
     
-        <br/>
-    </div>
-        <br/>
-      <hr>
-  
-
-
-
-    </div>
-  </div>
 
 
 <?php

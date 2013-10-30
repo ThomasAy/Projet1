@@ -862,26 +862,146 @@ background-color: rgb(238,238,238);
   background-color: rgb(238,238,238);
   border: 0;
 }
-  
-.BarrePanier img{
-  position:relative;
-  border:solid 1px rgb(238,238,238); 
-  width:15%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-right: 10%;
+
+.BarrePanier .Ligne1Panier{
+  height: 145px;
 }
 
-.PanierNom2 .BarrePanier p{
+.BarrePanier .Ligne1Panier .Image1Panier img{
   position:relative;
+  float:left;
   border:solid 1px rgb(238,238,238); 
   width:15%;
+  height: auto;
   margin-top: 1%;
   margin-bottom: 1%;
-  margin-right: 10%;
+  margin-right: 0px;
 }
 
+.BarrePanier .Ligne1Panier .Image1Panier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width:10%;
+  margin-top:70px;
+  margin-bottom: 1%;
+  margin-right: 10%;
+  margin-left:5%;
+}
 
+.BarrePanier .Ligne1Panier .Image1Panier .Quantite1Panier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100; 
+  width:5%;
+  margin-top: 70px;
+  margin-bottom: 1%;
+  margin-right: 5%;
+}
+
+.BarrePanier .Ligne1Panier .Image1Panier .Quantite1NumberPanier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  text-align: center;
+  border:solid 1px rgb(238,238,238); 
+  width:3%;
+  margin-top: 70px;
+  margin-bottom: 1%;
+  margin-right: 5%;
+  margin-left: -5%;
+}
+
+.BarrePanier .Ligne1Panier .Image1Panier .Image1Poubelle img{
+  position:relative;
+  float:left;
+  width:100%;
+}
+
+.BarrePanier .Ligne1Panier .Image1Panier .PrixProduit1Panier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100; 
+  width:5%;
+  margin-top: 70px;
+  margin-bottom: 1%;
+  margin-right: 5%;
+  margin-left: 31%
+}
+
+.BarrePanier .Ligne2Panier{
+  height: 145px;
+}
+
+.BarrePanier .Ligne2Panier .Image2Panier img{
+  position:relative;
+  float:left;
+  border:solid 1px rgb(238,238,238); 
+  width:15%;
+  height: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 0px;
+}
+
+.BarrePanier .Ligne2Panier .Image2Panier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width:10%;
+  margin-top:70px;
+  margin-bottom: 1%;
+  margin-right: 10%;
+  margin-left:5%;
+}
+
+.BarrePanier .Ligne2Panier .Image2Panier .Quantite2Panier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100; 
+  width:5%;
+  margin-top: 70px;
+  margin-bottom: 1%;
+  margin-right: 5%;
+}
+
+.BarrePanier .Ligne2Panier .Image2Panier .Quantite2NumberPanier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  text-align: center;
+  border:solid 1px rgb(238,238,238); 
+  width:3%;
+  margin-top: 70px;
+  margin-bottom: 1%;
+  margin-right: 5%;
+  margin-left: -5%;
+}
+
+.BarrePanier .Ligne2Panier .Image2Panier .Image2Poubelle img{
+  position:relative;
+  float:left;
+  width:100%;
+}
+
+.BarrePanier .Ligne2Panier .Image2Panier .PrixProduit2Panier p{
+  position:relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100; 
+  width:5%;
+  margin-top: 70px;
+  margin-bottom: 1%;
+  margin-right: 5%;
+  margin-left: 31%
+}
 
 .PanierNom2 .BarrePanier .ReductionCode{
   position: relative;
@@ -910,8 +1030,8 @@ background-color: rgb(238,238,238);
 
 .PanierNom2 .BarrePanier .ReductionAppliquer {
   position: relative;
-  background-color: rgb(155,155,155);
-  border:1px solid rgb(155,155,155);
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
   float:left;
   height: 69%;
   width: 15%;
@@ -919,8 +1039,30 @@ background-color: rgb(238,238,238);
   margin-left: 8%;
 }
 
-.PanierNom2 .BarrePanier .ReductionAppliquer .ReductionAppliquerNom{
-  position: absolute;
+.PanierNom2 .BarrePanier .ReductionAppliquer .ReductionAppliquerNom p{
+  position: relative;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  float: left;
+}
+
+.TotalPanier p{
+  position: relative;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  float: left;
+}
+
+.PrixTotalPanier p{
+  position: relative;
   text-align: center;
   color:black;
   font-family: "Helvetica Neue";
