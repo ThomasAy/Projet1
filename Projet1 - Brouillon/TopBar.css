@@ -361,7 +361,7 @@ width: 30%;
 
 .LogoTop img{
   position: relative;
-  width: 30%;
+  width: 10%;
 }
 
 .LogoTop h1{
@@ -1486,6 +1486,6 @@ p {
 .panier{
   position : relative;
   margin: auto;
-  margin-bottom: 25%
+  margin-bottom: 25%;
 }
 
