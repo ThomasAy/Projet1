@@ -39,8 +39,11 @@ function do_html_header($languages_vars, $title=''){
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
       <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
+
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
      
       <script>
@@ -54,6 +57,9 @@ function do_html_header($languages_vars, $title=''){
             font-size: 10px !important;
           };
       </style>
+      <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        
 
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
@@ -63,6 +69,7 @@ function do_html_header($languages_vars, $title=''){
   
   <!-- begin JS -->
     <script src="jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="tabulous.js" type="text/javascript"></script>
     <script src="jquery.polyglot.language.switcher.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -75,6 +82,13 @@ function do_html_header($languages_vars, $title=''){
             });
         });
     </script>
+    <script type="text/javascript"> $(document).ready(function($) {
+    
+
+    $('#tabs').tabulous({
+            effect: 'scale'
+    }); 
+    });</script>
 
     <script src="scripts.js"  type="text/javascript"></script>
   <!-- end JS -->
@@ -105,7 +119,7 @@ function do_html_header($languages_vars, $title=''){
         <div id="Rechercher">
           <form action="#" method="post">
         <fieldset>
-          <input type="text" value="Rechercher un produit..."  onfocus="this.value=(this.value=='Rechercher un produit')? '' : this.value ;" />
+          <input type="text" value="Rechercher un produit..."  onFocus="javascript:this.value=''" ;/>
           <input type="submit" name="go" id="go" value="Go" />
         </fieldset>
       </form>
@@ -736,6 +750,61 @@ function display_warning_message($message){
 
 function do_html_produit(){
 ?>
+<div class="LogoTop">
+    <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    <h1>Collection Homme | Collection Femme</h1> 
+
+</div>
+
+  <div class="ariane">
+    <h2>Accueil  &rsaquo;  Homme  &rsaquo;  Accessoires  &rsaquo;  <span style="text-decoration:underline;">Portefeuilles</span></h2>
+  </div>
+
+  <div class="ficheproduit">
+    <div id="previews">
+       <div class="previews1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+       <div class="previews2"><img  src="medias/produits/Ceinture-1.jpg" alt="Gants">
+        <div class="ajout"><a href="#">Ajouter au panier</a></div>
+        <div class ="prodfeat1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+        <div class="prodfeat2"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+        </div> 
+       <div class="previews3"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+     </div>
+
+
+   </div>
+   
+<div id="wrapper">
+
+                                <div id="tabs">
+                <ul>
+                        <li><a href="#tabs-1" title="">Description</a></li>
+                        <li><a href="#tabs-2" title="">Conseils mode</a></li>
+                        
+                </ul>
+
+                <div id="tabs_container">
+                        
+
+
+
+                <div id="tabs-1">
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p>
+                </div>
+
+                <div id="tabs-2">
+                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+        
+                </div>
+
+                
+
+                </div><!--End tabs container-->
+                
+        </div><!--End tabs-->
+
+  
+</div>
 
 
 
