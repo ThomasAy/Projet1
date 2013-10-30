@@ -41,6 +41,7 @@ time, mark, audio, video {
 
 body{
   min-height: 100%;
+  font-size: 150%;
   font-family: "Helvetica Neue";
 }
 
@@ -416,6 +417,7 @@ width: 15%;
 float: left;
 padding: 10px;
 background-color: rgb(238,238,238);
+font-size: 80%;
 
 }
 
@@ -1310,6 +1312,7 @@ p {
   bottom: 0px;
   float: left;
   margin-top: 5%;
+  font-size: 100%;
   clear: both;
 }
 
@@ -1323,6 +1326,7 @@ p {
 .Footer #text{
   display: inline-block;
   width: 50%;
+  font-size: 80%;
 }
 
 

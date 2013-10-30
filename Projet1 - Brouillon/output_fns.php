@@ -91,6 +91,7 @@ function do_html_header($languages_vars, $title=''){
     });</script>
 
     <script src="scripts.js"  type="text/javascript"></script>
+    <script src="tabulous.js" type="text/javascript"></script>
   <!-- end JS -->
 
 
@@ -152,7 +153,7 @@ function do_html_header($languages_vars, $title=''){
     <?php
 	}
 
- function do_html_produit($languages_vars){
+ function do_html_produit_fiche($languages_vars){
  ?>
  <div class="LogoTop">
     <div id="logoCat">
@@ -667,7 +668,6 @@ function do_man_category($languages_vars, $num_produits, $array_product){
 
     <div class="ProduitsHommes">
       <div class="NomHomme">
-          <?php var_dump($num_produits); ?>
           <h1><?php echo $languages_vars['homme']; ?> (<?php echo $num_produits; ?>)</h1>
       </div>
       <table border="1" cellspacing="20">
@@ -995,7 +995,8 @@ function do_html_cart($languages_vars){
 <?php
 }
 
-function do_html_produit2(){
+
+function do_html_produit($languages_vars, $produit, $produit_before='', $produit_after=''){
 ?>
   <div class="LogoTop">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
@@ -1009,14 +1010,23 @@ function do_html_produit2(){
 
   <div class="ficheproduit">
     <div id="previews">
-       <div class="previews1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
-       <div class="previews2"><img  src="medias/produits/Ceinture-1.jpg" alt="Gants">
-        <div class="ajout"><a href="#">Ajouter au panier</a></div>
+      <?php if(!empty($produit_before)){
+        ?>
+        <div class="previews1"><a href="show_product.php?id_product=<?php echo $produit_before['ID_PROD']; ?>"><img src="medias/pictures/<?php echo $produit_before['url']; ?>" alt="Gants"></a></div>
+      <?php
+      }
+      ?>
+       <div class="previews2"><img src="medias/pictures/<?php echo $produit['url']; ?>" alt="Gants">
+        <div class="ajout"><a href="cart.php?new=<?php echo $produit['ID_PROD']; ?>">Ajouter au panier</a></div>
         <div class ="prodfeat1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
         <div class="prodfeat2"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
         </div> 
-       <div class="previews3"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+       <?php if(!empty($produit_after)){
+        ?>
+        <div class="previews3"><a href="show_product.php?id_product=<?php echo $produit_after['ID_PROD']; ?>"><img src="medias/pictures/<?php echo $produit_after['url']; ?>" alt="Gants"></a></div>
+        <?php } ?>
      </div>
+
 
 
    </div>
@@ -1036,11 +1046,11 @@ function do_html_produit2(){
 
 
                 <div id="tabs-1">
-                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p>
+                            <p><?php echo $produit['DESC_FR'];?></p>
                 </div>
 
                 <div id="tabs-2">
-                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+                            <p><?php echo $produit['CONSEIL_FR']; ?></p>
         
                 </div>
 
