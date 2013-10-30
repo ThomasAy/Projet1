@@ -252,8 +252,9 @@ function display_list_of_products(){
     </center>
       <?php
 
-      $query = "SELECT ID_PROD, NOM, PRIX_HT, DESC_FR, STOCK 
-                FROM produit 
+      $query = "SELECT produit.ID_PROD, NOM, PRIX_HT, DESC_FR, STOCK, URL 
+                FROM produit, picture
+                WHERE produit.ID_PROD = picture.ID_PROD
                 ORDER BY ID_PROD ASC";
 
       $sql = $conn->query($query);
@@ -273,11 +274,10 @@ function display_list_of_products(){
         while($row = $sql->fetch_array(MYSQLI_BOTH)) {
             $ListeProd = $ListeProd .
             "<tr> 
-                <td>   <i>". $row['NOM'] . "</i> pour  : " . $row['PRIX_HT'] . "€! </td>
-                <td>    <img SRC=\"\" ALT=\"" . $row['NOM'] . "\" width=\"200px\"> </td>
+                <td>   <i>". $row['NOM'] . "</i> pour  : " . $row['PRIX_HT'] . "€ </td>
+                <td>    <img style=\"width:150px;\"SRC=\"". $row['URL'] ."\" ALT=\"" . $row['NOM'] . "\" width=\"200px\"> </td>
                 <td> <center> ".$row['DESC_FR']." </center> </td>
-                <td width=\"200px\"> 
-                </td>
+                <td> <center> ".$row['STOCK']." </center> </td>
             </tr>";
         }
 
@@ -296,55 +296,88 @@ function  display_form_Product($languages_vars)
 {
  echo '
   <center>
-     <div id="signup_form">
-          <div id="new_client">'
-            .$languages_vars['new_client'].
+     <div id="add_form">
+          <div id="new_product">'
+            .$languages_vars['ajout_produit'].
             '<hr>
           </div>
           <br/>
           <table>
-          <tr><td>
-          <form method="post" action="register.php">
-          <label for="civilite">* '.$languages_vars['civilite'].' : </label>
-          <input type="radio" name="civilite" value="1">' .$languages_vars['monsieur'].'
-          <input type="radio" name="civilite" value="2">' .$languages_vars['madame'].'
-          <input type="radio" name="civilite" value="3">' .$languages_vars['mademoiselle'].'
+          <tr>
+          <form method="post" action="add_product.php" enctype="multipart/form-data">
+
+          <label for="nom">* '. $languages_vars['nom'].' :</label>
+          <input type="text" name="nom" autofocus required>
           <br/>
-          <label for="nom">* '. $languages_vars['nom'].':</label>
-          <input type="text" name="nom">
           <br/>
-          <label for="prenom">* '. $languages_vars['prenom'].'</label>
-          <input type="text" name="prenom">
+          <label for="PRIX_HT">* '. $languages_vars['prix_ht'].' :</label>
+          <input type="number" name="PRIX_HT" required>
           <br/>
-          <label for="adresse">* '. $languages_vars['adresse'].'</label>
-           <input type="text" name="adresse">
           <br/>
-          <select name="pays">
-          <label for="country">';
-          
-            foreach($languages_vars['country'] as $key => $value){
-              echo '
-              </label>
-              <option value="' . $value . '"> $value </option>
-              ';
-            }
+          <label for="photo">* '. $languages_vars['photo'].' :</label>
+           <input type="file" name="photo" id="photo" />
+           <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+
+          <br/>
+          <br/>
+          <label for="description">* '. $languages_vars['description'].' :</label>
+          <textarea rows="2" cols="40" class="NomForm" type="text" name="description" maxlength="1000" required> </textarea>
+          <br />
+          <br />
+          <label for="conseil">* '. $languages_vars['conseils'].' :</label>
+          <textarea rows="3" cols="40" class="NomForm" type="text" name="conseils" maxlength="1000" required> </textarea>
+          <br />
+          <br />
+          <label for="VP">Mettre en vente privée</label>
+          <input style="margin: auto;" type="checkbox" name="VP" value="1">
+          <br />
+          <br />
+          <label for="stock">* '. $languages_vars['quantite'].' :</label>
+          <input type="number" name="stock" value="100" required>
+          <br/>
+          <br/>
+          <label for="alert">* Niveau d\'alerte (stock):</label>
+          <input type="number" name="alert" value="10" required>
+          <br/>
+          <br/>
+          <label for="Catégorie">* Catégorie :</label>
+          <select name="Catégorie" size="';
+          $conn = db_connect();
+
+          $sql2 = $conn->query("SELECT ID_CATE, NOM from categorie");
+          echo $sql2->num_rows. ' "> ';
+
+          $sql2 = $conn->query("SELECT ID_CATE, NOM from categorie");
+
+
+          while ($row = $sql2->fetch_array(MYSQLI_BOTH)) {
+            echo '<option value="'.$row["ID_CATE"].'">'.$row["NOM"].'</option>';
+          }
+          echo 
+          '
+          </select>
+          <br><br>
+          <label for="SC_cat">* Sous-Catégorie :</label>
+          <select name="SC_cat" size="4">
+          ';
+
+          $sql = $conn->query("SELECT ID_SC, NOM_SC from sous_categorie");
+
+
+          while ($row = $sql->fetch_array(MYSQLI_BOTH)) {
+            echo '<option value="'.$row["ID_SC"].'">'.$row["NOM_SC"].'</option>';
+          }
+
           echo '
           </select>
-          <br/>
-          <label for="phone">'. $languages_vars['phone'].'</label>
-          <input class="NomForm" type="text" name="phone">
-          <br>
-          <br/>
-          
-          <br/>
-
+          <br />
           <hr>
 
           <br/>
-          </td>
+          </tr>
           </table>
           
-          <input id="myButton" type="submit" name="submit" value='.$languages_vars['inscription'].'>
+          <input id="myButton" type="submit" name="submit" value='.$languages_vars['ajouter'].'>
           </form>
           </br>
           <br/>
