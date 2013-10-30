@@ -80,6 +80,15 @@
 	$languages_var['sacs']  = 'Bag';
 	$languages_var['accessoires'] = 'Accessory';
 
+	$languages_var['sac_main'] = 'Handbag';
+	$languages_var['porte_documents'] = 'Briefcase';
+	$languages_var['sac_dos'] = 'Backpack';
+	$languages_var['pochettes'] = 'Wallet';
+	$languages_var['montres'] = 'Watch';
+	$languages_var['portefeuille'] = 'Wallet';
+	$languages_var['gants'] = 'Gloves';
+	$languages_var['ceintures'] = 'Belt';
+
 
 
 	//FOOTER
@@ -187,6 +196,9 @@
 
 	$languages_var['accueil_home'] = '<p>Welcome to GrindHouse Leather website.</p>
 								 	  <p>We are available at anytime during your navigation ,do not hesitate to contact us if you need help.</p>';
+
+	$languages_var['no_product'] = '<p>No product in this category.</p>';
+
 
 	
 ?>
