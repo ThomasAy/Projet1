@@ -119,6 +119,7 @@
 	$languages_var['sous_categorie'] = 'Subcategory';
 	$languages_var['quantite'] = 'Quantity';
 	$languages_var['import_photos'] ='Click here to import pictures';
+	$languages_var['prix_ht'] = 'Pre-tax price';
 	$languages_var['prix_ttc'] = 'Price including taxes';
 	$languages_var['pourcentage_tva'] = '% taxes';
 	$languages_var['Valider'] = 'Submit';
