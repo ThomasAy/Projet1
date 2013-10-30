@@ -892,8 +892,29 @@ function do_html_cart($languages_vars){
     <p>MON PANIER</p>
 
     <div class="BarrePanier">
-
       <hr>
+        <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+        <p>test</p>
+      <hr>
+        <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">  
+      <hr>
+        <div class="Reduction">
+          <p>Code Réduction :</p>
+        </div>
+        <div class="ReductionCode">
+        </div>
+        <div class="ReductionAppliquer">
+          <div class="ReductionAppliquerNom">
+            <p>APPLIQUER</p>
+          </div>
+        </div>
+    
+        <br/>
+    </div>
+        <br/>
+      <hr>
+  
+
 
 
     </div>

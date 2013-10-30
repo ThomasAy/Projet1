@@ -737,7 +737,7 @@ background-color: rgb(238,238,238);
 
 .CartTop{
   position: relative;
-  height: 20%;
+  height: 80px;
   width: 100%;
   margin-top: 5%;
   z-index: 0;
@@ -763,7 +763,7 @@ background-color: rgb(238,238,238);
   font-weight: 100;
   width: 100%;
   margin-top: 9%;
-  height: 31%;
+  height: ;
   z-index: 2;
   float: left;
 }
@@ -856,12 +856,79 @@ background-color: rgb(238,238,238);
   z-index: 2;
 }
 
-.BarrePanier{
+.BarrePanier hr{
+  height:1px;
+  color: 1px solid rgb(238,238,238);
+  background-color: rgb(238,238,238);
+  border: 0;
+}
   
-  
+.BarrePanier img{
+  position:relative;
+  border:solid 1px rgb(238,238,238); 
+  width:15%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 10%;
+}
+
+.PanierNom2 .BarrePanier p{
+  position:relative;
+  border:solid 1px rgb(238,238,238); 
+  width:15%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 10%;
 }
 
 
+
+.PanierNom2 .BarrePanier .ReductionCode{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 40px;
+  width: 15%;
+  margin-top: 1%;
+}
+.PanierNom2 .BarrePanier .Reduction p{
+  position: relative;
+  float:left;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  height: 40px;
+  width: 20%;
+  margin-top: 2%;
+  margin-left: 8%;
+  margin-right:0%;
+  text-align: center;
+  color:black;
+  border:none;
+  
+}
+
+.PanierNom2 .BarrePanier .ReductionAppliquer {
+  position: relative;
+  background-color: rgb(155,155,155);
+  border:1px solid rgb(155,155,155);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+}
+
+.PanierNom2 .BarrePanier .ReductionAppliquer .ReductionAppliquerNom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  float: left;
+}
 
 /*
  _______   ______     ______   .___________. _______ .______      
