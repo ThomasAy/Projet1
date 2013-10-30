@@ -42,19 +42,6 @@ function do_html_header($languages_vars, $title=''){
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
 
-     
-      <script>
-        $(function() {
-          $( "#datepicker" ).datepicker();
-        });
-      </script>
-
-      <style>
-          #datepicker{
-            font-size: 10px !important;
-          };
-      </style>
-
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
     <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
@@ -126,7 +113,7 @@ function do_html_header($languages_vars, $title=''){
 
         </div>
         <div id="Panier">
-            <a href="#">
+            <a href="cart.php">
                 <span><img <?php echo 'src="medias/icons/Panier/Panier-' . $_SESSION["imgPanier"] . '.png"';?> alt="Votre panier" ></span>
             </a>
         </div>
@@ -135,7 +122,7 @@ function do_html_header($languages_vars, $title=''){
     <?php
 	}
 
-  function do_html_homepage_body(){ 
+  function do_html_homepage_body(){
   ?>
 
   <div class="Contenu">
@@ -251,36 +238,9 @@ function display_categories($cat_array){
 
 
 
-function display_books($book_array) {
-  //display all books in the array passed in
-  if (!is_array($book_array)) {
-    echo "<p>No books currently available in this category</p>";
-  } else {
-    //create table
-    echo "<table width=\"100%\" border=\"0\">";
 
-    //create a table row for each book
-    foreach ($book_array as $row) {
-      $url = "show_book.php?isbn=".$row['isbn'];
-      echo "<tr><td>";
-      if (@file_exists("images/".$row['isbn'].".jpg")) {
-        $title = "<img src=\"images/".$row['isbn'].".jpg\"
-                  style=\"border: 1px solid black\"/>";
-        do_html_url($url, $title);
-      } else {
-        echo "&nbsp;";
-      }
-      echo "</td><td>";
-      $title = $row['title']." by ".$row['author'];
-      do_html_url($url, $title);
-      echo "</td></tr>";
-    }
 
-    echo "</table>";
-  }
 
-  echo "<hr />";
-}
 
 function display_button($target, $image, $alt){
 	echo "<div align=\"center\">
@@ -536,9 +496,6 @@ function display_card_form($name) {
 }
 
 function display_login_form($languages_vars){
-  // dispaly form asking for name and password
-  if (isset($_POST['mail']) &&  isset ($_POST['passwd'])){
-  }
 ?>
 <center>
   <div id="login_form">
@@ -583,13 +540,13 @@ function display_admin_menu(){
 <?php
 }
 
-function do_man_category(){
+function do_man_category($languages_vars, $num_produits, $array_product){
 ?>
   <div class="LogoTop">
     <div id="logoCat">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
     </div>
-    <h1>Collection Homme | Collection Femme</h1> 
+    <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
     <div class="ImageCategroy">
       <img src="medias/pictures/Parc-6-Collection.jpg" alt="Collection Homme - Eté 2014">
     </div>
@@ -598,24 +555,24 @@ function do_man_category(){
   <div id="conteneur"> 
     <div class="Category">
       <div class="Sacs">  
-        <h1>Sacs</h1>
+        <h1><?php echo $languages_vars['sacs']; ?></h1>
         <div class="CategoryList1">
           <ul>
-          <li>Sacs à main</li> 
-          <li>Porte documents</li> 
-          <li>Sacs à dos</li> 
-          <li>Pochettes</li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=1', $languages_vars['sac_main']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=2', $languages_vars['porte_documents']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=3', $languages_vars['sac_dos']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=4', $languages_vars['pochettes']); ?></li> 
           </ul>
         </div>
       </div>
       <div class="Accessoires">
-        <h1>Accessoires</h1>
+        <h1><?php echo $languages_vars['accessoires']; ?></h1>
         <div class="CategoryList2">
           <ul>
-          <li>Montres</li> 
-          <li>Portefeuilles</li> 
-          <li>Gants</li> 
-          <li>Ceintures</li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=5', $languages_vars['montres']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=6', $languages_vars['portefeuille']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=7', $languages_vars['gants']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=8', $languages_vars['sac_main']); ?></li> 
           </ul>
         </div>
       </div>
@@ -623,9 +580,30 @@ function do_man_category(){
 
     <div class="ProduitsHommes">
       <div class="NomHomme">
-       <h1>Hommes (Nombre de Produits)</h1>
+          <?php var_dump($num_produits); ?>
+          <h1><?php echo $languages_vars['homme']; ?> (<?php echo $num_produits; ?>)</h1>
       </div>
       <table border="1" cellspacing="20">
+        <tr>
+        <?php foreach ($array_product as $row) {
+          $i = 1;
+            $url = 'show_product.php?id_product='.$row['ID_PROD'];
+            ?>
+              <td>
+                  <a href="<?php echo $url ; ?>"> <img src="medias/pictures/<?php echo $row['url']; ?>" alt="<?php echo $row['url']; ?>"></a>
+                  <h1 class="Produit"><a href="<?php echo $url; ?>"<?php echo $row['NOM']; ?></a><br><?php echo $row['PRIX_HT']; ?>
+              </td>
+            <?php
+              if($i % 2 == 0){?>
+                  </tr>
+              <?php }
+            }
+          $i++;
+        ?>
+      </table>
+        <!--<tr>
+
+        </tr>
         <tr>
           <td>
             <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
@@ -646,14 +624,13 @@ function do_man_category(){
             <img src="medias/pictures/Smartphone-1-Homepage.jpg" alt="Housse smartphone">
             <h1 class="Produit">Housse<br>49€</h1>
           </td>
-        </tr>
-      </table>
+        </tr>-->
+      
     </div>
   </div>
 
 <?php
 }
-		
 			
 function display_signup_form($languages_vars){
   //display

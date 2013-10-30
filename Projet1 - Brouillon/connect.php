@@ -20,8 +20,8 @@ if(isset($_POST['mail']) &&  isset ($_POST['passwd'])){
 			case 1 : $_SESSION['civ'] = $languages_var['monsieur']; break;
 			case 2 : $_SESSION['civ'] = $languages_var['madame']; break;
 			case 3 : $_SESSION['civ'] = $languages_var['mademoiselle']; break;
+			default : $_SESSION['civ'] = "Monsieur";
 		}
-		$_SESSION['civ'] = $type_civilite;
 		$_SESSION['type_user'] = $type_user;
 		if($type_user == 1){
 			$_SESSION['admin'] = $mail;

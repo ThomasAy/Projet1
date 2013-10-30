@@ -81,8 +81,18 @@ $languages_var['adresse_facturation'] = 'Adresse de facturation';
 $languages_var['new_adresse_livraison'] = 'Nouvelle adresse de livraison';
 
 $languages_var['filtre'] = 'Filtrer par';
+
 $languages_var['sacs']  = 'Sacs';
 $languages_var['accessoires'] = 'Accessoires';
+
+$languages_var['sac_main'] = 'Sacs à main';
+$languages_var['porte_documents'] = 'Porte Documents';
+$languages_var['sac_dos'] = 'Sacs à dos';
+$languages_var['pochettes'] = 'Pochettes';
+$languages_var['montres'] = 'Montres';
+$languages_var['portefeuille'] = 'Portefeuilles';
+$languages_var['gants'] = 'Gants';
+$languages_var['ceintures'] = 'Ceintures';
 
 
 //FOOTER
@@ -191,4 +201,12 @@ $languages_var['combinaison_incorrecte'] = 'La combinaison est incorrecte, veuil
 
 $languages_var['accueil_home'] = '<p>Toute l\'équipe de GrindHouse Leather vous souhaite la bienvenue sur son site en ligne.</p>
 								  <p>Nous sommes à votre disposition à tout moment durant votre visite, n\'hésitez pas à nous contacter en cas de besoin.</p>';
+
+$languages_var['no_product'] = '<p>Il n\'y a pas de produits actuellement dans cette catégorie.</p>';
+
+
+
+
+
+
 ?>
