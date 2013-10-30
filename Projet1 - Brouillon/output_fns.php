@@ -152,6 +152,68 @@ function do_html_header($languages_vars, $title=''){
     <?php
 	}
 
+ function do_html_produit($languages_vars){
+ ?>
+ <div class="LogoTop">
+    <div id="logoCat">
+    <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+    <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+  </div>
+ 
+   <div class="ariane">
+     <h2>Accueil  &rsaquo;  Homme  &rsaquo;  Accessoires  &rsaquo;  <span style="text-decoration:underline;">Portefeuilles</span></h2>
+   </div>
+ 
+   <div class="ficheproduit">
+     <div id="previews">
+        <div class="previews1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+        <div class="previews2"><img  src="medias/produits/Ceinture-1.jpg" alt="Gants">
+         <div class="ajout"><a href="#">Ajouter au panier</a></div>
+         <div class ="prodfeat1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+         <div class="prodfeat2"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+         </div> 
+        <div class="previews3"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+      </div>
+ 
+ 
+    </div>
+    
+ <div id="wrapper">
+ 
+                                 <div id="tabs">
+                 <ul>
+                         <li><a href="#tabs-1" title="">Description</a></li>
+                         <li><a href="#tabs-2" title="">Conseils mode</a></li>
+                         
+                 </ul>
+ 
+                 <div id="tabs_container">
+                         
+ 
+ 
+ 
+                 <div id="tabs-1">
+                             <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p>
+                 </div>
+ 
+                 <div id="tabs-2">
+                             <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+         
+                 </div>
+ 
+                 
+ 
+                 </div><!--End tabs container-->
+                 
+         </div><!--End tabs-->
+ 
+   
+ </div>
+ <?php
+ }
+
+
   function do_html_homepage_body(){
   ?>
 
@@ -933,7 +995,7 @@ function do_html_cart($languages_vars){
 <?php
 }
 
-function do_html_produit(){
+function do_html_produit2(){
 ?>
   <div class="LogoTop">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
@@ -992,6 +1054,7 @@ function do_html_produit(){
 </div>
 <?php
 }
+
 function do_html_admin(){
 ?>
 
