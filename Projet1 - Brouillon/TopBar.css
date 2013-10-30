@@ -387,6 +387,7 @@ width: 30%;
 
 .ImageCategroy img{
   position: relative;
+  margin-top:2%;
   width: 90%;
   height: auto;
 }
@@ -475,7 +476,8 @@ background-color: rgb(238,238,238);
   position:relative;
   float:left;
   border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
+  width:40%;
+  margin-top: 0%;
   margin-right: 10%;
 }
 
@@ -484,7 +486,7 @@ background-color: rgb(238,238,238);
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  width: 100%;
+  width: 40%;
   text-align: center;
 }
 
