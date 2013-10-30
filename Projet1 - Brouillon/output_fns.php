@@ -45,7 +45,6 @@ function do_html_header($languages_vars, $title=''){
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-<<<<<<< HEAD
      
       <script>
         $(function() {
@@ -62,8 +61,6 @@ function do_html_header($languages_vars, $title=''){
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         
 
-=======
->>>>>>> origin/Roberto
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
     <link rel="icon" type="image/x-icon" href="medias/favicon.ico">
@@ -120,19 +117,13 @@ function do_html_header($languages_vars, $title=''){
 <!-- end container -->    
         
         <div id="Rechercher">
-<<<<<<< HEAD
           <form action="#" method="post">
         <fieldset>
           <input type="text" value="Rechercher un produit..."  onFocus="javascript:this.value=''" ;/>
           <input type="submit" name="go" id="go" value="Go" />
         </fieldset>
       </form>
-=======
-          <form method="post" action="#">
-            <input id="inputSearch" type="text" name="keyWord"/>
-            <input id="btnValider" type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
-          </form>
->>>>>>> origin/Roberto
+
         </div>
 
         <div id="Texte_de_connexion">
@@ -897,8 +888,54 @@ function display_account_user($languages_vars){
 }
 function do_html_cart($languages_vars){
 ?>
-<<<<<<< HEAD
-<div class="LogoTop">
+  <div class="LogoTop">
+    <div id="logoCat">
+      <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+      <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+  </div>
+
+  <div class="CartTop">
+    <div class="Panier1">
+      <div class="Panier1Nom">
+        <p>1.MON PANIER</p>
+      </div>
+    </div>
+    <div class="MesInformations1">
+      <div class="MesInformations1Nom">
+        <p>2.MES INFORMATIONS</p> 
+      </div>
+    </div>
+    <div class="Livraison1">
+      <div class="Livraison1Nom">
+        <p>3.LIVRAISON</p>   
+      </div>
+    </div>
+    <div class="Paiement1">
+      <div class="Paiement1Nom">
+        <p>4.PAIEMENT</p>  
+      </div>
+    </div>
+  </div>
+
+  <div class="PanierNom2">
+    <p>MON PANIER</p>
+
+    <div class="BarrePanier">
+
+      <hr>
+
+
+    </div>
+  </div>
+
+
+<?php
+}
+
+function do_html_produit(){
+?>
+  <div class="LogoTop">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
     <h1>Collection Homme | Collection Femme</h1> 
 
@@ -953,53 +990,8 @@ function do_html_cart($languages_vars){
 
   
 </div>
-=======
-  <div class="LogoTop">
-    <div id="logoCat">
-      <img src="medias/pictures/logo.png" alt="GHL Logo"> 
-    </div>
-      <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
-  </div>
-
-  <div class="CartTop">
-    <div class="Panier1">
-      <div class="Panier1Nom">
-        <p>1.MON PANIER</p>
-      </div>
-    </div>
-    <div class="MesInformations1">
-      <div class="MesInformations1Nom">
-        <p>2.MES INFORMATIONS</p> 
-      </div>
-    </div>
-    <div class="Livraison1">
-      <div class="Livraison1Nom">
-        <p>3.LIVRAISON</p>   
-      </div>
-    </div>
-    <div class="Paiement1">
-      <div class="Paiement1Nom">
-        <p>4.PAIEMENT</p>  
-      </div>
-    </div>
-  </div>
-
-  <div class="PanierNom2">
-    <p>MON PANIER</p>
-
-    <div class="BarrePanier">
->>>>>>> origin/Roberto
-
-      <hr>
-
-
-    </div>
-  </div>
-
-
 <?php
 }
-<<<<<<< HEAD
 function do_html_admin(){
 ?>
 
@@ -1010,20 +1002,6 @@ function do_html_admin(){
 <img src="medias/pictures/logo.png" alt="logo">
   </div>
 </div>
-=======
-
-
-
->>>>>>> origin/Roberto
-
-
-
-
-<<<<<<< HEAD
-
-
-
-
 
 
 
@@ -1031,5 +1009,3 @@ function do_html_admin(){
 
 <?php  
 }
-=======
->>>>>>> origin/Roberto
