@@ -118,9 +118,9 @@ function do_html_header($languages_vars, $title=''){
 <!-- end container -->    
         
         <div id="Rechercher">
-          <form action="#" method="post">
+          <form action="search.php" method="post">
         <fieldset>
-          <input type="text" value="Rechercher un produit..."  onFocus="javascript:this.value=''" ;/>
+          <input type="text" value="Rechercher un produit..." name="search"  onFocus="javascript:this.value=''" ;/>
           <input type="submit" name="go" id="go" value="Go" />
         </fieldset>
       </form>
