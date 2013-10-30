@@ -91,7 +91,7 @@ require_once('ghl_fns.php');
 
 		else { $errorMSG = $errorMSG . "L'extension n'est pas valide" . $extension_upload;}
 	
-		echo '<center><div style="margin-top:70px;"> Votre produit "'.$_POST['nom'].'" a bien été ajouté. </br> '. $query2 .' <br> <br> <img style="width:30%;" src="'.$url.'" alt="'.$_POST['nom'].'"></div></center>';
+		echo '<center><div style="margin-top:70px;"> Votre produit "'.$_POST['nom'].'" a bien été ajouté. <br> <br> <img style="width:30%;" src="'.$url.'" alt="'.$_POST['nom'].'"></div></center>';
 
 	}
 
