@@ -639,6 +639,143 @@ background-color: rgb(238,238,238);
 
 
 /*
+  ______     ___      .______     .___________.
+ /      |   /   \     |   _  \    |           |
+|  ,----'  /  ^  \    |  |_)  |   `---|  |----`
+|  |      /  /_\  \   |      /        |  |     
+|  `----./  _____  \  |  |\  \----.   |  |     
+ \______/__/     \__\ | _| `._____|   |__| 
+
+*/
+
+.CartTop{
+  position: relative;
+  height: 20%;
+  width: 100%;
+  margin-top: 5%;
+  z-index: 0;
+}
+
+.CartTop .Panier1 {
+  position: relative;
+  background-color: rgb(155,155,155);
+  border:1px solid rgb(155,155,155);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Panier1 .Panier1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .MesInformations1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .MesInformations1 .MesInformations1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .Livraison1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Livraison1 .Livraison1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .Paiement1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Paiement1 .Paiement1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.PanierNom2{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 10%;
+  margin-top: 3%;
+  height: 5%;
+  z-index: 2;
+}
+
+.BarrePanier{
+  height: 5%;
+  
+}
+
+
+
+/*
  _______   ______     ______   .___________. _______ .______      
 |   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
 |  |__   |  |  |  | |  |  |  | `---|  |----`|  |__   |  |_)  |    

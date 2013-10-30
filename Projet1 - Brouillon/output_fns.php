@@ -237,11 +237,6 @@ function display_categories($cat_array){
 }
 
 
-
-
-
-
-
 function display_button($target, $image, $alt){
 	echo "<div align=\"center\">
 		  <a href=\"".$target."\">
@@ -760,4 +755,57 @@ function display_account_user($languages_vars){
   </div>
 <?php
 }
+function do_html_cart($languages_vars){
+?>
+  <div class="LogoTop">
+    <div id="logoCat">
+      <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+      <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+  </div>
+
+  <div class="CartTop">
+    <div class="Panier1">
+      <div class="Panier1Nom">
+        <p>1.MON PANIER</p>
+      </div>
+    </div>
+    <div class="MesInformations1">
+      <div class="MesInformations1Nom">
+        <p>2.MES INFORMATIONS</p> 
+      </div>
+    </div>
+    <div class="Livraison1">
+      <div class="Livraison1Nom">
+        <p>3.LIVRAISON</p>   
+      </div>
+    </div>
+    <div class="Paiement1">
+      <div class="Paiement1Nom">
+        <p>4.PAIEMENT</p>  
+      </div>
+    </div>
+  </div>
+
+  <div class="PanierNom2">
+    <p>MON PANIER</p>
+
+    <div class="BarrePanier">
+
+      <hr>
+
+      <hr>
+
+    </div>
+  </div>
+
+
+<?php
+}
+
+
+
+
+
+
 
