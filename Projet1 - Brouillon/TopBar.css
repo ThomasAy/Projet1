@@ -360,8 +360,7 @@ width: 30%;
 
 .LogoTop img{
   position: relative;
-  height: 25%;
-  width: 25%;
+  height: 15%;
 }
 
 .LogoTop h1{
@@ -381,12 +380,26 @@ width: 30%;
                                                                                    
 */
 
+
+.ariane h2{
+position: absolute;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  font-size:80%;
+  color: rgb(180, 180, 180);
+  width: 90%;
+  left: 5%;
+  height: 7%;
+  top:35%;
+}
+
 .ImageCategroy {
   position: relative;
 }
 
 .ImageCategroy img{
   position: relative;
+  margin-top:2%;
   width: 90%;
   height: auto;
 }
@@ -475,7 +488,8 @@ background-color: rgb(238,238,238);
   position:relative;
   float:left;
   border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
+  width:40%;
+  margin-top: 0%;
   margin-right: 10%;
 }
 
@@ -484,7 +498,7 @@ background-color: rgb(238,238,238);
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  width: 100%;
+  width: 40%;
   text-align: center;
 }
 
@@ -503,9 +517,19 @@ background-color: rgb(238,238,238);
   height: 20%;
   width: 30%;
   margin-top: 10%;
-  border : 1px solid rgb(238,238,238);
+  border : 5px solid rgb(238,238,238);
 }
-
+#signup_form #myButton {
+  position: relative;
+  display:block;
+  margin:1 5px 0 0;
+  color:black;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 30%;
+}
 #signup_form #new_client{
   font-family: "Helvetica Neue";
   font-weight: 100;
@@ -537,16 +561,43 @@ background-color: rgb(238,238,238);
 }
 
 
-#signup_form #myButton {
-  position: relative;
-  display:block;
-  margin:1 5px 0 0;
-  color:black;
-  background-color: rgb(238,238,238);
-  border:1px solid rgb(238,238,238);
-  font-family: "Helvetica Neue";
-  font-weight: 100;
-  width: 30%;
+
+
+/*
+.______   .______        ______    _______   __    __   __  .___________.
+|   _  \  |   _  \      /  __  \  |       \ |  |  |  | |  | |           |
+|  |_)  | |  |_)  |    |  |  |  | |  .--.  ||  |  |  | |  | `---|  |----`
+|   ___/  |      /     |  |  |  | |  |  |  ||  |  |  | |  |     |  |     
+|  |      |  |\  \----.|  `--'  | |  '--'  ||  `--'  | |  |     |  |     
+| _|      | _| `._____| \______/  |_______/  \______/  |__|     |__|     
+ 
+*/
+
+.ficheproduit {
+  position : relative;
+  top:45%;
+  width:100%;
+
+}
+.ficheproduit #previews {
+top:65%;
+position:relative;
+width:100%;
+height : 100%;
+
+
+}
+
+
+.ficheproduit #previews .previews2 {
+
+margin: 0 auto;
+position:relative;
+width: 45%;
+float : center;
+height:100%;
+z-index: 0;
+
 }
 
 #add_form{
@@ -612,6 +663,308 @@ background-color: rgb(238,238,238);
   font-size: 150%;
   width: 30%;
 }
+
+.ficheproduit #previews .previews1 {
+
+  width: 25%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  top:22%;
+
+}
+
+.ficheproduit #previews .previews3 {
+
+ width: 25%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  right: 0;
+  top:22%;
+
+}
+
+.ficheproduit #previews .previews2 img{
+  width:100%;
+  border: 1px rgb(190, 189, 189) solid;
+}
+
+
+.ficheproduit #previews .previews1 img{
+  border: 2px rgb(238,238,238) solid;
+  opacity:0.5;
+  width:100%;
+  
+}
+
+.ficheproduit #previews .previews3 img{
+  border: 2px rgb(238,238,238) solid;
+  opacity:0.5;
+  width:100%;
+
+}
+
+
+.ficheproduit #previews .previews2 .ajout{
+  width:175px;
+  height:20px;
+  margin-top:-40px;
+  padding:4px 0;
+  text-transform:uppercase;
+  color:#FFFFFF;
+  background-color:#565656;
+  cursor:pointer;
+  border: 2px rgb(238,238,238) solid;
+  text-align:center;
+  float:right;
+  z-index: 1;
+position:relative;
+}
+
+.ficheproduit #previews .ajout a{
+  color:white;
+  position:relative;
+
+}
+
+.ficheproduit #previews .prodfeat1 {
+width:15%;
+ position: absolute;
+  top: 100%;
+  z-index: 1;
+  left: 0;
+}
+
+.ficheproduit #previews .prodfeat2 {
+width:15%; 
+position: absolute;
+  top: 100%;
+  z-index: 1;
+  left: 17%;
+
+}
+
+/* Don't forget to include a CSS reset file otherwise it might look a little bit strange*/
+#wrapper #tabs a:active,a:focus {
+        outline: expression(hideFocus='true');
+}
+
+p {
+        margin-bottom: 20px;
+}
+
+#wrapper {
+
+        width: 100%;
+        height:40%;
+        margin: 0 auto;
+        margin-top: 30%;
+        background-color: rgb(238,238,238);
+        position:relative;
+}
+
+#wrapper #tabs {
+        top:10%;
+        position:relative;
+}
+#tabs p {
+        color:#565656;
+}
+#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
+        width: 45%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+}
+
+#tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li {
+        float: left;
+        margin-right: 2px;
+}
+
+#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
+        display: block;
+        padding: 8px 25px;
+        background: #7A7878;
+        text-decoration: none;
+        color: #ffffff;
+}
+
+#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
+        background: #565656;
+}
+
+#tabs_container {
+        padding: 40px;
+        overflow: hidden;
+        position: relative;
+        background: white;
+}
+
+#tabs_container div {
+        margin-right: 40px;
+}
+
+.transition {
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+
+        -webkit-transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -o-transition-delay: .3s;
+        -ms-transition-delay: .3s;
+        transition-delay: .3s;
+}
+
+.make_transist {
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+}
+
+.hidescale {
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        filter: alpha(opacity=0);
+        opacity: 0;
+}
+
+.showscale {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+
+        -webkit-transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -o-transition-delay: .3s;
+        -ms-transition-delay: .3s;
+        transition-delay: .3s;
+}
+
+.hideleft {
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+}
+
+.showleft {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        transform: translateX(0px);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+
+        -webkit-transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -o-transition-delay: .3s;
+        -ms-transition-delay: .3s;
+        transition-delay: .3s;
+}
+
+.hidescaleup {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+}
+
+.showscaleup {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -o-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+
+        -webkit-transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -o-transition-delay: .3s;
+        -ms-transition-delay: .3s;
+        transition-delay: .3s;
+}
+
+.hideflip {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+
+        -webkit-transform: rotatey(-90deg) scale(1.1);
+        -moz-transform: rotatey(-90deg) scale(1.1);
+        -o-transform: rotatey(-90deg) scale(1.1);
+        -ms-transform: rotatey(-90deg) scale(1.1);
+        transform: rotatey(-90deg) scale(1.1);
+
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+}
+
+.showflip {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+
+        -webkit-transition-delay: .3s;
+        -moz-transition-delay: .3s;
+        -o-transition-delay: .3s;
+        -ms-transition-delay: .3s;
+        transition-delay: .3s;
+
+        -webkit-transform: rotatey(0deg) scale(1);
+        -moz-transform: rotatey(0deg) scale(1);
+        -o-transform: rotatey(0deg) scale(1);
+        -ms-transform: rotatey(0deg) scale(1);
+        transform: rotatey(0deg) scale(1);
+
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+}
+
+.tabulous_active {
+        background: white !important;
+        color: #565656 !important;
+}
+
+.tabulousclear {
+        display: block;
+        clear: both;
+}
+
 
 
 /*
@@ -697,6 +1050,229 @@ background-color: rgb(238,238,238);
   padding: 5%;
 }
 
+/*
+ __    __       _______. _______ .______      
+|  |  |  |     /       ||   ____||   _  \     
+|  |  |  |    |   (----`|  |__   |  |_)  |    
+|  |  |  |     \   \    |   __|  |      /     
+|  `--'  | .----)   |   |  |____ |  |\  \----.
+ \______/  |_______/    |_______|| _| `._____|
+
+*/
+
+#account_home h2{
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 15%;
+  margin-top: 10%;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+#menu_account{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 200px;
+  width: 20%;
+  margin-top: 1%;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+#menu_account .ProfilUser h3{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#menu_account .ProfilUser li{
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 10%;
+}
+
+#menu_account .ProfilUser li:before {
+  position: relative;
+  content: "- ";
+}
+
+#menu_account .CommandesUser h3{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#menu_account .CommandesUser li{
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 10%;
+}
+
+#menu_account .CommandesUser li:before {
+  position: relative;
+  content: "- ";
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+#message_home{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height:200px;
+  width: 50%;
+  margin-top: 1%;
+  margin-left: 5%;
+  z-index: 1;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+
+
+/*
+  ______     ___      .______     .___________.
+ /      |   /   \     |   _  \    |           |
+|  ,----'  /  ^  \    |  |_)  |   `---|  |----`
+|  |      /  /_\  \   |      /        |  |     
+|  `----./  _____  \  |  |\  \----.   |  |     
+ \______/__/     \__\ | _| `._____|   |__| 
+
+*/
+
+.CartTop{
+  position: relative;
+  height: 80px;
+  width: 100%;
+  margin-top: 5%;
+  z-index: 0;
+}
+
+.CartTop .Panier1 {
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Panier1 .Panier1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .MesInformations1{
+  position: relative;
+  background-color: rgb(155,155,155);
+  border:1px solid rgb(155,155,155);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .MesInformations1 .MesInformations1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .Livraison1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Livraison1 .Livraison1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .Paiement1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Paiement1 .Paiement1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.PanierNom2{
+  position: absolute;
+  text-align: left;
+  color:rgb(105, 103, 103);
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 90%;
+  margin-top: 3%;
+  margin-left:5%;
+  height: 5%;
+  z-index: 2;
+}
+
+.BarrePanier{
+  
+  
+}
 
 
 
@@ -768,6 +1344,7 @@ background-color: rgb(238,238,238);
   z-index: 1;
 
 }
+
 
 .Footer #Contact{
   position: relative;
@@ -871,3 +1448,34 @@ background-color: rgb(238,238,238);
 |_______||__| \__| |_______/ 
 
 */
+.navadmin {
+  width:15%;
+  height:100%;
+  background-color:#313131;
+  z-index:-1;
+}
+
+.navadmin .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  background-color:#ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  z-index:1;
+  top:15%;
+  text-align: center;
+  vertical-align:middle;
+  position:relative;
+  }
+
+  .navadmin .logo img{
+    width:80px;
+    height:80px;
+     
+        
+         }
+

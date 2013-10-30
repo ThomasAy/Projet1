@@ -39,8 +39,27 @@ function do_html_header($languages_vars, $title=''){
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
       <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
+
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
       <link rel="icon" type="image/ico" href="medias/favicon.ico">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+     
+      <script>
+        $(function() {
+          $( "#datepicker" ).datepicker();
+        });
+      </script>
+
+      <style>
+          #datepicker{
+            font-size: 10px !important;
+          };
+      </style>
+      <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        
 
   <!-- begin CSS -->
     <link rel="stylesheet" type="text/css" href="TopBar.css">
@@ -50,6 +69,7 @@ function do_html_header($languages_vars, $title=''){
   
   <!-- begin JS -->
     <script src="jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="tabulous.js" type="text/javascript"></script>
     <script src="jquery.polyglot.language.switcher.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -62,6 +82,13 @@ function do_html_header($languages_vars, $title=''){
             });
         });
     </script>
+    <script type="text/javascript"> $(document).ready(function($) {
+    
+
+    $('#tabs').tabulous({
+            effect: 'scale'
+    }); 
+    });</script>
 
     <script src="scripts.js"  type="text/javascript"></script>
   <!-- end JS -->
@@ -90,10 +117,13 @@ function do_html_header($languages_vars, $title=''){
 <!-- end container -->    
         
         <div id="Rechercher">
-          <form method="post" action="#">
-            <input id="inputSearch" type="text" name="keyWord"/>
-            <input id="btnValider" type="submit" value="<?php echo $languages_vars['recherche']; ?>"/>
-          </form>
+          <form action="#" method="post">
+        <fieldset>
+          <input type="text" value="Rechercher un produit..."  onFocus="javascript:this.value=''" ;/>
+          <input type="submit" name="go" id="go" value="Go" />
+        </fieldset>
+      </form>
+
         </div>
 
         <div id="Texte_de_connexion">
@@ -235,11 +265,6 @@ function display_categories($cat_array){
 	echo "</ul>";
 	echo "<hr/>";
 }
-
-
-
-
-
 
 
 function display_button($target, $image, $alt){
@@ -572,7 +597,7 @@ function do_man_category($languages_vars, $num_produits, $array_product){
           <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=5', $languages_vars['montres']); ?></li> 
           <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=6', $languages_vars['portefeuille']); ?></li> 
           <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=7', $languages_vars['gants']); ?></li> 
-          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=8', $languages_vars['sac_main']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=8', $languages_vars['ceintures']); ?></li> 
           </ul>
         </div>
       </div>
@@ -591,7 +616,98 @@ function do_man_category($languages_vars, $num_produits, $array_product){
             ?>
               <td>
                   <a href="<?php echo $url ; ?>"> <img src="medias/pictures/<?php echo $row['url']; ?>" alt="<?php echo $row['url']; ?>"></a>
-                  <h1 class="Produit"><a href="<?php echo $url; ?>"<?php echo $row['NOM']; ?></a><br><?php echo $row['PRIX_HT']; ?>
+                  <h1 class="Produit"><a href="<?php echo $url; ?>"><?php echo $row['NOM']; ?></a><br><?php echo $row['PRIX_HT']; ?> &euro;
+              </td>
+            <?php
+              if($i % 2 == 0){?>
+                  </tr>
+              <?php }
+            }
+          $i++;
+        ?>
+      </table>
+        <!--<tr>
+
+        </tr>
+        <tr>
+          <td>
+            <img src="medias/pictures/Gants-1-Homepage.jpg" alt="Gants">
+            <h1 class="Produit">Gants<br>79€</h1>
+          </td>
+          <td>
+            <img src="medias/pictures/Montre-2-Homepage.jpg" alt="Montre">
+            <h1 class="Produit">Montre<br>299€</h1>
+            <h1 class="Produit"></h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="medias/pictures/Portefeuille-3-Homepage.jpg" alt="Portefeuille">
+            <h1 class="Produit">Portefeuille<br>199€</h1>
+          </td>
+          <td>
+            <img src="medias/pictures/Smartphone-1-Homepage.jpg" alt="Housse smartphone">
+            <h1 class="Produit">Housse<br>49€</h1>
+          </td>
+        </tr>-->
+      
+    </div>
+  </div>
+
+<?php
+}
+
+function do_sub_category($languages_vars, $num_produits, $array_product){
+?>
+  <div class="LogoTop">
+    <div id="logoCat">
+    <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+    <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+    <div class="ImageCategroy">
+      <img src="medias/pictures/Parc-6-Collection.jpg" alt="Collection Homme - Eté 2014">
+    </div>
+  </div>
+
+  <div id="conteneur"> 
+    <div class="Category">
+      <div class="Sacs">  
+        <h1><?php echo $languages_vars['sacs']; ?></h1>
+        <div class="CategoryList1">
+          <ul>
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=1', $languages_vars['sac_main']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=2', $languages_vars['porte_documents']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=3', $languages_vars['sac_dos']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=4', $languages_vars['pochettes']); ?></li> 
+          </ul>
+        </div>
+      </div>
+      <div class="Accessoires">
+        <h1><?php echo $languages_vars['accessoires']; ?></h1>
+        <div class="CategoryList2">
+          <ul>
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=5', $languages_vars['montres']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=6', $languages_vars['portefeuille']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=7', $languages_vars['gants']); ?></li> 
+          <li><?php do_html_url($_SERVER['PHP_SELF'].'?id=2&id_sc=8', $languages_vars['ceintures']); ?></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="ProduitsHommes">
+      <div class="NomHomme">
+          <h1><?php echo $languages_vars['homme']; ?> (<?php echo $num_produits; ?>)</h1>
+      </div>
+      <table border="1" cellspacing="20">
+        <tr>
+        <?php foreach ($array_product as $row) {
+          $i = 1;
+            $url = 'show_product.php?id_product='.$row['ID_PROD'];
+            ?>
+              <td>
+                  <a href="<?php echo $url ; ?>"> <img src="medias/pictures/<?php echo $row['url']; ?>" alt="<?php echo $row['url']; ?>"></a>
+                  <h1 class="Produit"><a href="<?php echo $url; ?>"><?php echo $row['NOM']; ?></a><br><?php echo $row['PRIX_HT']; ?> &euro;
               </td>
             <?php
               if($i % 2 == 0){?>
@@ -651,22 +767,22 @@ function display_signup_form($languages_vars){
           <input type="radio" name="civilite" value="3"><?php echo $languages_vars['mademoiselle']; ?>
           <br/>
           <label for="nom">* <?php echo $languages_vars['nom']." :";?></label>
-          <input type="text" name="nom">
+          <input type="text" name="nom" required>
           <br/>
           <label for="prenom">* <?php echo $languages_vars['prenom']." :";?></label>
-          <input type="text" name="prenom">
+          <input type="text" name="prenom" required>
           <br/>
           <label for="adresse">* <?php echo $languages_vars['adresse']." :";?></label>
-           <input type="text" name="adresse">
+           <input type="text" name="adresse" required>
           <br/>
           <label for="adresse_2"><?php echo $languages_vars['adresse_2']." :"; ?></label>
-           <input type="text" name="adresse_2">
+           <input type="text" name="adresse_2" required>
           <br/>
           <label for="code_postal">* <?php echo $languages_vars['code_postal']." :"; ?></label>
-           <input type="text" name="zipcode">
+           <input type="text" name="zipcode" required>
           <br/>
           <label for="ville">* <?php echo $languages_vars['ville']." :";?></label>
-          <input  type="text" name="ville">
+          <input  type="text" name="ville" required>
           <br/>
           <label for="pays">* <?php echo $languages_vars['pays']." :"; ?></label>
           <select name="pays">
@@ -679,7 +795,7 @@ function display_signup_form($languages_vars){
           </select>
           <br/>
           <label for="phone"><?php echo $languages_vars['phone']." :"; ?></label>
-          <input class="NomForm" type='text' name='phone'>
+          <input class="NomForm" type='text' name='phone' required>
           <br>
           <br/>
           <input type="checkbox" name="newsletter" value="1">
@@ -692,14 +808,14 @@ function display_signup_form($languages_vars){
           <br/>
 
           <label for="mail">* <?php echo $languages_vars['mail']." :"; ?></label>
-          <input type="email" name="email">
+          <input type="email" name="email" required>
           <br/>
 
           <label for="mdp">* <?php echo $languages_vars['mdp']." :"; ?></label>
-          <input type="password" name="mdp">
+          <input type="password" name="mdp" required>
           <br/>
           <label for="confirm_mdp">* <?php echo $languages_vars['confirm_mdp']." :"; ?></label>
-          <input type="password" name="mdp2">
+          <input type="password" name="mdp2" required>
           <br/>
           <br/>
           </td>
@@ -736,22 +852,32 @@ function display_warning_message($message){
 
 function display_account_user($languages_vars){
 ?>
+  <div class="LogoTop">
+    <div id="logoCat">
+      <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+      <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+  </div>
+
   <div id='account_home'>
    
-    <h2><?php echo $languages_vars['bonjour'].' '.$_SESSION['civ'].' '. $_SESSION['user_lastname']; ?></h2>
+    <h2><?php echo $languages_vars['bonjour'].' '.$_SESSION['civ'].' '. $_SESSION['user_lastname'].","; ?></h2>
       <div id="menu_account">
-        <h3><?php echo $languages_vars['profil']; ?></h3>
-          <ul>
-            <li><?php do_html_url('infos.php', $languages_vars['info']); ?></li>
-            <li><?php do_html_url('change_password.php', $languages_vars['change_mdp']); ?></li>
-            <li><?php do_html_url('newsletter.php', $languages_vars['newsletter']); ?></li>
-          </ul>
-          <h3><?php echo $languages_vars['commandes']; ?></h3>
-          <ul>
-            <li><?php do_html_url('orders.php', $languages_vars['commandes_en_cours']); ?></li>
-            <li><?php do_html_url('history.php', $languages_vars['historique_facture']); ?></li>
-          </ul>
-
+        <div class="ProfilUser">
+          <h3><?php echo $languages_vars['profil']; ?></h3>
+            <ul>
+              <li><?php do_html_url('infos.php', $languages_vars['info']); ?></li>
+              <li><?php do_html_url('change_password.php', $languages_vars['change_mdp']); ?></li>
+              <li><?php do_html_url('newsletter.php', $languages_vars['newsletter']); ?></li>
+            </ul>
+        </div>
+        <div class="CommandesUser">
+            <h3><?php echo $languages_vars['commandes']; ?></h3>
+            <ul>
+              <li><?php do_html_url('orders.php', $languages_vars['commandes_en_cours']); ?></li>
+              <li><?php do_html_url('history.php', $languages_vars['historique_facture']); ?></li>
+            </ul>
+        </div>
       </div>
 
       <div id="message_home">
@@ -760,4 +886,126 @@ function display_account_user($languages_vars){
   </div>
 <?php
 }
+function do_html_cart($languages_vars){
+?>
+  <div class="LogoTop">
+    <div id="logoCat">
+      <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+      <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+  </div>
 
+  <div class="CartTop">
+    <div class="Panier1">
+      <div class="Panier1Nom">
+        <p>1.MON PANIER</p>
+      </div>
+    </div>
+    <div class="MesInformations1">
+      <div class="MesInformations1Nom">
+        <p>2.MES INFORMATIONS</p> 
+      </div>
+    </div>
+    <div class="Livraison1">
+      <div class="Livraison1Nom">
+        <p>3.LIVRAISON</p>   
+      </div>
+    </div>
+    <div class="Paiement1">
+      <div class="Paiement1Nom">
+        <p>4.PAIEMENT</p>  
+      </div>
+    </div>
+  </div>
+
+  <div class="PanierNom2">
+    <p>MES INFORMATIONS</p>
+
+    <div class="BarrePanier">
+
+      <hr>
+
+
+    </div>
+  </div>
+
+
+<?php
+}
+
+function do_html_produit(){
+?>
+  <div class="LogoTop">
+    <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    <h1>Collection Homme | Collection Femme</h1> 
+
+</div>
+
+  <div class="ariane">
+    <h2>Accueil  &rsaquo;  Homme  &rsaquo;  Accessoires  &rsaquo;  <span style="text-decoration:underline;">Portefeuilles</span></h2>
+  </div>
+
+  <div class="ficheproduit">
+    <div id="previews">
+       <div class="previews1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+       <div class="previews2"><img  src="medias/produits/Ceinture-1.jpg" alt="Gants">
+        <div class="ajout"><a href="#">Ajouter au panier</a></div>
+        <div class ="prodfeat1"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+        <div class="prodfeat2"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+        </div> 
+       <div class="previews3"><img src="medias/produits/Ceinture-1.jpg" alt="Gants"></div>
+     </div>
+
+
+   </div>
+   
+<div id="wrapper">
+
+                                <div id="tabs">
+                <ul>
+                        <li><a href="#tabs-1" title="">Description</a></li>
+                        <li><a href="#tabs-2" title="">Conseils mode</a></li>
+                        
+                </ul>
+
+                <div id="tabs_container">
+                        
+
+
+
+                <div id="tabs-1">
+                            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus.</p>
+                </div>
+
+                <div id="tabs-2">
+                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor.</p>
+        
+                </div>
+
+                
+
+                </div><!--End tabs container-->
+                
+        </div><!--End tabs-->
+
+  
+</div>
+<?php
+}
+function do_html_admin(){
+?>
+
+<div class="navadmin">
+
+  <div class="logo">
+
+<img src="medias/pictures/logo.png" alt="logo">
+  </div>
+</div>
+
+
+
+
+
+<?php  
+}
