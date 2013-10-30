@@ -155,6 +155,7 @@ function do_html_header($languages_vars, $title=''){
 
  function do_html_produit_fiche($languages_vars){
  ?>
+
  <div class="LogoTop">
     <div id="logoCat">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
@@ -1070,11 +1071,12 @@ function do_html_cart($languages_vars){
 
 function do_html_produit($languages_vars, $produit, $produit_before='', $produit_after=''){
 ?>
-  <div class="LogoTop">
+<div class="LogoTop">
+    <div id="logoCat">
     <img src="medias/pictures/logo.png" alt="GHL Logo"> 
-    <h1>Collection Homme | Collection Femme</h1> 
-
-</div>
+    </div>
+    <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+  </div>
 
   <div class="ariane">
     <h2>Accueil  &rsaquo;  Homme  &rsaquo;  Accessoires  &rsaquo;  <span style="text-decoration:underline;">Portefeuilles</span></h2>

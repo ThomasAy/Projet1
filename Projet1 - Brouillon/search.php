@@ -28,7 +28,7 @@ while($row = $result->fetch_array(MYSQLI_BOTH))
 
 $ids = array_unique($ids);
 
-$query = "	SELECT produit.ID_PROD, NOM, PRIX_HT, DESC_FR, STOCK, URL FROM produit, picture 
+$query = "	SELECT produit.ID_PROD as prod, NOM, PRIX_HT, DESC_FR, STOCK, URL FROM produit, picture 
 			WHERE (";
 			foreach ($ids as $value) {
 				$query = $query . "produit.ID_PROD = " . $value . " OR ";
@@ -63,7 +63,7 @@ $result2 = $conn->query($query);
         while($row = $result2->fetch_array(MYSQLI_BOTH)) {
             $ListeProd = $ListeProd .
             "<tr> 
-                <td>   <b>". $row['NOM'] . "</b>  : " . $row['PRIX_HT'] . "€ </td>
+                <td>   <a href=\"show_product.php?id_product=".$row['prod']."\"><b>". $row['NOM'] . "</b></a>  : " . $row['PRIX_HT'] . "€ </td>
                 <td>    <img style=\"width:150px;\" SRC=\"". $row['URL'] ."\" ALT=\"" . $row['NOM'] . "\" width=\"200px\"> </td>
                 <td> <center> ".$row['DESC_FR']." </center> </td>
             </tr>";

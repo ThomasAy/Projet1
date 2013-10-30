@@ -126,9 +126,6 @@ function get_products_by_subcat($catid, $subcat_id){
 
 function get_product_details($id_prod){
 	//requête qui récupère les détails du livre dont l'isbn passé en paramètres correspond
-	if((!$isbn) || $isbn == ''){
-		return false;
-	}
 	
 	
 	$conn=db_connect();
