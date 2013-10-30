@@ -7,6 +7,6 @@
  display_list_of_products();
 
  do_html_footer();
-}
+
 
 ?>

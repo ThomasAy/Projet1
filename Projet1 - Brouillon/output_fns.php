@@ -153,7 +153,7 @@ function do_html_header($languages_vars, $title=''){
     <?php
 	}
 
- function do_html_produit($languages_vars){
+ function do_html_produit_fiche($languages_vars){
  ?>
  <div class="LogoTop">
     <div id="logoCat">
@@ -668,7 +668,6 @@ function do_man_category($languages_vars, $num_produits, $array_product){
 
     <div class="ProduitsHommes">
       <div class="NomHomme">
-          <?php var_dump($num_produits); ?>
           <h1><?php echo $languages_vars['homme']; ?> (<?php echo $num_produits; ?>)</h1>
       </div>
       <table border="1" cellspacing="20">
