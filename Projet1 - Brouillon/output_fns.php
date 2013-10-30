@@ -810,3 +810,28 @@ function do_html_produit(){
 
 <?php  
 }
+function do_html_admin(){
+?>
+
+<div class="navadmin">
+
+  <div class="logo">
+
+<img src="medias/pictures/logo.png" alt="logo">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php  
+}
