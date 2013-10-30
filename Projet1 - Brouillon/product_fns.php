@@ -101,9 +101,28 @@ function get_products($catid){
 	return $result;
 }
 
-function get_products_images($array_product){
-
+function get_products_by_subcat($catid, $subcat_id){
+	//Récupère les produits dans la catégorie correspondante dont l'ID est passé en paramètres
+	if((!$catid) || $catid=='' || (!$subcat_id) || $subcat_id==''){
+		return false;
+	}
+	
+	$conn = db_connect();
+	$query = "select produit.*, picture.url from produit, picture where id_cate = ".$catid." and id_subcat = ".$subcat_id." and produit.id_prod = picture.id_prod";
+	$result = @$conn->query($query);
+	if(!$result){
+		return false;
+	}
+	$num_products = $result->num_rows;
+	if($num_products == 0){
+		return false;
+	}
+	
+	$result = db_result_to_array($result);
+	return $result;
 }
+
+
 
 function get_product_details($id_prod){
 	//requête qui récupère les détails du livre dont l'isbn passé en paramètres correspond
@@ -123,6 +142,27 @@ function get_product_details($id_prod){
 	return $result;
 }
 
+function count_products_by_subcat($id_cate, $id_subcat){
+	if((!$id_cate) || $id_cate =='' || (!$id_subcat) || $id_subcat == '' ){
+		return false;
+	}
+
+	$conn = db_connect();
+
+	$query = "select * from produit where id_cate = $id_cate and id_subcat = $id_subcat";
+	$result = $conn->prepare($query);
+	if(!$result){
+		return false;
+	}
+
+	$result->execute();
+	$result->store_result();
+
+	$num_products = $result->num_rows;
+
+	return $num_products;
+}
+
 function count_products_by_cat($id_cate){
 
 	if((!$id_cate) || $id_cate ==''){
@@ -131,7 +171,7 @@ function count_products_by_cat($id_cate){
 
 	$conn = db_connect();
 
-	$query = "select * from `produit`,  where produit.id_cate = $id_cate";
+	$query = "select * from produit where id_cate = $id_cate";
 	$result = $conn->prepare($query);
 	if(!$result){
 		return false;
