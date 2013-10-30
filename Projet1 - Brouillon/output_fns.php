@@ -222,7 +222,14 @@ function do_html_header($languages_vars, $title=''){
     <div id="femme">
       <a href="category.php?id=1"><img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme"></a>
     </div>
+    <div id="femme" style="opacity:0; z-index:10; position:absolute;">
+      <a href="category.php?id=1"><img src="medias/pictures/Parc-5-Homepage.jpg" alt="Collection Femme"></a>
+    </div>
     <div id="homme">
+
+     <a href="category.php?id=2"><img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme"></a>
+    </div>
+    <div id="homme" style="opacity:0;  z-index:10; position:absolute; margin-left=600px;">
 
      <a href="category.php?id=2"><img src="medias/pictures/Parc-6-Homepage.jpg" alt="Collection Homme"></a>
     </div>
