@@ -32,11 +32,15 @@ if(isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom']) 
 	}
 	
 	if($password == $password2){
+		if(check_mail($mail) != 0){
+
 			if(insert_user($mail, $password, $civ, $prenom, $nom, $adresse, $adresse_2, $zipcode, $ville, $pays, $phone, $newsletter)){
 				do_html_header($languages_var);
 				display_signup_confirm($languages_var);
 				do_html_footer($languages_var);
-			} else {
+			}
+			
+		} else {
 				do_html_header($languages_var);
 				display_warning_message($languages_var['mail_existant']);
 				display_signup_form($languages_var);

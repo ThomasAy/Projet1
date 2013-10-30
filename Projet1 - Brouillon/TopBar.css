@@ -63,17 +63,13 @@ p{
 
 
 /*
-
 .___________.  ______   .______   .______        ___      .______      
 |           | /  __  \  |   _  \  |   _  \      /   \     |   _  \     
 `---|  |----`|  |  |  | |  |_)  | |  |_)  |    /  ^  \    |  |_)  |    
     |  |     |  |  |  | |   ___/  |   _  <    /  /_\  \   |      /     
     |  |     |  `--'  | |  |      |  |_)  |  /  _____  \  |  |\  \----.
-    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|
-                                                                       
+    |__|      \______/  | _|      |______/  /__/     \__\ | _| `._____|                                                                   
 */
-
-
 
 .Top_Bar {
   position: absolute;
@@ -139,7 +135,7 @@ width: 20px;
   position: absolute;
   left: 42%;
   top: 10px;
-  width: 50%;
+  width: 40%;
   height: 32px;
   z-index: 50;
 }
@@ -169,21 +165,21 @@ width: 20px;
   }
 
 .Top_Bar #btnValider{
-    font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue";
   font-weight: 100;
 }
 
   .Top_Bar #Texte_de_connexion {
-  display: none;
+  z-index: 10;
   position: absolute;
   right: 60px;
   top: 15px;
   min-height: 30px;
   color : #565656;
-  font : Helvetica;
+  font-family : "Helvetica Neue";
+  font-weight: 100;
 }
 .Top_Bar #Texte_de_connexion a{
-  
   color : #565656;
   font : Helvetica;
 }
@@ -349,29 +345,34 @@ width: 20px;
 */
 
 .LogoTop {
-  position: absolute;
+  display: inline-block;
+  position: relative;
   text-align: center;
-  height: 100%;
-  width: 100%; 
-  top: 10%; 
-  z-index: 3;
-  opacity: 1;
+  top: 60px;
+}
+
+.LogoTop #logoCat{
+
+margin: auto;
+float: center;
+width: 30%;
 }
 
 .LogoTop img{
   position: relative;
+<<<<<<< HEAD
   height: 15%;
+=======
+  height: 25%;
+  width: 25%;
+>>>>>>> origin/Roberto
 }
 
 .LogoTop h1{
-  position: absolute;
-  font-family: "Helvetica Neue";
-  font-weight: 100;
+  position: relative;
   font-size:150%;
-  color: black;
-  width: 90%;
-  left: 5%;
-  height: 7%;
+  width: 100%;
+
 } 
 
 /*
@@ -399,50 +400,28 @@ position: absolute;
 
 .ImageCategroy {
   position: relative;
-  left: 5%;
-  right: 5%;
-  margin-top: 5%;
-  width: 90%;
 }
 
 .ImageCategroy img{
   position: relative;
-  width: 100%;
+  margin-top:2%;
+  width: 90%;
+  height: auto;
 }
 
 #conteneur{
-  position: absolute;
-  margin-top: 68%;
+  position: relative;
+  margin-top: 85px;
   margin-left: 5%;
-  width: 90%;
-  height: 80%;
 }
 
 #conteneur .Category {
-  position: relative;
-  float: left;
-  background-color: rgb(238,238,238);
-  width: 30%; 
-  margin-left: 0%; 
-  margin-top: 5%;
-  float:left;
+position: relative;
+width: 15%;
+float: left;
+padding: 10px;
+background-color: rgb(238,238,238);
 
-}
-
-#conteneur .Category .Sacs{
-  position: relative;
-  margin-top: 5%;
-  width: 100%;
-  margin-left: 10%;
-  height: 30%;
-}
-
-#conteneur .Category .Accessoires{
-  position: relative;
-  margin-top: 5%;
-  width: 100%;
-  margin-left: 10%;
-  height: 60%;
 }
 
 #conteneur .Category h1{
@@ -452,7 +431,6 @@ position: absolute;
   color: black;
   width: 0%;
   margin-left: 0%;
-  margin-top: 3%;
 }
 
 #conteneur .Category .CategoryList1{
@@ -471,7 +449,7 @@ position: absolute;
   color: black;
 }
 
-#conteneur .Category .CategoryList1 li:before {
+#conteneur .Category li:before {
   position: relative;
   content: "- ";
 }
@@ -493,19 +471,13 @@ position: absolute;
   font-size:100%;
   color: black;
 }
-
-#conteneur .Category .CategoryList2 li:before {
-  position: relative;
-  content: "- "; 
-}
     
 #conteneur .ProduitsHommes{
   position:relative;
   float:left;
-  margin-top: 5%;
   margin-left: 5%;
-
- 
+  padding-top: 10px;
+  width: 70%;
 }
 
 #conteneur .ProduitsHommes .NomHomme h1{
@@ -513,7 +485,6 @@ position: absolute;
   font-weight: 100;
   font-size:150%;
   color: black;
-  width: 150%;
   margin-left: 2.5%;
 
 }
@@ -522,34 +493,9 @@ position: absolute;
   position:relative;
   float:left;
   border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
+  width:40%;
+  margin-top: 0%;
   margin-right: 10%;
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-}
-
-#conteneur .ProduitsHommes img{
-  position:relative;
-  float:left;
-  border:solid 1px rgb(238,238,238); 
-  margin-top: 3%;
-  margin-right: 10%;
-
 }
 
 #conteneur .ProduitsHommes .Produit{
@@ -557,26 +503,62 @@ position: absolute;
   font-family: "Helvetica Neue";
   font-weight: 100;
   color: black;
-  width: 100%;
+  width: 40%;
   text-align: center;
 }
+
+/*
+ _______   ______   .______      .___  ___. 
+|   ____| /  __  \  |   _  \     |   \/   | 
+|  |__   |  |  |  | |  |_)  |    |  \  /  | 
+|   __|  |  |  |  | |      /     |  |\/|  | 
+|  |     |  `--'  | |  |\  \----.|  |  |  | 
+|__|      \______/  | _| `._____||__|  |__|
+
+*/
+
 #signup_form{
-  margin-top: 30px;
+  position: relative;
+  border : 1px rgb(238,238,238);
+  height: 20%;
+  width: 30%;
+  margin-top: 10%;
+  border : 1px solid rgb(238,238,238);
 }
 
-#signup_confirm{
-  margin : auto;
-}
-
-#warning_message{
-  background-color: red;
-  border : 1px solid black;
-  opacity: 0.7;
-  margin-top: 50px;
+#signup_form #new_client{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  color: black;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(238,238,238);
 
 }
 
+#signup_form label{
+    display: block;
+    width: 50%;
+    float: left;
+}
 
+#signup_form input {
+  padding: 5px;
+}
+
+#signup_form select[name="pays"]{
+  padding: 5px;
+}
+
+#signup_form hr{
+  height:1px;
+  color: 1px solid rgb(238,238,238);
+  background-color: rgb(238,238,238);
+  border: 0;
+}
+
+
+<<<<<<< HEAD
 
 
 /*
@@ -916,6 +898,20 @@ p {
         display: block;
         clear: both;
 }
+=======
+#signup_form #myButton {
+  position: relative;
+  display:block;
+  margin:1 5px 0 0;
+  color:black;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 30%;
+}
+
+>>>>>>> origin/Roberto
 
 /*
  __        ______     _______  __  .__   __. 
@@ -926,10 +922,306 @@ p {
 |_______| \______/   \______| |__| |__| \__| 
 */
 
+
+#warning_message{
+  position: relative;
+  background-color: red;
+  border : 1px solid red;
+  opacity: 0.7;
+  height: 20%;
+  width: 30%;
+  margin-top: 10%;
+  margin-bottom: -10%;
+}
+
+
 #login_form{
   position: relative;
+  border : 1px solid rgb(238,238,238);
   height: 20%;
+  width: 30%;
+  margin-top: 10%;
+
 }
+
+#login_form h1{
+  background-color: rgb(238,238,238);
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  position: relative;
+}
+
+
+#login_form a{
+  height: 20%;
+  width: 30%;
+  margin-top: 10%;
+}
+
+#login_form input{
+  padding:5px;
+}
+
+#login_form #myButton {
+  position: relative;
+  display:block;
+  margin:1 5px 0 0;
+  color:black;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 50%;
+}
+
+#warning_message{
+  background-color: red;
+  border : 1px solid red;
+  opacity: 0.7;
+  margin-top: 10%;
+}
+
+
+/*
+     ___       _______  .___  ___.  __  .__   __. 
+    /   \     |       \ |   \/   | |  | |  \ |  | 
+   /  ^  \    |  .--.  ||  \  /  | |  | |   \|  | 
+  /  /_\  \   |  |  |  ||  |\/|  | |  | |  . `  | 
+ /  _____  \  |  '--'  ||  |  |  | |  | |  |\   | 
+/__/     \__\ |_______/ |__|  |__| |__| |__| \__|
+*/
+#menu{
+  position: relative;
+  padding: 5%;
+}
+
+/*
+ __    __       _______. _______ .______      
+|  |  |  |     /       ||   ____||   _  \     
+|  |  |  |    |   (----`|  |__   |  |_)  |    
+|  |  |  |     \   \    |   __|  |      /     
+|  `--'  | .----)   |   |  |____ |  |\  \----.
+ \______/  |_______/    |_______|| _| `._____|
+
+*/
+
+#account_home h2{
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 15%;
+  margin-top: 10%;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+#menu_account{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 200px;
+  width: 20%;
+  margin-top: 1%;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+#menu_account .ProfilUser h3{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#menu_account .ProfilUser li{
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 10%;
+}
+
+#menu_account .ProfilUser li:before {
+  position: relative;
+  content: "- ";
+}
+
+#menu_account .CommandesUser h3{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#menu_account .CommandesUser li{
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 10%;
+}
+
+#menu_account .CommandesUser li:before {
+  position: relative;
+  content: "- ";
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+#message_home{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height:200px;
+  width: 50%;
+  margin-top: 1%;
+  margin-left: 5%;
+  z-index: 1;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+
+
+/*
+  ______     ___      .______     .___________.
+ /      |   /   \     |   _  \    |           |
+|  ,----'  /  ^  \    |  |_)  |   `---|  |----`
+|  |      /  /_\  \   |      /        |  |     
+|  `----./  _____  \  |  |\  \----.   |  |     
+ \______/__/     \__\ | _| `._____|   |__| 
+
+*/
+
+.CartTop{
+  position: relative;
+  height: 20%;
+  width: 100%;
+  margin-top: 5%;
+  z-index: 0;
+}
+
+.CartTop .Panier1 {
+  position: relative;
+  background-color: rgb(155,155,155);
+  border:1px solid rgb(155,155,155);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Panier1 .Panier1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .MesInformations1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .MesInformations1 .MesInformations1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .Livraison1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Livraison1 .Livraison1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.CartTop .Paiement1{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 69%;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 8%;
+  z-index: 1;
+}
+
+.CartTop .Paiement1 .Paiement1Nom{
+  position: absolute;
+  text-align: center;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 100%;
+  margin-top: 9%;
+  height: 31%;
+  z-index: 2;
+  float: left;
+}
+
+.PanierNom2{
+  position: absolute;
+  text-align: left;
+  color:black;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 90%;
+  margin-top: 3%;
+  margin-left:5%;
+  height: 5%;
+  z-index: 2;
+}
+
+.BarrePanier{
+  
+  
+}
+
+
+
 /*
  _______   ______     ______   .___________. _______ .______      
 |   ____| /  __  \   /  __  \  |           ||   ____||   _  \     
