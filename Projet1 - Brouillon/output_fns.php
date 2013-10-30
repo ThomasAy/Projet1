@@ -822,22 +822,32 @@ function display_warning_message($message){
 
 function display_account_user($languages_vars){
 ?>
+  <div class="LogoTop">
+    <div id="logoCat">
+      <img src="medias/pictures/logo.png" alt="GHL Logo"> 
+    </div>
+      <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
+  </div>
+
   <div id='account_home'>
    
-    <h2><?php echo $languages_vars['bonjour'].' '.$_SESSION['civ'].' '. $_SESSION['user_lastname']; ?></h2>
+    <h2><?php echo $languages_vars['bonjour'].' '.$_SESSION['civ'].' '. $_SESSION['user_lastname'].","; ?></h2>
       <div id="menu_account">
-        <h3><?php echo $languages_vars['profil']; ?></h3>
-          <ul>
-            <li><?php do_html_url('infos.php', $languages_vars['info']); ?></li>
-            <li><?php do_html_url('change_password.php', $languages_vars['change_mdp']); ?></li>
-            <li><?php do_html_url('newsletter.php', $languages_vars['newsletter']); ?></li>
-          </ul>
-          <h3><?php echo $languages_vars['commandes']; ?></h3>
-          <ul>
-            <li><?php do_html_url('orders.php', $languages_vars['commandes_en_cours']); ?></li>
-            <li><?php do_html_url('history.php', $languages_vars['historique_facture']); ?></li>
-          </ul>
-
+        <div class="ProfilUser">
+          <h3><?php echo $languages_vars['profil']; ?></h3>
+            <ul>
+              <li><?php do_html_url('infos.php', $languages_vars['info']); ?></li>
+              <li><?php do_html_url('change_password.php', $languages_vars['change_mdp']); ?></li>
+              <li><?php do_html_url('newsletter.php', $languages_vars['newsletter']); ?></li>
+            </ul>
+        </div>
+        <div class="CommandesUser">
+            <h3><?php echo $languages_vars['commandes']; ?></h3>
+            <ul>
+              <li><?php do_html_url('orders.php', $languages_vars['commandes_en_cours']); ?></li>
+              <li><?php do_html_url('history.php', $languages_vars['historique_facture']); ?></li>
+            </ul>
+        </div>
       </div>
 
       <div id="message_home">

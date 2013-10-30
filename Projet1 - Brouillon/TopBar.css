@@ -637,6 +637,91 @@ background-color: rgb(238,238,238);
   padding: 5%;
 }
 
+/*
+ __    __       _______. _______ .______      
+|  |  |  |     /       ||   ____||   _  \     
+|  |  |  |    |   (----`|  |__   |  |_)  |    
+|  |  |  |     \   \    |   __|  |      /     
+|  `--'  | .----)   |   |  |____ |  |\  \----.
+ \______/  |_______/    |_______|| _| `._____|
+
+*/
+
+#account_home h2{
+  position: relative;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  width: 15%;
+  margin-top: 10%;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+#menu_account{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height: 200px;
+  width: 20%;
+  margin-top: 1%;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+#menu_account .ProfilUser h3{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#menu_account .ProfilUser li{
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 10%;
+}
+
+#menu_account .ProfilUser li:before {
+  position: relative;
+  content: "- ";
+}
+
+#menu_account .CommandesUser h3{
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+#menu_account .CommandesUser li{
+  list-style-type: none;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+  margin-left: 10%;
+}
+
+#menu_account .CommandesUser li:before {
+  position: relative;
+  content: "- ";
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
+
+#message_home{
+  position: relative;
+  background-color: rgb(238,238,238);
+  border:1px solid rgb(238,238,238);
+  float:left;
+  height:200px;
+  width: 50%;
+  margin-top: 1%;
+  margin-left: 5%;
+  z-index: 1;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
+}
 
 
 
