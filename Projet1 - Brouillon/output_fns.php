@@ -75,10 +75,8 @@ function do_html_header($languages_vars, $title=''){
         $(document).ready(function() {
             $('#polyglotLanguageSwitcher').polyglotLanguageSwitcher({
                 effect: 'fade',
-                testMode: true,
-                onChange: function(evt){
-                    alert("The selected language is: "+evt.selectedItem);
-                }
+                testMode: false,
+               
             });
         });
     </script>
