@@ -1122,10 +1122,10 @@ function display_signup_form($languages_vars){
           <br/>
 
           <label for="mdp">* <?php echo $languages_vars['mdp']." :"; ?></label>
-          <input type="password" name="mdp" required>
+          <input type="password" name="mdp" pattern="[a-zA-Z0-9]{8,}" title="Minmimum 8 letters or numbers." required>
           <br/>
           <label for="confirm_mdp">* <?php echo $languages_vars['confirm_mdp']." :"; ?></label>
-          <input type="password" name="mdp2" required>
+          <input type="password" name="mdp2" pattern="[a-zA-Z0-9]{8,}" title="Minmimum 8 letters or numbers." required>
           <br/>
           <br/>
           </td>
