@@ -5,7 +5,7 @@ session_start();
 if(isset($_GET['id_product'])){
 	$id_product = $_GET['id_product'];
 } else {
-	Location('index.php');
+	echo "coco";
 }
 
 $product = get_product_details($id_product);
@@ -30,7 +30,7 @@ if(is_array($product)){
 		do_html_produit($languages_var, $product);
 	}
 } else {
-	header('Location: index.php');
+	echo "caca";
 }
 
 do_html_footer();

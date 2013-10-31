@@ -126,6 +126,10 @@ function get_products_by_subcat($catid, $subcat_id){
 
 function get_product_details($id_prod){
 	//requête qui récupère les détails du livre dont l'isbn passé en paramètres correspond
+
+	if((!$id_prod) || $id_prod == ''){
+		return false;
+	}
 	
 	
 	$conn=db_connect();
@@ -246,12 +250,12 @@ function calculate_price($cart){
 	if(is_array($cart)){
 		$conn = db_connect();
 		foreach($cart as $id_prod => $qty){
-			$query = "select prix_ht from products where id_prod = '".$id_prod."'";
+			$query = "select prix_ht from produit where id_prod = '".$id_prod."'";
 			$result = $conn->query($query);
 			if($result){
 				$produit = $result->fetch_array();
 				$prix_produit = $produit['prix_ht'];
-				$price += $item_price*$qty;
+				$price += $prix_produit*$qty;
 			}
 		}
 	}
@@ -263,11 +267,11 @@ function calculate_items($cart){
 	//Calule le nombre total d'articles dans le panier
 	$produits = 0;
 	if(is_array($cart)){
-		foreach ($cart as $isbn => $qty){
-			$items += $qty;
+		foreach ($cart as $id => $qty){
+			$produits += $qty;
 		}
 	}
-	return $items;
+	return $produits;
 }
 	
 	

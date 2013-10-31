@@ -205,6 +205,8 @@ $languages_var['accueil_home'] = '<p>Toute l\'équipe de GrindHouse Leather vous
 
 $languages_var['no_product'] = '<p>Il n\'y a pas de produits actuellement dans cette catégorie.</p>';
 
+$languages_var['panier_vide'] = 'Il n\'y a pas de produits dans votre panier';
+
 
 
 
