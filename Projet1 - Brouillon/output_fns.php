@@ -789,7 +789,7 @@ function do_woman_category($languages_vars, $num_produits, $array_product){
     </div>
     <h1><?php do_html_url('category.php?id=2', $languages_vars['collection_homme']); ?> | <?php do_html_url('category.php?id=1', $languages_vars['collection_femme']); ?></h1> 
     <div class="ImageCategroy">
-      <img src="medias/pictures/Parc-6-Collection.jpg" alt="Collection Homme - Eté 2014">
+      <img src="/medias/Parc-6-CollectionFEMME copie.jpg" alt="Collection Homme - Eté 2014">
     </div>
   </div>
 
