@@ -333,11 +333,11 @@ function  display_form_Product($languages_vars)
           <br />
           <br />
           <label for="stock">* '. $languages_vars['quantite'].' :</label>
-          <input type="number" name="stock" value="100" required>
+          <input type="number" name="stock" value="100" pattern="[0-9]" title="Please just type numbers." required>
           <br/>
           <br/>
           <label for="alert">* Niveau d\'alerte (stock):</label>
-          <input type="number" name="alert" value="10" required>
+          <input type="number" name="alert" value="10" pattern="[0-9]" title="Please just type numbers." required>
           <br/>
           <br/>
           <label for="Catégorie">* Catégorie :</label>
